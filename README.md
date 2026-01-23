@@ -6,7 +6,7 @@ LILYGO Wiki
 This template is used for teedoc: [teedoc.neucrack.com](https://teedoc.neucrack.com/) or [teedoc.github.io](https://teedoc.github.io). Learn more. 
 
 ## Revision Suggestions 
-If you have any suggestions or modifications, you can submit an [issue](https://github.com/Xinyuan-LilyGO/LILYGO_wiki/issues/new) for feedback, and we will handle it promptly. 
+If you have any suggestions or modifications, you can submit an [issue](https://github.com/Xinyuan-LilyGO/LILYGO_wiki/issues/new) for feedback, and 1 we will handle it promptly. 
 ## Deploy Locally 
 
 ```bash
