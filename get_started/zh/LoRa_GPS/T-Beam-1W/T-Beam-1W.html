@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-Beam 1W - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "对我们的产品感兴趣可以关注我们的官网商店以及淘宝店铺<br>Github有感兴趣的项目可以 ☆ star哦~🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["LoRa", "GPS", "ESP32-S3", "OLED", "AXP2101"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/zh/">产品</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;中文 简体</a><ul><li class=""><a  href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html">English</a></li>
+<li class="active"><a  href="/get_started/zh/LoRa_GPS/T-Beam-1W/T-Beam-1W.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">显示设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">可穿戴以及可手持设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">无线通讯设备</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active_parent no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/get_started/zh/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">高速通讯设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">人工智能设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">基础设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">拓展设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/no_translate.html?ref=maixIV/m4ndock/FAQ.html&from=/get_started/zh/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic 设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic 设备</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic 下载</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore 设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Meshcore/meshcore.html"><span class="label">Meshcore 使用</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-Beam 1W</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>LoRa</li>
+                            
+                                <li>GPS</li>
+                            
+                                <li>ESP32-S3</li>
+                            
+                                <li>OLED</li>
+                            
+                                <li>AXP2101</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-BEAM-1W-1.jpg" alt="T-Beam-1W" /></p>
+</div>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(63, 201, 28)" href="https://lilygo.cc/products/t-beam-1w">官网购买</a>
+</div>
+<h2 id="%E7%89%88%E6%9C%AC%E8%BF%AD%E4%BB%A3%3A">版本迭代:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update date</th>
+  <th style="text-align:left">Update description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Beam-1W_V1.0</td>
+  <td style="text-align:center">2024-06-15</td>
+  <td style="text-align:left">初始版本</td>
+</tr>
+<tr>
+  <td style="text-align:center">T-Beam-1W_V1.1</td>
+  <td style="text-align:center">2024-08-22</td>
+  <td style="text-align:left">优化电源电路，增加风扇控制</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E8%B4%AD%E4%B9%B0%E9%93%BE%E6%8E%A5">购买链接</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">FLASH</th>
+  <th style="text-align:center">PSRAM</th>
+  <th style="text-align:center">PMU</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Beam-1W</td>
+  <td style="text-align:center">ESP32-S3FN8</td>
+  <td style="text-align:center">16MB</td>
+  <td style="text-align:center">8MB (OPI PSRAM)</td>
+  <td style="text-align:center">AXP2101</td>
+  <td style="text-align:center"><a href="https://lilygo.cc/products/t-beam-1w"  target="_blank">LILYGO Mall</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E7%9B%AE%E5%BD%95">目录</h2>
+<ul>
+<li><a href="#%E6%A6%82%E8%BF%B0"  >概述</a></li>
+<li><a href="#%E5%8A%9F%E8%83%BD%E6%A1%86%E5%9B%BE"  >功能框图</a></li>
+<li><a href="#%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0"  >规格参数</a></li>
+<li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"  >快速开始</a></li>
+<li><a href="#%E5%BC%95%E8%84%9A%E6%98%A0%E5%B0%84"  >引脚映射</a></li>
+<li><a href="#%E7%94%B5%E6%B0%94%E5%8F%82%E6%95%B0"  >电气参数</a></li>
+<li><a href="#%E6%8C%89%E9%92%AE%E4%B8%8Eled%E8%AF%B4%E6%98%8E"  >按钮与LED说明</a></li>
+<li><a href="#rf%E5%8F%82%E6%95%B0%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"  >RF参数与注意事项</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"  >常见问题</a></li>
+<li><a href="#%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD"  >资源下载</a></li>
+</ul>
+<h2 id="%E6%A6%82%E8%BF%B0">概述</h2>
+<p>T-Beam-1W 是一款集成了 <strong>ESP32-S3</strong> 双核处理器、<strong>LoRa SX1262</strong> 模块、<strong>GPS L76K</strong> 定位模块、<strong>SH1106 OLED 屏幕</strong>和 <strong>AXP2101 电源管理芯片</strong>的高性能物联网开发板。板载 TF 卡槽、QWIIC 接口、外部天线接口，支持 Wi-Fi、蓝牙 5.0 和 LoRa 通信，适用于远距离通信、定位追踪、环境监测等应用场景。</p>
+<blockquote>
+<p><strong>使用须知：</strong></p>
+<ol>
+<li>本板不对外接 7.4V 电池充电，仅由电池供电。</li>
+<li>发射前务必连接天线，否则易损坏 RF 模块。</li>
+<li>引脚表中标有 * 的 GPIO 已连接内部模块，无法复用。</li>
+<li>本板上 RF 模块最大输出功率为 32dBm。</li>
+</ol>
+</blockquote>
+<h3 id="%E5%AE%9E%E7%89%A9%E5%9B%BE">实物图</h3>
+<div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-BEAM-1W-2.jpg" alt="T-Beam-1W" /></p>
+</div>
+<h2 id="%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0">规格参数</h2>
+<p><img src="./assets/T-BEAM-1W-info-zh.jpg" alt="T-BEAM-1W" /></p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">组件</th>
+  <th style="text-align:center">规格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">MCU</td>
+  <td style="text-align:center">ESP32-S3FN8，双核 LX7，240MHz</td>
+</tr>
+<tr>
+  <td style="text-align:center">无线</td>
+  <td style="text-align:center">Wi-Fi 2.4GHz + 蓝牙 5.0 LE</td>
+</tr>
+<tr>
+  <td style="text-align:center">LoRa 模块</td>
+  <td style="text-align:center">SX1262，支持 830~945MHz</td>
+</tr>
+<tr>
+  <td style="text-align:center">GPS 模块</td>
+  <td style="text-align:center">L76K，支持多星座定位</td>
+</tr>
+<tr>
+  <td style="text-align:center">屏幕</td>
+  <td style="text-align:center">1.3 英寸 SH1106 OLED，128×64 分辨率</td>
+</tr>
+<tr>
+  <td style="text-align:center">存储</td>
+  <td style="text-align:center">16MB Flash + 8MB PSRAM，支持 TF 卡扩展</td>
+</tr>
+<tr>
+  <td style="text-align:center">电源管理</td>
+  <td style="text-align:center">AXP2101，支持 USB-C 供电，7.4V 电池输入</td>
+</tr>
+<tr>
+  <td style="text-align:center">接口</td>
+  <td style="text-align:center">QWIIC、UART、SPI、I2C、TF 卡槽</td>
+</tr>
+<tr>
+  <td style="text-align:center">按键</td>
+  <td style="text-align:center">BOOT、RESET、自定义按键</td>
+</tr>
+<tr>
+  <td style="text-align:center">尺寸</td>
+  <td style="text-align:center">133 × 43 × 27 mm</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB 供电</td>
+  <td style="text-align:center">5V / 500mA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">快速开始</h2>
+<h3 id="PlatformIO-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">PlatformIO 环境搭建</h3>
+<ol>
+<li>安装 <a href="https://code.visualstudio.com/"  target="_blank">Visual Studio Code</a> 和 <a href="https://www.python.org/"  target="_blank">Python</a></li>
+<li>在 <code>Visual Studio Code</code> 的扩展中搜索 <code>PlatformIO</code> 插件并安装</li>
+<li>安装完成后，需要重启 <code>Visual Studio Code</code></li>
+<li>重启后，在左上角选择 <code>文件</code> -&gt; <code>打开文件夹</code> -&gt; 选择 <code>LilyGo-LoRa-Series</code> 目录</li>
+<li>等待第三方依赖库安装完成</li>
+<li>点击打开 <code>platformio.ini</code> 文件，在 <code>platformio</code> 栏目中</li>
+<li>在 <code>default_envs</code> 下选择您要使用的开发板名称，并取消其注释</li>
+<li>取消其中一行 <code>src_dir = xxxx</code> 的注释，确保只有一行生效。请注意示例注释，其中说明了哪些功能可用、哪些不可用。</li>
+<li>点击左下角的 (✔) 符号进行编译</li>
+<li>使用 USB-C 数据线将开发板连接至电脑（Micro-USB 接口用于模块固件升级）</li>
+<li>点击 (→) 上传固件</li>
+<li>点击 (插头符号) 监视串行输出</li>
+<li>若无法烧录或 USB 设备持续闪烁，请查看下方的<strong>常见问题解答</strong></li>
+</ol>
+<h3 id="Arduino-IDE-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">Arduino IDE 环境搭建</h3>
+<ol>
+<li>安装  <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>安装 [Arduino ESP32] <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></li>
+<li>将 <code>lib</code> 目录中的所有文件夹复制到 <code>Sketchbook 位置</code> 目录。如何找到您自己的库的位置，请参阅此处：<a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer</a></li>
+</ol>
+<ul>
+<li>Windows：<code>C:\Users\{用户名}\Documents\Arduino</code></li>
+<li>macOS：<code>/Users/{用户名}/Documents/Arduino</code></li>
+<li>Linux：<code>/home/{用户名}/Arduino</code></li>
+</ul>
+<ol start="4">
+<li>打开相应的示例</li>
+</ol>
+<ul>
+<li>打开下载的 <code>LilyGo-LoRa-Series</code></li>
+<li>打开 <code>examples</code></li>
+<li>选择示例文件并打开以 <code>ino</code> 结尾的文件</li>
+</ul>
+<ol start="5">
+<li>在 Arduino IDE 工具项目中选择对应的开发板，并点击下方列表中的相应选项进行选择。</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">Name</th>
+  <th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">Board</td>
+  <td style="text-align:left"><strong>ESP32S3 Dev Module</strong></td>
+</tr>
+<tr>
+  <td style="text-align:left">Port</td>
+  <td style="text-align:left">Your port</td>
+</tr>
+<tr>
+  <td style="text-align:left">USB CDC On Boot</td>
+  <td style="text-align:left">Enable</td>
+</tr>
+<tr>
+  <td style="text-align:left">CPU Frequency</td>
+  <td style="text-align:left">240MHZ(WiFi)</td>
+</tr>
+<tr>
+  <td style="text-align:left">Core Debug Level</td>
+  <td style="text-align:left">None</td>
+</tr>
+<tr>
+  <td style="text-align:left">USB DFU On Boot</td>
+  <td style="text-align:left">Disable</td>
+</tr>
+<tr>
+  <td style="text-align:left">Erase All Flash Before Sketch Upload</td>
+  <td style="text-align:left">Disable</td>
+</tr>
+<tr>
+  <td style="text-align:left">Flash Mode</td>
+  <td style="text-align:left">QIO 80Mhz</td>
+</tr>
+<tr>
+  <td style="text-align:left">Flash Size</td>
+  <td style="text-align:left"><strong>16MB(128Mb)</strong></td>
+</tr>
+<tr>
+  <td style="text-align:left">Arduino Runs On</td>
+  <td style="text-align:left">Core1</td>
+</tr>
+<tr>
+  <td style="text-align:left">USB Firmware MSC On Boot</td>
+  <td style="text-align:left">Disable</td>
+</tr>
+<tr>
+  <td style="text-align:left">Partition Scheme</td>
+  <td style="text-align:left"><strong>16M Flash (3MB APP/9.9MB FATFS)</strong></td>
+</tr>
+<tr>
+  <td style="text-align:left">PSRAM</td>
+  <td style="text-align:left"><strong>OPI PSRAM</strong></td>
+</tr>
+<tr>
+  <td style="text-align:left">Upload Speed</td>
+  <td style="text-align:left">921600</td>
+</tr>
+<tr>
+  <td style="text-align:left">Programmer</td>
+  <td style="text-align:left"><strong>Esptool</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>请根据您的板型号（例如 <code>T_BEAM_1W</code>）取消每个草图的 <code>utilities.h</code> 文件的注释，否则编译时会报错</li>
+<li>上传示例</li>
+</ol>
+<h2 id="%E5%BC%95%E8%84%9A%E6%98%A0%E5%B0%84">引脚映射</h2>
+<p><img src="./assets/T-BEAM-1W-pin.jpg" alt="T-BEAM-1W" /></p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">引脚名称</th>
+  <th style="text-align:center">GPIO</th>
+  <th style="text-align:center">是否可用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">Uart1 TX</td>
+  <td style="text-align:center">43</td>
+  <td style="text-align:center">✅</td>
+</tr>
+<tr>
+  <td style="text-align:left">Uart1 RX</td>
+  <td style="text-align:center">44</td>
+  <td style="text-align:center">✅</td>
+</tr>
+<tr>
+  <td style="text-align:left">I2C SDA</td>
+  <td style="text-align:center">8</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">I2C SCL</td>
+  <td style="text-align:center">9</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">SPI MOSI</td>
+  <td style="text-align:center">11</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">SPI MISO</td>
+  <td style="text-align:center">12</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">SPI SCK</td>
+  <td style="text-align:center">13</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">SD CS</td>
+  <td style="text-align:center">10</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">GPS TX</td>
+  <td style="text-align:center">6</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">GPS RX</td>
+  <td style="text-align:center">5</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">GPS PPS</td>
+  <td style="text-align:center">7</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">GPS Wake-up</td>
+  <td style="text-align:center">16</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa RESET</td>
+  <td style="text-align:center">3</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa DIO1</td>
+  <td style="text-align:center">1</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa CS</td>
+  <td style="text-align:center">15</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa LDO EN</td>
+  <td style="text-align:center">40</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa Ctrl</td>
+  <td style="text-align:center">21</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">LoRa BUSY</td>
+  <td style="text-align:center">38</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">BOOT 按键</td>
+  <td style="text-align:center">0</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">自定义按键</td>
+  <td style="text-align:center">17</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">板载 LED</td>
+  <td style="text-align:center">18</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">NTC ADC</td>
+  <td style="text-align:center">14</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">电池 ADC</td>
+  <td style="text-align:center">4</td>
+  <td style="text-align:center">❌</td>
+</tr>
+<tr>
+  <td style="text-align:left">风扇控制</td>
+  <td style="text-align:center">41</td>
+  <td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意：</strong></p>
+<ul>
+<li>LDO EN 为模块内部使能引脚，高电平打开 Radio。</li>
+<li>LoRa Ctrl 为内部 LNA 控制引脚，接收时高电平，发送/休眠时低电平。</li>
+</ul>
+</blockquote>
+<h2 id="%E7%94%B5%E6%B0%94%E5%8F%82%E6%95%B0">电气参数</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">项目</th>
+  <th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">USB-C 输入电压</td>
+  <td style="text-align:left">3.9V ~ 6V</td>
+</tr>
+<tr>
+  <td style="text-align:left">充电功能</td>
+  <td style="text-align:left">不支持</td>
+</tr>
+<tr>
+  <td style="text-align:left">电池电压</td>
+  <td style="text-align:left">7.4V</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>提示：</strong> 建议电池放电能力 ≥ 2A，否则高功率发射时可能触发保护。</p>
+</blockquote>
+<h2 id="%E6%8C%89%E9%92%AE%E4%B8%8ELED%E8%AF%B4%E6%98%8E">按钮与LED说明</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">按钮</th>
+  <th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">IO17</td>
+  <td style="text-align:left">自定义按键</td>
+</tr>
+<tr>
+  <td style="text-align:left">BOOT</td>
+  <td style="text-align:left">下载模式/自定义</td>
+</tr>
+<tr>
+  <td style="text-align:left">RST</td>
+  <td style="text-align:left">复位</td>
+</tr>
+<tr>
+  <td style="text-align:left">PWR（电源键）</td>
+  <td style="text-align:left">长按 6 秒关机</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">LED</th>
+  <th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">IO18 LED</td>
+  <td style="text-align:left">受 GPIO18 控制</td>
+</tr>
+<tr>
+  <td style="text-align:left">PPS LED</td>
+  <td style="text-align:left">随 GPS 脉冲闪烁</td>
+</tr>
+<tr>
+  <td style="text-align:left">USB LED</td>
+  <td style="text-align:left">USB 连接时亮起</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95">相关测试</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">频段</th>
+  <th style="text-align:left">模块型号</th>
+  <th style="text-align:left">频率范围</th>
+  <th style="text-align:left">输出功率</th>
+  <th style="text-align:left">调制方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">868MHz</td>
+  <td style="text-align:left">SX1262 (XY16P35)</td>
+  <td style="text-align:left">830~950MHz</td>
+  <td style="text-align:left">最大 32dBm</td>
+  <td style="text-align:left">LoRa/FSK/GMSK</td>
+</tr>
+<tr>
+  <td style="text-align:left">433MHz</td>
+  <td style="text-align:left">SX1262 (XY16P354)</td>
+  <td style="text-align:left">400~520MHz</td>
+  <td style="text-align:left">最大 32dBm</td>
+  <td style="text-align:left">LoRa/FSK/GMSK</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重要提醒：</strong></p>
+<ol>
+<li>发射前务必连接天线。</li>
+<li>建议 PA 稳定时间 &gt; 800us。</li>
+<li>发射前需提前切换 RF Switch 至 TX 通道，否则可能损坏 PA。</li>
+</ol>
+<p><img src="./assets/RampTime.jpg" alt="RampTime" /></p>
+<h3 id="RF-Block-Diagram">RF Block Diagram</h3>
+<p><img src="./assets/XY16P35.jpg" alt="RF Block Diagram" /></p>
+<h3 id="VCC%3D%2B5V%2C-400M~520MHz-module-output-power-dBm-and-current">VCC=+5V, 400M~520MHz module output power dBm and current</h3>
+<p><img src="./assets/currnetA.jpg" alt="currnetA" /></p>
+<h3 id="VCC%3D%2B5V%2C-830M~950MHz-module-output-power-dBm-and-current">VCC=+5V, 830M~950MHz module output power dBm and current</h3>
+<p><img src="./assets/currnetB.jpg" alt="currnetB" /></p>
+<h2 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</h2>
+<ul>
+<li><p><strong>Q. 为什么烧录时 USB 设备不停闪烁？</strong><br />
+A. 请检查是否选择了正确的开发板型号，并确保 <code>utilities.h</code> 中宏定义已打开。</p>
+</li>
+<li><p><strong>Q. 为什么 LoRa 发送距离很近？</strong><br />
+A. 请确认天线已连接，且 RF Switch 切换正确，输出功率设置合理。</p>
+</li>
+<li><p><strong>Q. 电池供电时为何无法开机？</strong><br />
+A. 请检查电池电压是否在 7.4V 左右，电池放电能力是否足够。</p>
+</li>
+<li><p><strong>Q. GPS 定位慢或无信号？</strong><br />
+A. 请确保在室外空旷环境使用，并检查天线连接。</p>
+</li>
+<li><p>RF Block Diagram</p>
+</li>
+</ul>
+<h2 id="%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD">资源下载</h2>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/13db0dd8bd4fdc8c080ef1337d56255529870630/schematic/T-Beam_1W_V1.0.pdf"  target="_blank">原理图 PDF</a></li>
+<li><a href="https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1262"  target="_blank">SX1262 数据手册</a></li>
+<li><a href="https://www.x-powers.com/en/product/axp2101"  target="_blank">AXP2101 数据手册</a></li>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series"  target="_blank">示例代码库</a></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/zh/LoRa_GPS/T-LoraPager/T-LoraPager.html">
+                            <span class="icon"></span>
+                            <span class="label">T-LoraPager</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/zh/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html">
+                            <span class="label">T-Beam SUPREME</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>相关链接</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO 官网</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO 淘宝</a></li>
+</ul>
+</li>
+<li><a>关注我们</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">淘宝</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>源码</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">开源项目</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki源码</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">深圳市芯元电子科技有限公司</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

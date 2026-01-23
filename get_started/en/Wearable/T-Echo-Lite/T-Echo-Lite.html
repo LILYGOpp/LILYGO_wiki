@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-Echo Lite - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["LoRa", "nRF52840", "E-Paper", "Low Power", "Meshtastic", "Keyboard"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html">English</a></li>
+<li class=""><a  href="/get_started/zh/Wearable/T-Echo-Lite/T-Echo-Lite.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-Echo Lite</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>LoRa</li>
+                            
+                                <li>nRF52840</li>
+                            
+                                <li>E-Paper</li>
+                            
+                                <li>Low Power</li>
+                            
+                                <li>Meshtastic</li>
+                            
+                                <li>Keyboard</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<img src="assets\T-Echo-Lite01.jpg" alt="">
+</div>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(103, 175, 8)" href="https://lilygo.cc/products/t-echo-lite?_pos=1&_sid=79b4c08e7&_ss=r&variant=45331277906101">Official Store</a>
+</div>
+<h2 id="Version-iteration%3A">Version iteration:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Echo-Lite_V1.0</td>
+  <td style="text-align:center">2024-12-06</td>
+</tr>
+<tr>
+  <td style="text-align:center">T-Echo-Lite-KeyShield_V1.0</td>
+  <td style="text-align:center">2025-10-14</td>
+</tr>
+</tbody>
+</table>
+<h2 id="PurchaseLink">PurchaseLink</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">FLASH</th>
+  <th style="text-align:center">PSRAM</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Echo-Lite_V1.0</td>
+  <td style="text-align:center">nRF52840</td>
+  <td style="text-align:center">1M</td>
+  <td style="text-align:center">256kB</td>
+  <td style="text-align:center"><a href="https://lilygo.cc/products/t-echo-lite?_pos=1&amp;_sid=79b4c08e7&amp;_ss=r&amp;variant=45331277906101"  target="_blank">LILYGO Mall</a></td>
+</tr>
+<tr>
+  <td style="text-align:center">T-Echo-Lite-KeyShield_V1.0</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center">NULL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Directory">Directory</h2>
+<ul>
+<li><a href="#describe"  >Describe</a></li>
+<li><a href="#preview"  >Preview</a></li>
+<li><a href="#module"  >Module</a></li>
+<li><a href="#SoftwareDeployment"  >SoftwareDeployment</a></li>
+<li><a href="#pinoverview"  >PinOverview</a></li>
+<li><a href="#RelatedTests"  >RelatedTests</a></li>
+<li><a href="#faq"  >FAQ</a></li>
+<li><a href="#project"  >Project</a></li>
+</ul>
+<h2 id="Describe">Describe</h2>
+<p>T-Echo-Lite is a lightweight version based on T-Echo, featuring a smaller volume and lower power consumption design compared to T-Echo. Its minimum deep sleep power consumption can reach 2μA to 10μA (due to differences in onboard components on different boards, power consumption performance may vary; the minimum power consumption mentioned here is based on the engineering board tested by the LILYGO laboratory). The board is equipped with a rich set of features, including an inertial sensor, LORA module, solar charging function (5V), external GPS, and more. Its excellent power consumption performance allows T-Echo-Lite to achieve superior battery life.</p>
+<p>T-Echo-Lite-KeyShield is a baseboard expansion for T-Echo-Lite, primarily extending peripherals such as a keyboard, speaker, microphone, and vibration motor.</p>
+<h2 id="Preview">Preview</h2>
+<h3 id="Actual-Product-Image">Actual Product Image</h3>
+<p align="center" width="100%">
+    <img src="assets\T-Echo-Lite02.jpg" alt="">
+</p>
+<h2 id="Module">Module</h2>
+<h3 id="T-Echo-Lite-Section">T-Echo-Lite Section</h3>
+<h3 id="1.-MCU">1. MCU</h3>
+<ul>
+<li>Chip: nRF52840</li>
+<li>RAM: 256kB</li>
+<li>FLASH: 1M</li>
+<li>Related Documentation:<blockquote>
+<a href="https://docs.nordicsemi.com/bundle/ps_nrf52840/page/keyfeatures_html5.html"  target="_blank">nRF52840_Datasheet</a></blockquote>
+</li>
+</ul>
+<h3 id="2.-Screen">2. Screen</h3>
+<ul>
+<li>Name: GDEM0122T61</li>
+<li>Size: 1.22 inches</li>
+<li>Resolution: 176x192px</li>
+<li>Screen Type: E-PAPER</li>
+<li>Driver Chip: SSD1681</li>
+<li>Bus Communication Protocol: IIC</li>
+<li>Additional Notes: Fast refresh is not supported (after consulting the screen manufacturer, they replied that it is not supported), it is recommended to use full refresh only</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/adafruit/Adafruit_EPD"  target="_blank">Adafruit_EPD</a><br />
+<a href="https://github.com/adafruit/Adafruit_BusIO"  target="_blank">Adafruit_BusIO</a><br />
+<a href="https://github.com/adafruit/Adafruit_SPIFlash"  target="_blank">Adafruit_SPIFlash</a><br />
+<a href="https://github.com/adafruit/Adafruit-GFX-Library"  target="_blank">Adafruit-GFX-Library</a></blockquote>
+</li>
+<li>Related Documentation:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/GDEM0122T61.pdf"  target="_blank">GDEM0122T61</a><br />
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/SSD1681.pdf"  target="_blank">SSD1681</a></blockquote>
+</li>
+</ul>
+<h3 id="3.-LORA">3. LORA</h3>
+<ul>
+<li>Chip Module: S62F</li>
+<li>Chip: SX1262</li>
+<li>Bus Communication Protocol: SPI</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/jgromes/RadioLib"  target="_blank">RadioLib</a><br />
+<a href="https://github.com/adafruit/Adafruit_BusIO"  target="_blank">Adafruit_BusIO</a><br />
+<a href="https://github.com/adafruit/Adafruit_SPIFlash"  target="_blank">Adafruit_SPIFlash</a></blockquote>
+</li>
+<li>Related Documentation:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/S62F.pdf"  target="_blank">S62F</a></blockquote>
+</li>
+</ul>
+<h3 id="4.-GPS">4. GPS</h3>
+<ul>
+<li>Chip Module: L76K</li>
+<li>Bus Communication Protocol: UART</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/mikalhart/TinyGPSPlus"  target="_blank">TinyGPSPlus</a></blockquote>
+</li>
+<li>Related Documentation:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/L76KB-A58.pdf"  target="_blank">L76KB-A58</a></blockquote>
+</li>
+</ul>
+<h3 id="5.-Inertial-Measurement-Unit">5. Inertial Measurement Unit</h3>
+<ul>
+<li>Chip: ICM20948</li>
+<li>Bus Communication Protocol: IIC</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/wollewald/ICM20948_WE"  target="_blank">ICM20948_WE</a></blockquote>
+</li>
+<li>Related Documentation:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/ICM20948.pdf"  target="_blank">ICM20948</a></blockquote>
+</li>
+</ul>
+<h3 id="6.-Flash">6. Flash</h3>
+<ul>
+<li>Chip: ZD25WQ32CEIGR</li>
+<li>Bus Communication Protocol: SPI</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/adafruit/Adafruit_BusIO"  target="_blank">Adafruit_BusIO</a><br />
+<a href="https://github.com/adafruit/Adafruit_SPIFlash"  target="_blank">Adafruit_SPIFlash</a></blockquote>
+</li>
+<li>Related Documentation:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/ZD25WQ32CEIGR.pdf"  target="_blank">ZD25WQ32CEIGR</a></blockquote>
+</li>
+</ul>
+<h3 id="T-Echo-Lite-KeyShield-Section">T-Echo-Lite-KeyShield Section</h3>
+<h3 id="1.-Keyboard-Backlight">1. Keyboard Backlight</h3>
+<ul>
+<li>Driver Chip: AW21009QNR</li>
+<li>Bus Communication Protocol: IIC</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/Llgok/cpp_bus_driver"  target="_blank">cpp_bus_driver</a></blockquote>
+</li>
+<li>Related Information:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/AW21009QNR.pdf"  target="_blank">AW21009QNR</a></blockquote>
+</li>
+</ul>
+<h3 id="2.-Vibration">2. Vibration</h3>
+<ul>
+<li>Driver Chip: AW86224</li>
+<li>Bus Communication Protocol: IIC</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/Llgok/cpp_bus_driver"  target="_blank">cpp_bus_driver</a></blockquote>
+</li>
+<li>Related Information:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/AW86224AFCR.pdf"  target="_blank">AW86224AFCR</a></blockquote>
+</li>
+</ul>
+<h3 id="3.-Speaker-Microphone">3. Speaker Microphone</h3>
+<ul>
+<li>Driver Chip: ES8311</li>
+<li>Bus Communication Protocols: IIC, IIS</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/Llgok/cpp_bus_driver"  target="_blank">cpp_bus_driver</a></blockquote>
+</li>
+<li>Related Information:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/ES8311.pdf"  target="_blank">ES8311</a></blockquote>
+</li>
+</ul>
+<h3 id="4.-Keyboard">4. Keyboard</h3>
+<ul>
+<li>Driver Chip: TCA8418</li>
+<li>Bus Communication Protocol: IIC</li>
+<li>Dependent Libraries:<blockquote>
+<a href="https://github.com/Llgok/cpp_bus_driver"  target="_blank">cpp_bus_driver</a></blockquote>
+</li>
+<li>Related Information:<blockquote>
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/information/tca8418.pdf"  target="_blank">tca8418</a></blockquote>
+</li>
+</ul>
+<h2 id="SoftwareDeployment">SoftwareDeployment</h2>
+<p align="center" width="100%">
+    <img src="assets\T-Echo-Lite03.jpg" alt="">
+</p>
+<h3 id="Examples-Support">Examples Support</h3>
+<h3 id="T-Echo-Lite-Examples">T-Echo-Lite Examples</h3>
+<table>
+<thead>
+<tr>
+  <th>Example</th>
+  <th><code>[Arduino IDE (Adafruit_nRF52_V1.6.1)]</code> <br /> <code>[PlatformIO (nordicnrf52_V10.6.0)]</code> <br /> Support</th>
+  <th>Description</th>
+  <th>Picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Battery_Measurement"  target="_blank">Battery_Measurement</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/BLE_Uart"  target="_blank">BLE_Uart</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Button_Triggered"  target="_blank">Button_Triggered</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Display"  target="_blank">Display</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Display_BLE_Uart"  target="_blank">Display_BLE_Uart</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Display_SX1262"  target="_blank">Display_SX1262</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Flash"  target="_blank">Flash</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Flash_Erase"  target="_blank">Flash_Erase</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Flash_Speed_Test"  target="_blank">Flash_Speed_Test</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/GPS"  target="_blank">GPS</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/GPS_Full"  target="_blank">GPS_Full</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/ICM20948"  target="_blank">ICM20948</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/IIC_Scan_2"  target="_blank">IIC_Scan_2</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/nrf52840_module"  target="_blank">nrf52840_module</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Original_Test"  target="_blank">Original_Test</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td>Product factory original testing</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/Sleep_Wake_Up"  target="_blank">Sleep_Wake_Up</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/SX126x_PingPong"  target="_blank">SX126x_PingPong</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite/SX126x_PingPong_2"  target="_blank">SX126x_PingPong_2</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="./examples/T-Echo-Lite/sx126x_tx_continuous_wave"  >sx126x_tx_continuous_wave</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="T-Echo-Lite-KeyShield-Examples">T-Echo-Lite-KeyShield Examples</h3>
+<table>
+<thead>
+<tr>
+  <th>Example</th>
+  <th><code>[Arduino IDE (Adafruit_nRF52_V1.6.1)]</code> <br /> <code>[PlatformIO (nordicnrf52_V10.6.0)]</code> <br /> Support</th>
+  <th>Description</th>
+  <th>Picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/aw21009qnr"  target="_blank">aw21009qnr</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/aw86224"  target="_blank">aw86224</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/es8311"  target="_blank">es8311</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/original_test"  target="_blank">original_test</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td>Product factory original testing</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/tca8418"  target="_blank">tca8418</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/examples/T-Echo-Lite-KeyShield/voice_speaker"  target="_blank">voice_speaker</a></td>
+  <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+  <th>Bootloader</th>
+  <th>Description</th>
+  <th>Picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/bootloader/"  target="_blank">bootloader</a></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+  <th>Firmware</th>
+  <th>Description</th>
+  <th>Picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/firmware/%5BT-Echo-Lite_V1.0%5D%5BOriginal_Test(lora_868mhz_125khz)%5D_firmware/"  target="_blank">T-Echo-Lite_Original_Test(lora_868mhz_125khz)</a></td>
+  <td>Product factory original testing</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/firmware/%5BT-Echo-Lite_V1.0%5D%5BOriginal_Test(lora_915mhz_125khz)%5D_firmware/"  target="_blank">T-Echo-Lite_Original_Test(lora_915mhz_125khz)</a></td>
+  <td>Product factory original testing</td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/firmware/%5BT-Echo-Lite-KeyShield_V1.0%5D%5Boriginal_test%5D_firmware/"  target="_blank">T-Echo-Lite-KeyShield_original_test</a></td>
+  <td>Product factory original testing</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="IDE-and-Flashing">IDE and Flashing</h3>
+<h4 id="PlatformIO">PlatformIO</h4>
+<ol>
+<li><p>Install <a href="https://code.visualstudio.com/Download"  target="_blank">VisualStudioCode</a>,choose installation based on your system type.</p>
+</li>
+<li><p>Open the &quot;Extension&quot; section of the Visual Studio Code software sidebar (Alternatively, use &quot;<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>&quot; to open the extension). Search for the &quot;PlatformIO IDE&quot; extension and download it.</p>
+</li>
+<li><p>During the installation of the extension, you can go to GitHub to download the program. You can download the main branch by clicking on the &quot;&lt;&gt; Code&quot; with green text, or you can download the program versions from the &quot;Releases&quot; section in the sidebar.</p>
+</li>
+<li><p>After the installation of the extension is completed, open the Explorer in the sidebar (Alternatively, use &quot;<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>&quot; go open it). Click on &quot;Open Folder&quot;, locate the project code you just downloaded (the entire folder), and click &quot;Add.&quot; At this point, the project files will be added to your workspace.</p>
+</li>
+<li><p>Open the &quot;platformio.ini&quot; file in the project folder (PlatformIO will automatically open the &quot;platformio.ini&quot; file corresponding to the added folder). Under the &quot;[platformio]&quot; section, uncomment and select the example program you want to burn (it should start with &quot;default_envs = xxx&quot;) Then click &quot;<kbd><a href="assets/4.png"  >√</a></kbd>&quot; in the bottom left corner to compile. If the compilation is correct, connect the microcontroller to the computer and click &quot;<kbd><a href="assets/5.png"  >→</a></kbd>&quot; in the bottom left corner to download the program.</p>
+</li>
+<li><p>At this point, an error may occur, and you need to install <a href="https://www.python.org/downloads/"  target="_blank">Python</a>. Open the folder &quot;tool&quot; -&gt; &quot;win10 vscode platformio start&quot; sequentially, and execute the cmd command <code>python t-echo-lite_v1.0.0_setup.py</code> under the &quot;win10 vscode platformio start&quot; folder. This will complete the development board installation, and the compilation and flashing will no longer report errors.</p>
+</li>
+</ol>
+<h4 id="Arduino">Arduino</h4>
+<ol>
+<li><p>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino</a>, and select the installation based on your system type.</p>
+</li>
+<li><p>Open the &quot;example&quot; directory of the project folder, select the example project folder, and open the file ending with &quot;.ino&quot; to open the Arduino IDE project workspace.</p>
+</li>
+<li><p>Open the &quot;Tools&quot; menu bar at the top right -&gt; Select &quot;Board&quot; -&gt; &quot;Board Manager&quot;, find or search for &quot;Adafruit_nRF52&quot;, and download the board file with the author named &quot;Adafruit&quot;. Then return to the &quot;Board&quot; menu bar, select the board type under the &quot;Adafruit_nRF52&quot; board, and the selected board type is determined by the &quot;board = xxx&quot; header under the [env] directory in the &quot;platformio.ini&quot; file. If there is no corresponding board, you need to manually add the board under the &quot;board&quot; directory in the project folder. (If &quot;Adafruit_nRF52&quot; cannot be found, you need to open Preferences -&gt; Add <code>https://www.adafruit.com/package_adafruit_index.json</code> to &quot;Additional Board Manager URLs&quot;)</p>
+</li>
+<li><p>Open the menu bar &quot;<a href="assets/6.png"  >File</a>&quot; -&gt; &quot;<a href="assets/6.png"  >Preferences</a>&quot;, find the &quot;<a href="assets/7.png"  >Project Folder Location</a>&quot; section, and copy and paste all the library files along with the folders in the &quot;libraries&quot; folder under the project directory into the &quot;libraries&quot; folder in this directory.</p>
+</li>
+<li><p>Select the correct settings in the &quot;Tools&quot; menu, as shown in the table below.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Setting</th>
+  <th style="text-align:center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">Board</td>
+  <td style="text-align:center">Nordic nRF52840 DK</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li><p>Select the correct port.</p>
+</li>
+<li><p>Enable boot download mode: Press and release the RST chip reset button, wait for LED1 to light up (you must wait for LED1 to light up), then press and release the RST button again. Observe that LED1 gradually dims and then gradually lights up, indicating that the boot download mode has been entered.</p>
+</li>
+<li><p>Click the top right &quot;<a href="assets/8.png"  >√</a>&quot; to compile. If there are no errors, connect the microcontroller to the computer and click the top right &quot;<a href="assets/9.png"  >→</a>&quot; to start the flashing process.</p>
+</li>
+</ol>
+<h4 id="JLINK-Flashing-Firmware-and-Bootloader">JLINK Flashing Firmware and Bootloader</h4>
+<ol>
+<li><p>Install the software <a href="https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-Desktop/Download#infotabs"  target="_blank">nRF-Connect-for-Desktop</a></p>
+</li>
+<li><p>Install the software <a href="https://www.segger.com/downloads/jlink/"  target="_blank">JLINK</a></p>
+</li>
+<li><p>Connect the JLINK pins correctly as shown in the figure below</p>
+</li>
+</ol>
+<p align="center" width="100%">
+    <img src="assets/12.jpg" alt="">
+</p>
+<ol start="4">
+<li><p>Open the software nRF-Connect-for-Desktop and install the tool <a href="./assets/10.png"  >Programmer</a> and open it</p>
+</li>
+<li><p>Add files, select both the bootloader file and the firmware file at the same time, click <a href="./assets/11.png"  >Erase&amp;write</a>, and the flashing will be completed.</p>
+</li>
+</ol>
+<h2 id="PinOverview">PinOverview</h2>
+<p>For pin definitions, please refer to the configuration file:</p>
+<br />
+<p><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/libraries/private_library/t_echo_lite_config.h"  target="_blank">t_echo_lite_config.h</a><br />
+<a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/libraries/private_library/t_echo_lite_keyshield_config.h"  target="_blank">t_echo_lite_keyshield_config.h</a></p>
+<h2 id="RelatedTests">RelatedTests</h2>
+<h3 id="Power-Dissipation">Power Dissipation</h3>
+<table>
+<thead>
+<tr>
+  <th>Firmware</th>
+  <th>Program</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/firmware/%5BT-Echo-Lite_V1.0%5D%5BSleep_Wake_Up%5D_firmware/%5BT-Echo-Lite_V1.0%5D%5BSleep_Wake_Up%5D_firmware_202412040900.hex"  target="_blank">Sleep_Wake_Up</a> <br /> <a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/firmware/%5BT-Echo-Lite_V1.0%5D%5BSleep_Wake_Up%5D_firmware/%5BT-Echo-Lite_V1.0%5D%5BSleep_Wake_Up%5D_firmware_202412040900.uf2"  target="_blank">Sleep_Wake_Up(uf2)</a></td>
+  <td><code>Sleep_Wake_Up</code></td>
+  <td>Minimum power consumption: 2.54uA <br /> More information can be found in the <a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/tree/main/relevant_test/PowerConsumptionTestLog_%5BT-Echo-Lite_V1.0%5D_20241210.pdf"  target="_blank">Power Consumption Test Log</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="FAQ">FAQ</h2>
+<ul>
+<li>Q. After reading the above tutorials, I still don't know how to build a programming environment. What should I do?</li>
+<li>A. If you still don't understand how to build an environment after reading the above tutorials, you can refer to the <a href="https://github.com/Xinyuan-LilyGO/LilyGo-Document"  target="_blank">LilyGo-Document</a> document instructions to build it.</li>
+</ul>
+<br />
+<ul>
+<li>Q. Why does Arduino IDE prompt me to update library files when I open it? Should I update them or not?</li>
+<li>A. Choose not to update library files. Different versions of library files may not be mutually compatible, so it is not recommended to update library files.</li>
+</ul>
+<br />
+<ul>
+<li>Q. Why is there no debug information output from my board's USB?</li>
+<li>A. Please enable the &quot;DTR&quot; option in your serial assistant software.</li>
+</ul>
+<br />
+<ul>
+<li>Q. Why does my board fail to flash when I use USB directly?</li>
+<li>A. Please press and release the RST chip reset button, wait for LED1 to light up (you must wait for LED1 to light up), then press and release the RST button again. Observe that LED1 gradually dims and then gradually lights up, indicating that the boot download mode has been entered. At this point, you can flash the board.</li>
+</ul>
+<br />
+<ul>
+<li>Q. How should the Bluetooth antenna and Lora antenna of the T-Echo-Lite module be distinguished?</li>
+<li>A. The Bluetooth antenna and Lora antenna of the T-Echo-Lite module are as shown in the following figure:</li>
+</ul>
+<p align="center" width="100%">
+    <img src="assets/14.png" alt="">
+</p>
+<br />
+<h2 id="Project">Project</h2>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/blob/main/project/T-Echo-Lite_V1.0/T-Echo-Lite_V1.0.pdf"  target="_blank">T-Echo-Lite_V1.0</a></li>
+<li><a href="https://github.com/Xinyuan-LilyGO/T-Echo-Lite/blob/main/project/T-Echo-Lite_V1.0/T-Echo-Lite-Eapper_V1.0.pdf"  target="_blank">T-Echo-Lite-Eapper_V1.0</a></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/en/Wearable/T-Echo/T-Echo.html">
+                            <span class="icon"></span>
+                            <span class="label">T-Echo</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html">
+                            <span class="label">T-Embed CC1101</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

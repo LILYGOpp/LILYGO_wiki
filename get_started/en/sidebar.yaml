@@ -1,4 +1,172 @@
 items:
--   label: Introduction to teedoc
-    file: README.md
-
+-   label: DISPLAY
+    items:
+    -   label: T-Circle
+        file: Display/T-Circle/T-Circle.md
+    -   label: T-Circle S3
+        file: Display/T-Circle-S3/T-Circle-S3.md  
+    -   label: T-Display P4
+        file: Display/T-Display-P4/T-Display-P4.md    
+    -   label: T-Display K230
+        file: Display/T-Display-K230/T-Display-K230.md 
+    -   label: T-Display S3 Long
+        file: Display/T-Display-S3-Long/T-Display-S3-Long.md
+    -   label : T-Display S3 Pro LR1121
+        file: Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.md
+    -   label : T-Display S3 AMOLED Plus
+        file: Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.md        
+    -   label: T-Display S3 AMOLED 1.43
+        file: Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.md
+    -   label: T-Display S3 AMOLED 1.64
+        file: Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.md
+    -   label: T-Display S3 AMOLED 1.75
+        file: Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.md
+    -   label: T-Pico 2350
+        file: Display/T-Pico-2350/T-Pico-2350.md 
+    -   label: T-QT C6
+        file: Display/T-QT-C6/T-QT-C6.md
+    -   label: T-Encoder Pro
+        file: Display/T-Encoder-Pro/T-Encoder-Pro.md
+    -   label: T-Camera Plus S3
+        file: Display/T-Camera-Plus-S3/T-Camera-Plus-S3.md
+    -   label: T-Keyboard-S3 Pro
+        file: Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.md
+    -   label: T-Display Bar
+        file: Display/T-Display-Bar/T-Display-Bar.md
+-   label: Wearable and Handheld Kit
+    items:
+    -   label: T-Watch S3 Plus
+        file: Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.md
+    -   label: T5 E-Paper
+        file: Wearable/T5-E-Paper/T5-E-Paper.md       
+    -   label: T5 E-Paper S3 Pro
+        file: Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.md
+    -   label: T-Deck 
+        file: Wearable/T-Deck/T-Deck.md
+    -   label: T-Deck Plus
+        file: Wearable/T-Deck-Plus/T-Deck-Plus.md
+    -   label: T-Deck Pro
+        file: Wearable/T-Deck-Pro/T-Deck-Pro.md
+    -   label: T-Echo
+        file: Wearable/T-Echo/T-Echo.md
+    -   label: T-Echo-Lite
+        file: Wearable/T-Echo-Lite/T-Echo-Lite.md
+    -   label: T-Embed CC1101
+        file: Wearable/T-Embed-CC1101/T-Embed-CC1101.md
+    -   label: T-Embed SI4732
+        file: Wearable/T-Embed-SI4732/T-Embed-SI4732.md   
+    -   label: T-Glass  
+        file: Wearable/T-Glass/T-Glass.md 
+    -   label: T-Mini E-paper-S3
+        file: Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.md                      
+    -   label: T-Watch Ultra
+        file: Wearable/T-Watch-Ultra/T-Watch-Ultra.md
+-   label: Wireless Kit
+    items:   
+    -   label: LoRa/GPS
+        items:
+        -   label: T3 S3
+            file: LoRa_GPS/T3S3/T3S3.md
+        -   label: T-LoRa32
+            file: LoRa_GPS/LoRa32/LoRa32.md
+        -   label: T-LoRa-C6
+            file: LoRa_GPS/T-LoRa-C6/T-LoRa-C6.md
+        -   label: T-LoRa Dual
+            file: LoRa_GPS/T-Lora-Dual/T-Lora-Dual.md
+        -   label: T3 STM32
+            file: LoRa_GPS/T3-STM32/T3-STM32.md 
+        -   label: T3 TXCO
+            file: LoRa_GPS/T3-TXCO/T3-TXCO.md 
+        -   label: T3-S3 LR1121
+            file: LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.md             
+        -   label: T3-S3 E-paper
+            file: LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.md            
+        -   label: T3-S3_MVSRBoard
+            file : LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.md
+        -   label: T-LoraPager
+            file: LoRa_GPS/T-LoraPager/T-LoraPager.md
+        -   label: T-Beam 1W
+            file: LoRa_GPS/T-Beam-1W/T-Beam-1W.md
+        -   label: T-Beam SUPREME
+            file: LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.md            
+    -   label: HSC Tech
+        items:
+        -   label: T-TWR
+            file: High_speed/T-TWR/T-TWR.md
+        -   label: T-Halow
+            file: High_speed/T-Halow/T-Halow.md
+        -   label: T-Connect
+            file: High_speed/T-Connect/T-Connect.md            
+        -   label: T-Connect Pro
+            file: High_speed/T-Connect-Pro/T-Connect-Pro.md
+        -   label: T-Sim Shield
+            file: High_speed/T-Sim-Shield/T-Sim-Shield.md            
+        -   label: T-ETH
+            items:
+            -   label: T-ETH-Elite
+                file: High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.md
+            -   label: T-ETH-Gateway
+                file: High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.md
+            -   label: T-ETH-LoRa-shield
+                file: High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.md
+            -   label: T-ETH-1302
+                file: High_speed/T-ETH/T-ETH-1302/T-ETH-1302.md
+        -   label: T-ETH-Lite
+            items:
+            -   label: T-ETH-Lite
+                file: High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.md
+            -   label: T-ETH-Lite-S3
+                file: High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.md        
+        -   label: T-2Can
+            file: High_speed/T-2Can/T-2Can.md
+        -   label: T-PCIE
+            file: High_speed/T-PCIE/SIM.md
+            items:
+            -   label: SIM7600E
+                file: High_speed/T-PCIE/SIM7600E/SIM7600E.md
+            -   label: T-A7670    
+                items:
+                -   label: T-A7670E
+                    file : High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.md
+                -   label: T-A7670G
+                    file:  High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.md
+                -   label: T-A7670SA
+                    file:  High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.md            
+-   label: AI Kit
+    items:
+    -   label: T-Display K230
+        file: AI/T-Display-K230/T-Display-K230.md 
+    -   label : T-Bao
+        file: AI/T-Bao/T-Bao.md      
+    -   label: T-Circle S3
+        file: AI/T-Circle-S3/T-Circle-S3.md
+-   label: Basic Module
+    items:
+    -   label: T7 C6
+        file: Basic_Module/T7_C6/T7_C6.md
+    -   label: T-Knob
+        file: Basic_Module/T-Knob/T-Knob.md 
+-   label: Expansion Kit
+    items:
+    -   label: T-BHI260AP
+        file: Expand_Module/T-BHI260AP/T-BHI260AP.md
+    -   label: T-Solar
+        file: Expand_Module/T-Solar/T-Solar.md  
+    -   label: T-Radar
+        file: Expand_Module/T-Radar/T-Radar.md              
+-   label: FAQ
+    items:
+    -   label: FAQ
+        file: maixIV/m4ndock/FAQ.md
+-   label: Meshtastic 
+    items:
+    -   label: Meshtastic device
+        file: Meshtastic/Meshtastic_lilygo.md
+    -   label: Meshtastic download
+        file: Meshtastic/Meshtastic_use.md 
+    -   label: Meshtastic FAQ
+        file: Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.md
+-   label: Meshcore
+    items:
+    -   label: Meshcore use
+        file: Meshcore/meshcore.md        

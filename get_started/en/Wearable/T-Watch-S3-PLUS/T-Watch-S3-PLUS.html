@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-Watch S3 Plus - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["T-Watch", "ESP32-S3", "Smart Watch", "GPS", "LoRa"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html">English</a></li>
+<li class=""><a  href="/get_started/zh/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-Watch S3 Plus</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>T-Watch</li>
+                            
+                                <li>ESP32-S3</li>
+                            
+                                <li>Smart Watch</li>
+                            
+                                <li>GPS</li>
+                            
+                                <li>LoRa</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-Watch-S3-PLUS1.jpg" alt="T-Watch S3 Plus" /></p>
+</div>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(63, 201, 28)" href="https://lilygo.cc/products/t-watch-s3-plus">Official Store</a>
+</div>
+<h2 id="Version-Iteration%3A">Version Iteration:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update date</th>
+  <th style="text-align:left">Update description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Watch-S3-Plus_V1.0</td>
+  <td style="text-align:center">2024-01-01</td>
+  <td style="text-align:left">Initial version, added GPS functionality</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Purchase-Links">Purchase Links</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">FLASH</th>
+  <th style="text-align:center">PSRAM</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Watch S3 Plus</td>
+  <td style="text-align:center">ESP32-S3</td>
+  <td style="text-align:center">16M</td>
+  <td style="text-align:center">8M (Octal SPI)</td>
+  <td style="text-align:center"><a href="https://lilygo.cc/products/t-watch-s3-plus"  target="_blank">Link</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Contents">Table of Contents</h2>
+<ul>
+<li><a href="#description"  >Description</a></li>
+<li><a href="#preview"  >Preview</a></li>
+<li><a href="#modules"  >Modules</a></li>
+<li><a href="#quick-start"  >Quick Start</a></li>
+<li><a href="#faq"  >FAQ</a></li>
+<li><a href="#projects"  >Projects</a></li>
+<li><a href="#resources"  >Resources</a></li>
+<li><a href="#dependent-libraries"  >Dependent Libraries</a></li>
+</ul>
+<h2 id="Description">Description</h2>
+<p>The T-Watch S3 Plus is an enhanced version based on the T-Watch S3, adding GPS functionality to create a multifunctional smart wearable device. It integrates high-performance hardware with wireless communication technology, suitable for sports health monitoring, remote interaction, and audio scenarios. Its core configuration includes a 1.54-inch 240x240 high-definition LCD display, paired with a BMA423 3-axis sensor and capacitive touch module, enabling precise motion tracking and responsive touch operations. Built-in Max98357A audio amplifier and PDM microphone support high-quality audio output and voice command input. Currently, the T-Watch S3 Plus offers two LoRa versions: SX1262 and SX1280, combined with the GPS module to achieve precise positioning and long-range, low-power wireless communication, suitable for IoT and smart wearable scenarios.</p>
+<h2 id="Preview">Preview</h2>
+<h3 id="Physical-Image">Physical Image</h3>
+<div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-Watch-S3-PLUS2.jpg" alt="T-Watch-S3-Plus" /></p>
+</div>
+<h3 id="Pinout-Diagram">Pinout Diagram</h3>
+<img src="./assets/T-Watch-S3-PLUS3.jpg" alt="summary" width=100%>
+<h2 id="Modules">Modules</h2>
+<h3 id="MCU">MCU</h3>
+<ul>
+<li>Chip: ESP32-S3</li>
+<li>PSRAM: 8M</li>
+<li>FLASH: 16M</li>
+<li>Other Notes: For more information, please visit <a href="https://www.espressif.com/en/products/socs/esp32-s3"  target="_blank">Espressif Official ESP32-S3 Datasheet</a></li>
+</ul>
+<h3 id="Display">Display</h3>
+<ul>
+<li>Size: 1.54-inch LCD</li>
+<li>Resolution: 240×240px</li>
+<li>Display Type: LCD</li>
+<li>Bus Communication Protocol: SPI</li>
+</ul>
+<h3 id="Touch">Touch</h3>
+<ul>
+<li>Type: Capacitive Touchscreen</li>
+<li>Bus Communication Protocol: I2C</li>
+</ul>
+<h3 id="Sensors">Sensors</h3>
+<ul>
+<li>3-Axis Sensor: BMA423 (I2C)</li>
+<li>Motor Driver: DRV2605 (I2C)</li>
+</ul>
+<h3 id="Audio">Audio</h3>
+<ul>
+<li>Audio Output: Max98357A (I2S)</li>
+<li>Audio Input: PDM Microphone</li>
+</ul>
+<h3 id="Communication-Modules">Communication Modules</h3>
+<ul>
+<li>LoRa: SX1262/SX1280, supports 433~923MHz frequency bands</li>
+<li>GPS: Integrated GPS module</li>
+<li>Wi-Fi: 802.11 b/g/n</li>
+<li>Bluetooth: BLE 5.0</li>
+</ul>
+<h3 id="Power-Management">Power Management</h3>
+<ul>
+<li>Chip: AXP2101 Highly Integrated Power Management Unit</li>
+</ul>
+<h3 id="Overview">Overview</h3>
+<h3 id="%E2%9C%A8-Hardware-Features">✨ Hardware Features</h3>
+<table>
+<thead>
+<tr>
+  <th>Feature</th>
+  <th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>SOC</td>
+  <td><a href="https://www.espressif.com/en/products/socs/esp32-s3" title="ESP32-S3" target="_blank">Espressif ESP32-S3</a></td>
+</tr>
+<tr>
+  <td>Flash</td>
+  <td>16MB(QSPI)</td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td>8MB (QSPI)</td>
+</tr>
+<tr>
+  <td>GNSS</td>
+  <td><a href="https://www.u-blox.com/en/product/mia-m10-series" title="UBlox MIA-M10Q" target="_blank">UBlox MIA-M10Q</a></td>
+</tr>
+<tr>
+  <td>LoRa</td>
+  <td><a href="https://www.semtech.com/products/wireless-rf/lora-connect/sx1262" title="Semtech SX1262" target="_blank">Semtech SX1262</a></td>
+</tr>
+<tr>
+  <td>Accelerometer</td>
+  <td><a href="https://www.mouser.com/datasheet/2/783/BSCH_S_A0010021471_1-2525113.pdf" title="BMA423" target="_blank">Bosch BMA423</a></td>
+</tr>
+<tr>
+  <td>Real-Time Clock</td>
+  <td><a href="https://www.nxp.com/products/PCF8563" title="PCF8563" target="_blank">NXP PCF8563</a></td>
+</tr>
+<tr>
+  <td>Power Management</td>
+  <td><a href="http://www.x-powers.com/en.php/Info/product_detail/article_id/95" title="AXP2101" target="_blank">X-Powers AXP2101</a></td>
+</tr>
+<tr>
+  <td>Haptic Driver</td>
+  <td><a href="https://www.ti.com/product/DRV2605" title="DRV2605" target="_blank">Texas Instruments DRV2605</a></td>
+</tr>
+<tr>
+  <td>PDM Microphone</td>
+  <td><a href="https://media.digikey.com/pdf/Data%20Sheets/Knowles%20Acoustics%20PDFs/SPM1423HM4H-B.pdf" title="SPM1423HM4H-B" target="_blank">SPM1423HM4H-B</a></td>
+</tr>
+<tr>
+  <td>PCM Class D Amplifier</td>
+  <td><a href="https://www.analog.com/en/products/max98357a.html" title="MAX98357A" target="_blank">Analog Devices MAX98357A (3.2W Class D)</a></td>
+</tr>
+<tr>
+  <td>Capacitive Touch</td>
+  <td><a href="https://buydisplay.com/download/ic/FT6236-FT6336-FT6436L-FT6436_Datasheet.pdf" title="FT6336U" target="_blank">FT6336U</a></td>
+</tr>
+<tr>
+  <td>IR Emitter</td>
+  <td><a href="https://www.everlight-led.cn/en/datasheet-download/item/ir12-21c-tr8-datasheet" title="IR12-21C" target="_blank">IR12-21C</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E2%9C%A8-Display-Features">✨ Display Features</h3>
+<table>
+<thead>
+<tr>
+  <th>Feature</th>
+  <th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Resolution</td>
+  <td>240 x 240</td>
+</tr>
+<tr>
+  <td>Display Size</td>
+  <td>1.3 inch</td>
+</tr>
+<tr>
+  <td>Surface Brightness</td>
+  <td>450 cd/m²</td>
+</tr>
+<tr>
+  <td>Driver IC</td>
+  <td>ST7789V3 (SPI)</td>
+</tr>
+<tr>
+  <td>Contrast Ratio</td>
+  <td>800:1</td>
+</tr>
+<tr>
+  <td>Display Colors</td>
+  <td>262K</td>
+</tr>
+<tr>
+  <td>Viewing Angle</td>
+  <td>Full View (IPS)</td>
+</tr>
+<tr>
+  <td>Operating Temperature</td>
+  <td>-20～70°C</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%F0%9F%93%8D-%3Ca-href%3D%22https%3A//github.com/espressif/arduino-esp32/blob/master/variants/lilygo_twatch_s3/pins_arduino.h%22--target%3D%22_blank%22%3EPin-Mapping%3C/a%3E">📍 <a href="https://github.com/espressif/arduino-esp32/blob/master/variants/lilygo_twatch_s3/pins_arduino.h"  target="_blank">Pin Mapping</a></h3>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>GPIO Number</th>
+  <th>Idle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>SDA</td>
+  <td>10</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>SCL</td>
+  <td>11</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Touch Panel(<strong>FT6336U</strong>) SDA</td>
+  <td>39</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Touch Panel(<strong>FT6336U</strong>) SCL</td>
+  <td>40</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Touch Panel(<strong>FT6336U</strong>) Interrupt</td>
+  <td>16</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Touch Panel(<strong>FT6336U</strong>) Reset</td>
+  <td>Not Connected</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>RTC(<strong>PCF8563</strong>) SDA</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>RTC(<strong>PCF8563</strong>) SCL</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>RTC(<strong>PCF8563</strong>) Interrupt</td>
+  <td>17</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Sensor(<strong>BMA423</strong>) Interrupt</td>
+  <td>14</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Sensor(<strong>BMA423</strong>) SDA</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Sensor(<strong>BMA423</strong>) SCL</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>PCM Amplifier(<strong>MAX98357A</strong>) BCLK</td>
+  <td>48</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>PCM Amplifier(<strong>MAX98357A</strong>) WCLK</td>
+  <td>15</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>PCM Amplifier(<strong>MAX98357A</strong>) DOUT</td>
+  <td>46</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>GNSS(<strong>MIA-M10Q</strong>) TX</td>
+  <td>42</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>GNSS(<strong>MIA-M10Q</strong>) RX</td>
+  <td>41</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>GNSS(<strong>MIA-M10Q</strong>) PPS</td>
+  <td>Not Connected</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) SCK</td>
+  <td>3</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) MISO</td>
+  <td>4</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) MOSI</td>
+  <td>1</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) Reset</td>
+  <td>8</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) BUSY</td>
+  <td>7</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) CS</td>
+  <td>5</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>LoRa(<strong>SX1262 or SX1280</strong>) Interrupt</td>
+  <td>9</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display CS</td>
+  <td>12</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display MOSI</td>
+  <td>13</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display MISO</td>
+  <td>Not Connected</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display SCK</td>
+  <td>18</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display DC</td>
+  <td>38</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display Reset</td>
+  <td>Not Connected</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Display Backlight</td>
+  <td>45</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Charger(<strong>AXP2101</strong>) SDA</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Charger(<strong>AXP2101</strong>) SCL</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Charger(<strong>AXP2101</strong>) Interrupt</td>
+  <td>21</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Haptic Driver(<strong>DRV2605</strong>) SDA</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>Haptic Driver(<strong>DRV2605</strong>) SCL</td>
+  <td>Shared I2C Bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>PDM Microphone(<strong>SPM1423HM4H</strong>) SCK</td>
+  <td>44</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>PDM Microphone(<strong>SPM1423HM4H</strong>) DATA</td>
+  <td>47</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>IR Emitter</td>
+  <td>2</td>
+  <td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%F0%9F%A7%91%F0%9F%8F%BC%E2%80%8D%F0%9F%94%A7-I2C-Device-Addresses">🧑🏼‍🔧 I2C Device Addresses</h3>
+<table>
+<thead>
+<tr>
+  <th>Device</th>
+  <th>7-bit Address</th>
+  <th>Shared Bus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://buydisplay.com/download/ic/FT6236-FT6336-FT6436L-FT6436_Datasheet.pdf" title="FT6336U" target="_blank">Touch Panel FT6336U</a></td>
+  <td>0x38</td>
+  <td>❌ Uses Wire1</td>
+</tr>
+<tr>
+  <td><a href="https://www.mouser.com/datasheet/2/783/BSCH_S_A0010021471_1-2525113.pdf" title="BMA423" target="_blank">Accelerometer BMA423</a></td>
+  <td>0x19</td>
+  <td>✅️</td>
+</tr>
+<tr>
+  <td><a href="http://www.x-powers.com/en.php/Info/product_detail/article_id/95" title="AXP2101" target="_blank">Power Management AXP2101</a></td>
+  <td>0x34</td>
+  <td>✅️</td>
+</tr>
+<tr>
+  <td><a href="https://www.nxp.com/products/PCF8563" title="PCF8563" target="_blank">Real-Time Clock PCF8563</a></td>
+  <td>0x51</td>
+  <td>✅️</td>
+</tr>
+<tr>
+  <td><a href="https://www.ti.com/product/DRV2605" title="DRV2605" target="_blank">Haptic Driver DRV2605</a></td>
+  <td>0x5A</td>
+  <td>✅️</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E2%9A%A1-Power-Management-Channels">⚡ Power Management Channels</h3>
+<table>
+<thead>
+<tr>
+  <th>Channel</th>
+  <th>Peripheral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>DC1</td>
+  <td><strong>ESP32-S3</strong></td>
+</tr>
+<tr>
+  <td>DC2</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>DC3</td>
+  <td>Unused <del><strong>GNSS</strong></del></td>
+</tr>
+<tr>
+  <td>DC4</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>DC5</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>LDO1(VRTC)</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>ALDO1</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>ALDO2</td>
+  <td><strong>Display Backlight</strong></td>
+</tr>
+<tr>
+  <td>ALDO3</td>
+  <td><strong>Display and Touch</strong></td>
+</tr>
+<tr>
+  <td>ALDO4</td>
+  <td><strong>LoRa</strong></td>
+</tr>
+<tr>
+  <td>BLDO1</td>
+  <td><strong>GNSS</strong></td>
+</tr>
+<tr>
+  <td>BLDO2</td>
+  <td><strong>DRV2605 Enable</strong></td>
+</tr>
+<tr>
+  <td>DLDO1</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>CPUSLDO</td>
+  <td>Unused</td>
+</tr>
+<tr>
+  <td>VBACKUP</td>
+  <td><strong>RTC Coin Cell Battery</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>BLDO1 serves as GPS power (along with BOOT and RST buttons in the back case)</li>
+<li>DC3 was originally used as GPS power (without BOOT and RST buttons on the back cover)</li>
+</ul>
+<h3 id="%E2%9A%A1-Electrical-Parameters">⚡ Electrical Parameters</h3>
+<table>
+<thead>
+<tr>
+  <th>Feature</th>
+  <th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>🔗USB-C Input Voltage</td>
+  <td>3.9V-6V</td>
+</tr>
+<tr>
+  <td>⚡Charging Current</td>
+  <td>0-1024mA ((Programmable))</td>
+</tr>
+<tr>
+  <td>🔋Battery Voltage</td>
+  <td>3.7V</td>
+</tr>
+<tr>
+  <td>🔋Battery Capacity</td>
+  <td>1500mA ((5.55Wh))</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ It is recommended to use a charging current below 130mA. Excessive charging current may damage the battery.<br />
+If not used for an extended period, please turn the battery switch to OFF.</p>
+</blockquote>
+<h3 id="%E2%9A%A1-Power-Consumption-Reference">⚡ Power Consumption Reference</h3>
+<table>
+<thead>
+<tr>
+  <th>Mode</th>
+  <th>Wake-up Sources</th>
+  <th>Current</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Light Sleep</td>
+  <td>Power Button + Boot Button + Touch Panel</td>
+  <td>2.38mA</td>
+</tr>
+<tr>
+  <td>Light Sleep</td>
+  <td>Power Button + Boot Button</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <td>Deep Sleep</td>
+  <td>Power Button + Boot Button (Backup Power ON)</td>
+  <td>530uA</td>
+</tr>
+<tr>
+  <td>Deep Sleep</td>
+  <td>Power Button + Boot Button (Backup Power OFF)</td>
+  <td>460uA</td>
+</tr>
+<tr>
+  <td>Deep Sleep</td>
+  <td>Touch Panel</td>
+  <td>1.08mA</td>
+</tr>
+<tr>
+  <td>Deep Sleep</td>
+  <td>Timer (Backup Power ON)</td>
+  <td>510uA</td>
+</tr>
+<tr>
+  <td>Deep Sleep</td>
+  <td>Timer (Backup Power OFF)</td>
+  <td>460uA</td>
+</tr>
+<tr>
+  <td>Shutdown</td>
+  <td>Only Backup Power Maintained</td>
+  <td>50uA</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>T-Watch-S3-Plus does not have the touch reset pin connected, so if the touch screen is set to sleep, touch will not work.</li>
+</ul>
+<h3 id="Resources">Resources</h3>
+<ul>
+<li><a href="../../schematic/T_WATCH-S3%2025-03-24.pdf"  >Main Board Schematic</a></li>
+<li><a href="../../schematic/T-Watch-S3-Plus-GPS%20V1.0%202025-04-29.pdf"  >GPS Schematic</a></li>
+</ul>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Example-Support">Example Support</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">Example</th>
+  <th style="text-align:center">PlatformIO/Arduino</th>
+  <th style="text-align:center">ESP-IDF</th>
+  <th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/LilyGoLib/blob/master/examples/factory/factory.ino"  target="_blank">Factory Program</a></td>
+  <td style="text-align:center">✓</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:left">Factory Example</td>
+</tr>
+<tr>
+  <td style="text-align:left"><em>(More examples please refer to GitHub repository)</em></td>
+  <td style="text-align:center"></td>
+  <td style="text-align:center"></td>
+  <td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="PlatformIO">PlatformIO</h3>
+<ol>
+<li>Install <a href="https://code.visualstudio.com/Download"  target="_blank">Visual Studio Code</a>, choose the installation according to your system type.</li>
+<li>Open the &quot;Extensions&quot; in the Visual Studio Code sidebar (or use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> to open extensions), search for the &quot;PlatformIO IDE&quot; extension and install it.</li>
+<li>During the extension installation, you can go to GitHub to download the project code. You can download the main branch code by clicking the green &quot;&lt;&gt; Code&quot; button, or download the &quot;Releases&quot; version from the sidebar.</li>
+<li>After the extension installation is complete, open the sidebar's Explorer (or use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> to open it), click &quot;Open Folder&quot;, find the recently downloaded project code folder (the entire folder), and click &quot;Add&quot;. Now the project files are added to your workspace.</li>
+<li>Open the &quot;platformio.ini&quot; file in the project folder (PlatformIO will automatically open the &quot;platformio.ini&quot; for the corresponding folder), under the &quot;[platformio]&quot; section, uncomment to select the example program you want to flash (headed by &quot;default_envs = xxx&quot;), then click the &quot;<kbd>√</kbd>&quot; at the bottom left to compile. If the compilation is successful, connect the microcontroller to your computer, and click the &quot;<kbd>→</kbd>&quot; at the bottom left to flash.</li>
+</ol>
+<h3 id="Arduino">Arduino</h3>
+<ol>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html"  target="_blank">Arduino ESP32 <strong>V3.3.0-alpha1</strong> or higher or the latest version</a><ul>
+<li>Tip: Arduino Manager URL: <a href="https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json"  target="_blank">https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGoLib/archive/refs/heads/master.zip"  target="_blank">Download LilyGoLib library</a></li>
+<li>Open <code>Arduino IDE</code> -&gt; <code>Sketch</code> -&gt; <code>Include Library</code> -&gt; <code>Add .ZIP Library</code> -&gt; <code>Select the library zip file downloaded in step 3</code></li>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGoLib-ThirdParty"  target="_blank">Install LilyGoLib-ThirdParty</a><ul>
+<li>Copy all directories from <a href="https://github.com/Xinyuan-LilyGO/LilyGoLib-ThirdParty"  target="_blank">LilyGoLib-ThirdParty</a> to the ArduinoIDE libraries directory. If there is no <code>libraries</code> directory, please create it.</li>
+<li>Please note: do not copy the <code>LilyGoLib-ThirdParty</code> directory itself, but copy the folders inside the <code>LilyGoLib-ThirdParty</code> directory to the libraries directory.</li>
+<li>How to find the library location on your computer, <a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">please see here</a><ul>
+<li>Windows: <code>C:\Users\{Username}\Documents\Arduino</code></li>
+<li>macOS: <code>/Users/{Username}/Documents/Arduino</code></li>
+<li>Linux: <code>/home/{Username}/Arduino</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Please note that the libraries in LilyGoLib-ThirdParty are not necessarily the latest versions. Before confirming the hardware is working properly, please do not upgrade the dependent library versions.<br />
+ArduinoIDE will prompt that new library versions are available for upgrade every time it opens.<br />
+Please confirm normal operation before attempting to update to the latest versions. If you encounter issues, please revert to the dependent library versions that worked properly. The current dependent library version list can be viewed <a href="./third_party.md#t-watch-s3-third-party"  >here</a></p>
+</blockquote>
+<ol start="6">
+<li><code>File</code> -&gt; <code>Examples</code> -&gt; <code>LilyGOLib</code> -&gt; <code>helloworld</code></li>
+<li><code>Tools</code> -&gt; <code>Board</code> -&gt; <code>esp32</code>, please select from the table below</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Arduino IDE Setting</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td>LilyGo T-Watch-S3</td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>USB CDC On Boot</td>
+  <td>Enabled</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>USB DFU On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core 1</td>
+</tr>
+<tr>
+  <td>JTAG Adapter</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core 1</td>
+</tr>
+<tr>
+  <td>USB Firmware MSC On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td>16M Flash(3M APP/9.9MB FATFS)</td>
+</tr>
+<tr>
+  <td>Board Revision</td>
+  <td>Radio-SX1262</td>
+</tr>
+<tr>
+  <td>Upload Mode</td>
+  <td>UART0/Hardware CDC</td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>USB Mode</td>
+  <td>CDC and JTAG</td>
+</tr>
+<tr>
+  <td>USB Mode</td>
+  <td>CDC and JTAG</td>
+</tr>
+</tbody>
+</table>
+<ol start="8">
+<li><strong>Board Revision Option</strong>, please select according to the actual purchased RF type. Current options include:<ul>
+<li>Radio-SX1262(Sub 1G LoRa)</li>
+<li>Radio-SX1280(2.4G LoRa)</li>
+<li>Radio-CC1101(Sub 1G (G)MSK, 2(G)FSK, 4(G)FSK, ASK, OOK)</li>
+<li>Radio-LR1121(Sub 1G + 2.4G LoRa)</li>
+<li>Radio-SI4432(Sub 1G ISM)</li>
+</ul>
+</li>
+<li>Select <code>Port</code></li>
+<li>Click <code>Upload</code>, wait for compilation and writing to complete</li>
+<li>If unable to upload the program or the USB device keeps popping up on the computer, please manually put the device into download mode. How to enter download mode, please see <a href="#t-watch-s3-plus-enter-download-mode"  >here</a></li>
+</ol>
+<blockquote>
+<ul>
+<li>If there is no serial message output, please check if USB CDC ON Boot is set to Enabled.</li>
+<li>The board revision varies according to the actual RF module model. The current default version is SX1262.</li>
+<li>This library depends on the latest <a href="https://github.com/espressif/arduino-esp32/releases/tag/3.3.0-alpha1"  target="_blank">arduino-esp32</a> version. If it is lower than <strong>V3.3.0-alpha1</strong>, it will report an error.</li>
+</ul>
+</blockquote>
+<h3 id="T-Watch-S3-Plus-Enter-Download-Mode">T-Watch-S3-Plus Enter Download Mode</h3>
+<blockquote>
+<p>Download mode is only needed when the program does not allow code upload. Normally this step is not required.</p>
+<p>🤖 The BOOT button and RST button for T-Watch-S3-Plus are reserved on the edge of the case. Please follow the steps below to put the device into download mode.</p>
+<ol>
+<li>Connect the development board via USB-C cable</li>
+<li>Press and hold the <strong>BOOT</strong> button, while still holding the <strong>BOOT</strong> button</li>
+<li>Release the <strong>RST</strong> button</li>
+<li>Release the <strong>BOOT</strong> button</li>
+<li>The USB port should be fixed and not blink again. You can click upload.</li>
+<li>Press the <strong>RST</strong> button to exit download mode</li>
+</ol>
+<p>If the new code is successfully written but the device does not light up or has other issues, please use our factory test code to test whether the peripherals can work normally. Please jump here to download the firmware and write it for testing.</p>
+</blockquote>
+<h3 id="Development-Platforms">Development Platforms</h3>
+<ol>
+<li><a href="https://www.espressif.com/en/products/sdks/esp-idf"  target="_blank">ESP-IDF</a></li>
+<li><a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li><a href="https://platformio.org/"  target="_blank">Platform IO</a></li>
+<li><a href="https://micropython.org/"  target="_blank">Micropython</a></li>
+</ol>
+<h2 id="FAQ">FAQ</h2>
+<ul>
+<li><p><strong>Q: What is the main difference between T-Watch S3 Plus and T-Watch S3?</strong><br />
+A: T-Watch S3 Plus adds GPS functionality based on T-Watch S3, other hardware configurations are basically the same.</p>
+</li>
+<li><p><strong>Q: How to power on and off?</strong><br />
+A: Press and hold the POWER button for 2 seconds to power on, hold for 6 seconds to power off. The BOOT button is a built-in button used to enter download mode.</p>
+</li>
+<li><p><strong>Q: Which LoRa frequency bands are supported?</strong><br />
+A: Currently there are two versions: SX1262 and SX1280, supporting 433MHz~923MHz frequency bands. Please choose the appropriate version according to the regulations in your region.</p>
+</li>
+<li><p><strong>Q: How to develop watch applications?</strong><br />
+A: It is recommended to use the TTGO_TWatch_Library, which provides rich watch UI components and sensor drivers for rapid watch application development.</p>
+</li>
+<li><p><strong>Q: What is the battery life?</strong><br />
+A: Battery life depends on usage scenarios. Under normal usage conditions, it can last for several days. For specific times, please refer to actual test data.</p>
+</li>
+</ul>
+<h2 id="Projects">Projects</h2>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library/blob/t-watch-s3/schematic/T_WATCH_S3.pdf"  target="_blank">T-Watch S3 Plus</a></li>
+</ul>
+<h2 id="Resources">Resources</h2>
+<ul>
+<li><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">ESP32-S3 Datasheet</a></li>
+<li><a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bma423-ds000.pdf"  target="_blank">BMA423 Datasheet</a></li>
+<li><a href="https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library"  target="_blank">AXP2101 Datasheet</a></li>
+<li><em>(More resources please refer to GitHub repository)</em></li>
+</ul>
+<h2 id="Dependent-Libraries">Dependent Libraries</h2>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library/tree/t-watch-s3"  target="_blank">TTGO_TWatch_Library</a></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html">
+                            <span class="icon"></span>
+                            <span class="label">T-Display Bar</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html">
+                            <span class="label">T5 E-Paper</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

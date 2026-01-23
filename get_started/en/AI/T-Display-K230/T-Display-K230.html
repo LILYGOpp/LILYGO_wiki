@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-Display K230 - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["K230", "AIoT", "LoRa", "AMOLED", "RISC-V"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/AI/T-Display-K230/T-Display-K230.html">English</a></li>
+<li class=""><a  href="/get_started/zh/AI/T-Display-K230/T-Display-K230.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">AI Kit</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-Display K230</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>K230</li>
+                            
+                                <li>AIoT</li>
+                            
+                                <li>LoRa</li>
+                            
+                                <li>AMOLED</li>
+                            
+                                <li>RISC-V</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/K256outlook1.jpg" alt="T-Display K230" /></p>
+</div>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(103, 175, 8)" href="https://lilygo.cc/products/t-display-k230">Official Store</a>
+</div>
+<h2 id="Version-History%3A">Version History:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update Date</th>
+  <th style="text-align:left">Update Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Display-K230_V1.0</td>
+  <td style="text-align:center">2024-01-01</td>
+  <td style="text-align:left">Initial Version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Purchase-Link">Purchase Link</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">Memory</th>
+  <th style="text-align:center">Storage</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Display K230</td>
+  <td style="text-align:center">K230 + ESP32-S3</td>
+  <td style="text-align:center">8Gb LPDDR4</td>
+  <td style="text-align:center">16MB FLASH + TF Card</td>
+  <td style="text-align:center"><a href="https://lilygo.cc/products/t-display-k230"  target="_blank">LILYGO Mall</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Contents">Table of Contents</h2>
+<ul>
+<li><a href="#description"  >Description</a></li>
+<li><a href="#preview"  >Preview</a></li>
+<li><a href="#modules"  >Modules</a></li>
+<li><a href="#k230-sdk-quick-development-guide"  >K230 SDK Quick Development Guide</a></li>
+</ul>
+<h2 id="Description">Description</h2>
+<p>T-Display K230 is a new product based on Canaan Technology's latest K230 chip, following the K210. It inherits the powerful computing capability of K230 with up to 1.6GHz frequency, integrates LILYGO's signature LoRa communication and display features, and includes HDMI and Ethernet interfaces, providing developers with broader application possibilities.</p>
+<p>In terms of design, T-Display K230 adopts a handheld device size design, equipped with a 4.1-inch high-quality AMOLED screen supporting capacitive touch, offering a smoother visual and interactive experience. As a high-performance chip in the AIoT field, K230 features rich computing capabilities and expansion interfaces, with dual-core RISC-V processors reaching up to 1.6GHz frequency, integrated NPU computing power close to 1.6TOPS, supporting AI inference acceleration. The combination of LoRa communication + ISP camera gives T-Display K230 strong advantages in remote wireless data transmission, AI recognition, IoT monitoring interaction, and other fields.</p>
+<h2 id="Preview">Preview</h2>
+<h3 id="Physical-Images">Physical Images</h3>
+<div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/K256outlook3.jpg" alt="T-Display-K230" /></p>
+</div>
+<h3 id="Pinout-Diagram">Pinout Diagram</h3>
+<img src="./assets/T-Display-K230-cn.jpg" alt="summary" width=100%>
+<h2 id="Modules">Modules</h2>
+<h3 id="1.-Main-Processor-%28K230%29">1. Main Processor (K230)</h3>
+<ul>
+<li>Chip: Canaan K230</li>
+<li>CPU Big Core: 1.6GHz RISC-V, 128bit RVV 1.0 extension</li>
+<li>CPU Small Core: 0.8GHz RISC-V</li>
+<li>NPU (KPU): Computing power close to 1.6TOPS, supports INT8/INT16</li>
+<li>Memory: 8Gb LPDDR4</li>
+<li>Codec: H.264/H.265 codec, JPEG codec</li>
+</ul>
+<h3 id="2.-Co-processor-%28ESP32-S3%29">2. Co-processor (ESP32-S3)</h3>
+<ul>
+<li>Chip: ESP32-S3-R8</li>
+<li>PSRAM: 8M</li>
+<li>FLASH: 16M</li>
+<li>Functions: Wi-Fi/Bluetooth connectivity, system auxiliary management</li>
+</ul>
+<h3 id="3.-Screen">3. Screen</h3>
+<ul>
+<li>Size: 4.1-inch AMOLED</li>
+<li>Resolution: 568×1232</li>
+<li>Interface: 2 lane MIPI DSI</li>
+<li>Touch: Capacitive touch screen (GT9895)</li>
+</ul>
+<h3 id="4.-Camera">4. Camera</h3>
+<ul>
+<li>Interface: 3 channels MIPI CSI-2</li>
+<li>Configuration: Default configured for one channel, supports up to 1x4lane + 1x2lane</li>
+<li>Speed: Up to 1.5Gbps</li>
+</ul>
+<h3 id="5.-Communication-Modules">5. Communication Modules</h3>
+<ul>
+<li>LoRa: SX1262, SX1280, supports 433~923MHz frequency bands</li>
+<li>Wi-Fi: 802.11b/g/n (ESP32-S3)</li>
+<li>Ethernet: IEEE 802.3u compatible</li>
+<li>Bluetooth: Bluetooth 5 (LE) (ESP32-S3)</li>
+</ul>
+<h3 id="6.-Audio">6. Audio</h3>
+<ul>
+<li>Output: 3.5mm audio interface</li>
+<li>Input: Microphone</li>
+</ul>
+<h3 id="Overview">Overview</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Component</th>
+  <th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">Main Processor</td>
+  <td style="text-align:center">K230 Dual-core RISC-V (1.6GHz + 0.8GHz)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Co-processor</td>
+  <td style="text-align:center">ESP32-S3-R8</td>
+</tr>
+<tr>
+  <td style="text-align:center">NPU</td>
+  <td style="text-align:center">1.6TOPS, supports AI inference acceleration</td>
+</tr>
+<tr>
+  <td style="text-align:center">Memory</td>
+  <td style="text-align:center">8Gb LPDDR4</td>
+</tr>
+<tr>
+  <td style="text-align:center">Storage</td>
+  <td style="text-align:center">16MB FLASH + TF card expansion</td>
+</tr>
+<tr>
+  <td style="text-align:center">Screen</td>
+  <td style="text-align:center">4.1-inch AMOLED (568×1232)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Camera</td>
+  <td style="text-align:center">3 channels MIPI CSI-2</td>
+</tr>
+<tr>
+  <td style="text-align:center">Video Output</td>
+  <td style="text-align:center">HDMI 1080P@30FPS</td>
+</tr>
+<tr>
+  <td style="text-align:center">LoRa</td>
+  <td style="text-align:center">SX1262/SX1280 (433~923MHz)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Network</td>
+  <td style="text-align:center">Wi-Fi + Ethernet</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB</td>
+  <td style="text-align:center">1 × POWER + 1 × USB 2.0 OTG (TYPE-C)</td>
+</tr>
+<tr>
+  <td style="text-align:center">IO Interface</td>
+  <td style="text-align:center">2×20 dual-row expansion interface</td>
+</tr>
+<tr>
+  <td style="text-align:center">Buttons</td>
+  <td style="text-align:center">RST + BOOT + INT0</td>
+</tr>
+<tr>
+  <td style="text-align:center">Indicators</td>
+  <td style="text-align:center">Power indicator + RGB light</td>
+</tr>
+<tr>
+  <td style="text-align:center">Power</td>
+  <td style="text-align:center">5V/500mA</td>
+</tr>
+<tr>
+  <td style="text-align:center">Dimensions</td>
+  <td style="text-align:center"><strong>104×51×15.5mm</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="K230-SDK-Quick-Development-Guide">K230 SDK Quick Development Guide</h2>
+<p>-<a href="https://www.youtube.com/watch?v=lxcQWDoruOI"  target="_blank">K230 SDK Video Tutorial</a></p>
+<h3 id="K230-SDK-Structure-Introduction">K230 SDK Structure Introduction</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Level 1 Directory</th>
+  <th style="text-align:center">Level 2 Directory</th>
+  <th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">configs</td>
+  <td style="text-align:center">NA</td>
+  <td style="text-align:left">Resource configuration (memory allocation planning)</td>
+</tr>
+<tr>
+  <td style="text-align:center">output</td>
+  <td style="text-align:center">NA</td>
+  <td style="text-align:left">SDK compilation products</td>
+</tr>
+<tr>
+  <td style="text-align:center">src</td>
+  <td style="text-align:center">big</td>
+  <td style="text-align:left">Big core RTSmart code</td>
+</tr>
+<tr>
+  <td style="text-align:center">src</td>
+  <td style="text-align:center">common</td>
+  <td style="text-align:left">Big and small core common code</td>
+</tr>
+<tr>
+  <td style="text-align:center">src</td>
+  <td style="text-align:center">little</td>
+  <td style="text-align:left">Small core Linux code</td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">docker</td>
+  <td style="text-align:left">dockerfile</td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">doxygen</td>
+  <td style="text-align:left">doxygen scripts and configuration files</td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">kconfig</td>
+  <td style="text-align:left"></td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">gen_image.sh</td>
+  <td style="text-align:left">Script to generate flashable images</td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">gen_image_cfg</td>
+  <td style="text-align:left">Image partition configuration files</td>
+</tr>
+<tr>
+  <td style="text-align:center">tools</td>
+  <td style="text-align:center">tuning-tool-client</td>
+  <td style="text-align:left">PC-side image debugging tool</td>
+</tr>
+</tbody>
+</table>
+<p>K230 SDK is a software development kit for K230 development boards, containing source code, toolchains, and other related resources needed for development based on Linux &amp; RT-smart dual-core heterogeneous systems.</p>
+<h3 id="Setting-Up-Development-Environment">Setting Up Development Environment</h3>
+<p>K230 SDK needs to be compiled in a Linux environment, Ubuntu Linux 20.04 is recommended.</p>
+<blockquote>
+<p>If you need to compile in a Windows environment, it is recommended to use WSL2 + Docker environment.</p>
+</blockquote>
+<h4 id="Using-Docker-Compilation-Environment">Using Docker Compilation Environment</h4>
+<ul>
+<li><p>Get docker compilation image<br />
+It is recommended to compile K230 SDK in a docker environment, you can directly use the following docker image:</p>
+
+<pre class="language-shell"><code class="language-shell">docker pull ghcr.io/kendryte/k230_sdk
+</code></pre>
+<p>You can confirm the docker image is successfully pulled using the following command:</p>
+
+<pre class="language-shell"><code class="language-shell">  docker images | grep k230_sdk
+</code></pre>
+<blockquote>
+<p>Note: The docker image does not include toolchain by default. After downloading the source code, use the command 'make prepare_sourcecode' to automatically download the toolchain to the current compilation directory.</p>
+</blockquote>
+</li>
+</ul>
+<p>If you don't use the docker compilation environment but prefer to use native Linux for compilation, you can refer to <code>tools/docker/Dockerfile</code> to install the corresponding tools into your Linux system.</p>
+<p>If the download speed is slow or unsuccessful, you can use <code>tools/docker/Dockerfile</code> to compile the docker image yourself. For details, please refer to <a href="https://github.com/kendryte/k230_docs/blob/main/zh/01_software/board/K230_SDK_%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md#43-%E7%BC%96%E8%AF%91-sdk"  target="_blank">K230 SDK Usage Instructions</a></p>
+<h3 id="Compiling-K230-SDK">Compiling K230 SDK</h3>
+<h4 id="Download-K230-SDK-Source-Code">Download K230 SDK Source Code</h4>
+
+<pre class="language-shell"><code class="language-shell">git clone https://github.com/kendryte/k230_sdk
+cd k230_sdk
+make prepare_sourcecode
+</code></pre>
+<blockquote>
+<p><code>make prepare_sourcecode</code> will automatically download Linux and RT-Smart toolchain, buildroot package, AI package, etc. Please ensure this command executes successfully without any Errors. Download time and speed depend on actual network speed.</p>
+</blockquote>
+<h4 id="Start-Compiling-K230-SDK">Start Compiling K230 SDK</h4>
+<p>Taking docker image compilation as an example:</p>
+<ol>
+<li><p>Confirm the current directory is the <code>k230_sdk</code> source code root directory,</p>
+</li>
+<li><p>Use the following command to enter docker</p>
+</li>
+</ol>
+
+<pre class="language-shell"><code class="language-shell">  docker run -u root -it -v $(pwd):$(pwd) -v $(pwd)/toolchain:/opt/toolchain -w $(pwd) ghcr.io/kendryte/k230_sdk /bin/bash
+</code></pre>
+<blockquote>
+<p>Select different config configurations for compilation based on different development boards or software functions. Compilation command format: <code>make CONF=xxx</code>, for example:</p>
+</blockquote>
+<blockquote>
+<p>To compile K230-USIP-LP3-EVB board image, execute <code>make CONF=k230_evb_defconfig</code> command to start compilation</p>
+</blockquote>
+<blockquote>
+<p>To compile CanMV-K230 board image, execute <code>make CONF=k230_canmv_defconfig</code> command to start compilation</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>The automatically downloaded toolchain in the external directory will be mapped to the <code>/opt/toolchain/</code> directory in the docker image.</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>The default parameter <code>-u root</code> specifies docker to execute as root user, k230_sdk can be compiled without root permissions</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Please use the complete path <code>ghcr.io/kendryte/k230_sdk</code> for the docker image. If using a locally compiled docker image, please modify the name accordingly</li>
+</ul>
+</blockquote>
+<h4 id="Compilation-Products-Introduction">Compilation Products Introduction</h4>
+<p>Taking the products generated by make CONF=k230_evb_defconfig compilation as an example:</p>
+
+<pre class="language-shell"><code class="language-shell">k230_evb_defconfig/images
+├── big-core
+├── env.env
+├── jffs2.env
+├── little-core
+├── sysimage-sdcard.img    # SD and eMMC non-secure boot image
+├── sysimage-sdcard.img.gz # SD and eMMC non-secure boot image compressed package
+├── sysimage-spinor32m.img # norflash non-secure boot image
+├── sysimage-spinor32m.img.gz    # norflash non-secure boot image compressed package
+└── sysimage-spinor32m_jffs2.img # norflash jffs2 non-secure boot image 
+</code></pre>
+<p>Both TF card and eMMC can use the<code>sysimage-sdcard.img</code> image, or use <code>sysimage-sdcard.img.gz</code> decompressed to get this file.</p>
+<h3 id="Pre-compiled-Image-Download">Pre-compiled Image Download</h3>
+<p>If you don't want to compile the image yourself, you can download pre-compiled images and use them directly for flashing.</p>
+<ol>
+<li>**<a href="https://github.com/kendryte/k230_sdk/tree/main"  target="_blank">main branch</a></li>
+</ol>
+<p>** as a release branch, compiled release images are automatically published to the <a href="https://github.com/kendryte/k230_sdk/releases"  target="_blank">Release</a> page. (Supported from v1.4 version)</p>
+<p>2.Pre-compiled release images: Please visit <a href="https://developer.canaan-creative.com/resource"  target="_blank">Canaan Developer Community</a>, then in the <code>K230/Images</code> category, download the required image files. For <code>evb</code> devices download<code>k230_evb*.img.gz</code>, for <code>canmv</code> devices download <code>k230_canmv*.img.gz</code>.</p>
+<blockquote>
+<p>The downloaded images are in .gz compressed format by default, which needs to be decompressed first before flashing.<br />
+The K230 micropython image supports different functions compared to K230 SDK.</p>
+</blockquote>
+<h3 id="Flashing-Image-Files">Flashing Image Files</h3>
+<h4 id="Flashing-TF-Card">Flashing TF Card</h4>
+<p>If using Linux to flash TF card, you need to first confirm the TF card name in the system <code>/dev/sdx</code>, and replace <code>/dev/sdx</code> in the following command.</p>
+
+<pre class="language-shell"><code class="language-shell">sudo dd if=sysimage-sdcard.img of=/dev/sdx bs=1M oflag=sync
+</code></pre>
+<p>If using Windows for flashing, it is recommended to use the <a href="http://rufus.ie/downloads/"  target="_blank">rufus tool</a>.</p>
+<p>For other more detailed flashing methods, please refer to K230 SDK documentation.</p>
+<h3 id="Power-On-and-Boot">Power On and Boot</h3>
+<h4 id="K230-EVB-Development-Board-Power-On-and-Boot">K230 EVB Development Board Power On and Boot</h4>
+<p>K230 EVB supports multiple boot methods including SDCard, eMMC, norflash, etc. Users can switch between different boot modes by changing the boot <a href="https://github.com/kendryte/k230_docs/blob/main/zh/00_hardware/K230_DEMO_BOARD%E8%B5%84%E6%BA%90%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md#%E7%94%B5%E6%BA%90%E5%8C%BA%E5%BC%80%E6%9C%BA%E4%B8%8A%E7%94%B5%E6%96%B9%E5%BC%8F"  target="_blank">switch</a>settings on the board.<br />
+For development convenience, it is recommended to prepare a TF card and set the boot switch to SD card boot mode. Later, you can consider burning the image file to eMMC.</p>
+<ol>
+<li>Please first <strong>confirm that the startup switch SW1 is set to the SD card startup mode</strong> (for details, please refer to <a href="https://github.com/kendryte/k230_docs/blob/main/zh/00_hardware/K230_DEMO_BOARD%E8%B5%84%E6%BA%90%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.md#%E7%94%B5%E6%BA%90%E5%8C%BA%E5%BC%80%E6%9C%BA%E4%B8%8A%E7%94%B5%E6%96%B9%E5%BC%8F"  target="_blank">Power-on Method</a></li>
+<li>Insert the TF card with the completed burning into the TF card slot of the development board</li>
+<li>Connect the power supply to the development board</li>
+<li><strong>Pull the power switch K1 to the ON position</strong>, and the system can be powered on and started</li>
+<li>If you have connected the serial port, you can see the startup log output in the serial port.</li>
+</ol>
+<h4 id="CanMV-K230-Development-Board-Power-On-and-Boot">CanMV-K230 Development Board Power On and Boot</h4>
+<p>K230 CanMV-K230 development board supports SDCard boot method and HDMI output display. Therefore, you need to prepare a TF card, and it is recommended to prepare an HDMI monitor.</p>
+<ol>
+<li>Insert the TF card that has been programmed into the TF card slot of the development board.</li>
+<li>Power on the development board. At this point, the system can be powered on and started.</li>
+</ol>
+<p>After the system is powered on, by default, there will be <strong>two serial port devices</strong>, which can be used respectively to access the small-core Linux and the large-core RTSmart.</p>
+<p>The default username for the small-core Linux is &quot;root&quot; and the password is empty. In the large-core RTSmart system, an application will automatically start at boot. You can press the <code>q</code> key to exit to the command prompt terminal.</p>
+<p>base platform:<br />
+<code>Ubuntu 20.04</code></p>
+<p>Refer to BUILD, you can use Docker or local environment for compilation, compilation speed is faster.Or refer to K230 CanMV Custom Firmware</p>
+<ul>
+<li>Flashing:</li>
+</ul>
+<p>Under Linux, directly use the dd command for flashing. Under Windows, use flashing tools. Refer to K230 CanMV How to Flash Firmware.</p>
+<ul>
+<li><p>Operator:</p>
+</li>
+<li><p>Compile firmware:</p>
+</li>
+</ul>
+
+<pre class="language-shell"><code class="language-shell">      cd canmv_k230
+      time make log
+</code></pre>
+<p><code>canmv_k230/output/k230_canmv_v3p0</code>  generates <code>CanMV-K230-V3P0_rtsmart_localnncase_v2.9.0.img</code>  which can be burned onto an SD card</p>
+<ul>
+<li>Compile app:</li>
+</ul>
+<p>Change to current directory canmv_k230</p>
+
+<pre class="language-shell"><code class="language-shell">      cd canmv_k230/src/rtsmart/mpp
+      source build_env.sh
+      cd userapps/sample/sample_display
+      make
+</code></pre>
+<p>In the sample/elf directory, generate sample_display.elf</p>
+<p>Default app: sample_display</p>
+<p>Rename sample_display.elf to <code>app.elf</code>, copy to the SD card's sdcard partition, reboot, and it will run by default.</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html">
+                            <span class="icon"></span>
+                            <span class="label">T-A7670SA</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/en/AI/T-Bao/T-Bao.html">
+                            <span class="label">T-Bao</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en"  class=" language_en ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="Firmware">
+    
+    
+    <meta name="description" content="Firmware">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Firmware - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["START", "Firmware", "LILYGO"], "date": "2026-01-23", "update": [], "ts": 1769149852, "author": "", "brief": "", "cover": "", "order": 1, "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/get_started/en/">Products</a></li>
+<li class="active"><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="">
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Firmware</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>START</li>
+                            
+                                <li>Firmware</li>
+                            
+                                <li>LILYGO</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="Last modify date: 2026-01-23">
+                                    2026-01-23
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <span id="blog_start"></span><h2 id="DISPLAY">DISPLAY</h2>
+<h3 id="T-Display-S3">T-Display-S3</h3>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3?variant=42589373268149"  target="_blank">T-Display-S3</a></td>
+  <td><a href="./bin/T-Display-S3/ScreenDetection.bin"  >ScreenDetection</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3?variant=42589373268149"  target="_blank">T-Display-S3</a></td>
+  <td><a href="./bin/T-Display-S3/firmware_no_touch.bin"  >Factory</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3?variant=42351558590645"  target="_blank">T-Display-S3-Touch</a></td>
+  <td><a href="./bin/T-Display-S3/firmware_touch.bin"  >Factory</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3?variant=43164741632181"  target="_blank">T-Display-S3-MIDI</a></td>
+  <td><a href="./bin/T-Display-S3/T-Display-S3-MIDI_V1.0.0_firmware.bin"  >firmware</a></td>
+  <td>Original</td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3/T-Display-S3-MIDI_V1.0.1_firmware.bin"  >firmware</a></td>
+  <td>Fixed T-Display S3 MIDI left and right channel error issue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="T-Display-S3-Pro">T-Display-S3 Pro</h3>
+<table>
+<thead>
+<tr>
+  <th>firmware</th>
+  <th>Describe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Factory_1.x.bin</td>
+  <td>Default factory-installed desktop firmware</td>
+</tr>
+<tr>
+  <td>UnitTest_V1.x_Release.bin</td>
+  <td>Firmware for testing hardware, outputting debugging information to Qwiic UART</td>
+</tr>
+<tr>
+  <td>UnitTest_V1.x_Debug.bin</td>
+  <td>Firmware for testing hardware, output debugging information to USB CDC</td>
+</tr>
+<tr>
+  <td>UnitTest_V1.x_DiscChg_Release.bin</td>
+  <td>Firmware for testing hardware,Disable charge function, outputting debugging information to Qwiic UART</td>
+</tr>
+<tr>
+  <td>UnitTest_V1.x_DiscChg_Debug.bin</td>
+  <td>Firmware for testing hardware,Disable charge function, output debugging information to USB CDC</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>
+V1.0
+</summary>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3-pro"  target="_blank">T-Display-S3-Pro</a></td>
+  <td><a href="./bin/T-Display-S3-Pro/Factory_V1.0.bin"  >Factory</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/Factory_V1.0_Release.bin"  >Release</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.0_Debug.bin"  >debug</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.0_DiscChg_Release.bin"  >DiscChg_Release</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.0_DiscChg_Debug.bin"  >DiscChg_Debug</a></td>
+</tr>
+</tbody>
+</table>
+</details>
+<!-- ***************************************************** -->
+<details>
+<summary>
+V1.1
+</summary>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://www.lilygo.cc/products/t-display-s3-pro"  target="_blank">T-Display-S3-Pro</a></td>
+  <td><a href="./bin/T-Display-S3-Pro/Factory_V1.1.bin"  >Factory</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/Factory_V1.1_Release.bin"  >Release</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.1_Debug.bin"  >debug</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.1_DiscChg_Release.bin"  >DiscChg_Release</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Display-S3-Pro/UnitTest_V1.1_DiscChg_Debug.bin"  >DiscChg_Debug</a></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id=""></h3>
+<h2 id="LoRa">LoRa</h2>
+<h3 id="LoRa32">LoRa32</h3>
+<details>
+<summary>
+LoRa32 V1.3
+</summary>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://lilygo.cc/products/lora-v1-3"  target="_blank">T3 LoRa32 V1.3</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_3-recv--868M.bin"  >recv-868M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_3-send--868M.bin"  >send-868M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_3-recv--915M.bin"  >recv-915M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_3-send--915M.bin"  >send-915M</a></td>
+</tr>
+</tbody>
+</table>
+</details>
+<!-- ***************************************************** -->
+<details>
+<summary>
+LoRa32 V1.6.1
+</summary>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://lilygo.cc/products/lora3"  target="_blank">T3 LoRa32 V1.6.1</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-recv-433M.bin"  >recv-433M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-send-433M.bin"  >send-433M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-recv-868M.bin"  >recv-868M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-send-868M.bin"  >send-868M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-recv-915M.bin"  >recv-915M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/firmware-1_6_1-send-915M.bin"  >send-915M</a></td>
+</tr>
+</tbody>
+</table>
+</details>
+<!-- ***************************************************** -->
+<details>
+<summary>
+LoRa32 V3
+</summary>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://lilygo.cc/products/t3-tcxo"  target="_blank">T3 LoRa32 V3</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/T3_V_3_TXCO_Recv.bin"  >T3_V_3_TXCO_Recv</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/LoRa32/T3_V_3_TXCO_Sender.bin"  >T3_V_3_TXCO_Sender</a></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="T-LoRa-Pager">T-LoRa-Pager</h3>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://lilygo.cc/products/t-lora-pager"  target="_blank">T-LoRa-Pager</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-LoRaPager/factory.tlora.pager.lr1121.20251031.bin"  >Factory.LR1121</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-LoRaPager/factory.tlora.pager.sx1262.20251031.bin"  >Factory.SX1262</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Portable">Portable</h2>
+<h3 id="T-Echo">T-Echo</h3>
+<blockquote>
+<p><code>firmware-xxx.uf2</code> firmware includes LoRa transceiver, BLE connection, all hardware function test items, about ble , please download nRF Connect on google play, and then you can scan Bluetooth devices through nRF Connect.</p>
+</blockquote>
+<blockquote>
+<p><code>gps_factory.uf2</code> Used to diagnose whether the hardware is normal and test when GPS fails.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+  <th>Product</th>
+  <th>Firmware Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="https://lilygo.cc/products/t-echo-lilygo"  target="_blank">T-Echo</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/firmware-433M.uf2"  >firmware-433M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/firmware-868M.uf2"  >firmware-868M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/firmware-915M.uf2"  >firmware-915M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/firmware-920M.uf2"  >firmware-920M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/firmware-923M.uf2"  >firmware-923M</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="./bin/T-Echo/gps_factory.uf2"  >gps_factory</a></td>
+</tr>
+<tr>
+  <td></td>
+  <td><a href="https://flasher.meshtastic.org"  target="_blank">Meshtastic_Online</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="How-to-update-the-firmware%3F">How to update the firmware?</h4>
+<ul>
+<li><p>Connect the USB-C port to the device. Do not use the USB-C to USB-C port; use the USB-A to USB-C port.</p>
+</li>
+<li><p>Double-click the top left button on the device. Remember to double-click. If this doesn't work, try again.</p>
+</li>
+<li><p>Once the disk is visible on your computer, drag the <code>*.uf2</code> firmware file to the disk and wait for the file to copy.</p>
+</li>
+<li><p>The device should boot normally</p>
+</li>
+</ul>
+<h3 id="T-Deck">T-Deck</h3>
+<table>
+<thead>
+<tr>
+  <th>Firmware Name</th>
+  <th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./bin/T-Deck/T-Keyboard_Keyboard_ESP32C3_250620.bin"  >T-Keyboard.bin</a></td>
+  <td>T-Deck Keyboard C3 firmware</td>
+</tr>
+<tr>
+  <td><a href="./bin/T-Deck/T-Deck_UnitTest_250620.bin"  >T-Deck_UnitTest.bin</a></td>
+  <td>T-Deck/T-Deck-Plus function test firmware</td>
+</tr>
+<tr>
+  <td><a href="./bin/T-Deck/T-Deck-Plus-TouchFix_241203.bin"  >T-Deck-Plus-TouchFix.bin</a></td>
+  <td>T-Deck-Plus Touch Fix</td>
+</tr>
+<tr>
+  <td><a href="https://flasher.meshtastic.org"  target="_blank">Meshtastic Online</a></td>
+  <td>Meshtastic Web flasher</td>
+</tr>
+</tbody>
+</table>
+<h3 id="T-Deck-pro">T-Deck pro</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Firmware            </th>
+  <th style="text-align:center">        description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Deck-Pro/H693_factory_v1.3_20251015.bin"  >Factory_v1.2</a></td>
+  <td style="text-align:center">Factory firmware</td>
+</tr>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Deck-Pro/H693_factory_v1.2_20250412_fix.bin"  >Factory_v1.2_fix</a></td>
+  <td style="text-align:center">Fix firmware</td>
+</tr>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Deck-Pro/Test_EPD.bin"  >Test_EPD</a></td>
+  <td style="text-align:center">Display test</td>
+</tr>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Deck-Pro/Test_pcm5102a.bin"  >Test_pcm5102a</a></td>
+  <td style="text-align:center">Sound test(non-4G version)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="T-Watch-S3">T-Watch S3</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Firmware            </th>
+  <th style="text-align:center">        description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Watch/factory.twatchs3.sx1262.20251031.bin"  >Watch_S3_Factory</a></td>
+  <td style="text-align:center">SX1262 Factory firmware</td>
+</tr>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Watch/factory.twatchs3.sx1280.20251031.bin"  >Watch_S3_Factory</a></td>
+  <td style="text-align:center">SX1280 Factory firmware</td>
+</tr>
+<tr>
+  <td style="text-align:center"><a href="./bin/T-Watch/factory.watch.ultra.sx1262.20251106.bin"  >Watch_Ulrta_Factory</a></td>
+  <td style="text-align:center">Watch Ultra Factory firmware</td>
+</tr>
+</tbody>
+</table>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

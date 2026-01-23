@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-TWR - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["ESP32-S3", "GNSS", "Walkie-Talkie", "OLED"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/High_speed/T-TWR/T-TWR.html">English</a></li>
+<li class=""><a  href="/get_started/zh/High_speed/T-TWR/T-TWR.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-TWR</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>ESP32-S3</li>
+                            
+                                <li>GNSS</li>
+                            
+                                <li>Walkie-Talkie</li>
+                            
+                                <li>OLED</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-TWR-1.jpg" alt="T-TWR" /></p>
+</div>
+<blockquote>
+<p>Note: T-TWR has UHF and VHF receiver versions. The main difference is the walkie-talkie frequency band. UHF walkie-talkie frequency band is 400-480MHz, VHF walkie-talkie frequency band is 134-174MHz.</p>
+</blockquote>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(103, 175, 8)" href="https://lilygo.cc/products/t-twr-rev2-1?variant=44505308528821">Official Store</a>
+</div>
+<h2 id="Version-History%3A">Version History:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update date</th>
+  <th style="text-align:left">Update description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-TWR REV2.1</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:left">Current Version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Purchase-Links">Purchase Links</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">FLASH</th>
+  <th style="text-align:center">PSRAM</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-TWR REV2.1</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+  <td style="text-align:center">16MB</td>
+  <td style="text-align:center">8MB (Octal SPI)</td>
+  <td style="text-align:center"><a href="https://lilygo.cc/products/t-twr-rev2-1?variant=44505308528821"  target="_blank">LILYGO Mall</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Contents">Table of Contents</h2>
+<ul>
+<li><a href="#description"  >Description</a></li>
+<li><a href="#preview"  >Preview</a></li>
+<li><a href="#modules"  >Modules</a></li>
+<li><a href="#quick-start"  >Quick Start</a></li>
+<li><a href="#faq"  >FAQ</a></li>
+<li><a href="#projects"  >Projects</a></li>
+<li><a href="#resources"  >Resources</a></li>
+<li><a href="#dependent-libraries"  >Dependent Libraries</a></li>
+</ul>
+<h2 id="Description">Description</h2>
+<p>LILYGO T-TWR REV2.1 is a highly integrated development board based on ESP32-S3-WROOM-1-N16R8, equipped with 16MB Flash and 8MB PSRAM, supporting Wi-Fi/Bluetooth 5 (LE) dual-mode communication, built-in PMU AXP2102 power management unit, supporting USB/21700/18650 battery multiple power supply modes, suitable for portable device development.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Multi-system Positioning: L76K GNSS module supports GPS, BDS, GLONASS multi-system positioning and AGNSS assistance</li>
+<li>Walkie-Talkie Function: SA868 UHF/VHF walkie-talkie module, optional 134-174MHz or 350-480MHz frequency bands</li>
+<li>HD Display: 1.3-inch SH1106 OLED screen (128×64 resolution, I²C interface)</li>
+<li>Power Management: AXP2102 power management chip, supports multiple power supply modes</li>
+<li>Rich Interfaces: TF card expansion, microphone input, environmental sensor interface, RGB status indicator</li>
+<li>Portable Design: Supports 21700/18650 batteries, suitable for outdoor applications</li>
+</ul>
+<h2 id="Preview">Preview</h2>
+<h3 id="Physical-Image">Physical Image</h3>
+<div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T-TWR-2.jpg" alt="T-TWR" /></p>
+</div>
+<h3 id="Pin-Diagram">Pin Diagram</h3>
+<img src="./assets/T-TWR-3.jpg" alt="summary" width=100%>
+<h2 id="Modules">Modules</h2>
+<h3 id="MCU">MCU</h3>
+<ul>
+<li>Chip: ESP32-S3-WROOM-1-N16R8</li>
+<li>PSRAM: 8M (Octal SPI)</li>
+<li>FLASH: 16M</li>
+<li>Wireless: Wi-Fi 802.11 b/g/n; Bluetooth 5.0 (LE)</li>
+<li>Additional Information: More information available at <a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">Espressif Official ESP32-S3 Datasheet</a></li>
+</ul>
+<h3 id="Display-Module">Display Module</h3>
+<ul>
+<li>Screen: 1.3-inch SH1106 OLED</li>
+<li>Resolution: 128×64 pixels</li>
+<li>Interface: I²C (SDA-1008/SCL-1009)</li>
+<li>Compatible Library: U8g2</li>
+</ul>
+<h3 id="Positioning-Module">Positioning Module</h3>
+<ul>
+<li>Chip: L76K GNSS</li>
+<li>Supported Systems: GPS, BDS, GLONASS</li>
+<li>Assisted Positioning: AGNSS</li>
+<li>Compatible Library: TinyGPSPlus</li>
+</ul>
+<h3 id="Communication-Module">Communication Module</h3>
+<ul>
+<li>Chip: SA868</li>
+<li>Frequency Band Options:<ul>
+<li>UHF Version: 400-480MHz</li>
+<li>VHF Version: 134-174MHz</li>
+</ul>
+</li>
+<li>Function: Walkie-talkie communication</li>
+</ul>
+<h3 id="Power-Management">Power Management</h3>
+<ul>
+<li>Chip: AXP2102 PMU</li>
+<li>Power Supply Methods: USB, 21700 battery, 18650 battery</li>
+<li>Battery Type: Supports 21700/18650 batteries + spring battery holder</li>
+</ul>
+<h3 id="Audio-Module">Audio Module</h3>
+<ul>
+<li>Chip: RS2257XC6</li>
+<li>Function: Audio collection and processing</li>
+</ul>
+<h3 id="Overview">Overview</h3>
+<img src="./assets/T-TWR-4.jpg" alt="summary" width=100%>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Component</th>
+  <th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">MCU</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+</tr>
+<tr>
+  <td style="text-align:center">FLASH</td>
+  <td style="text-align:center">16MB</td>
+</tr>
+<tr>
+  <td style="text-align:center">PSRAM</td>
+  <td style="text-align:center">8MB (Octal SPI)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Display</td>
+  <td style="text-align:center">1.3-inch SH1106 OLED (128×64)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Walkie-Talkie</td>
+  <td style="text-align:center">SA868 UHF/VHF Module</td>
+</tr>
+<tr>
+  <td style="text-align:center">Audio</td>
+  <td style="text-align:center">RS2257XC6 Audio Collection Module</td>
+</tr>
+<tr>
+  <td style="text-align:center">GNSS</td>
+  <td style="text-align:center">L76K GNSS Module (GPS/BDS/GLONASS)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Power Management</td>
+  <td style="text-align:center">AXP2102 PMU</td>
+</tr>
+<tr>
+  <td style="text-align:center">Battery</td>
+  <td style="text-align:center">21700 Battery / 18650 Battery</td>
+</tr>
+<tr>
+  <td style="text-align:center">LED</td>
+  <td style="text-align:center">WS2812 RGB Status Indicator</td>
+</tr>
+<tr>
+  <td style="text-align:center">Encoder</td>
+  <td style="text-align:center">Supports rotary encoder control</td>
+</tr>
+<tr>
+  <td style="text-align:center">Storage</td>
+  <td style="text-align:center">TF Card Expansion Interface</td>
+</tr>
+<tr>
+  <td style="text-align:center">Wireless</td>
+  <td style="text-align:center">2.4GHz Wi-Fi + Bluetooth 5.0 (LE)</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB</td>
+  <td style="text-align:center">1 × USB Port and OTG (TYPE-C)</td>
+</tr>
+<tr>
+  <td style="text-align:center">IO Interface</td>
+  <td style="text-align:center">2 × 15pin Expansion IO Interface</td>
+</tr>
+<tr>
+  <td style="text-align:center">Expansion Interface</td>
+  <td style="text-align:center">2 × 1mm 4-pin STEMMA QT/QWIIC Interface + Antenna Interface</td>
+</tr>
+<tr>
+  <td style="text-align:center">Buttons</td>
+  <td style="text-align:center">1 x RESET + 1 x BOOT + 1 x PWR + 1 x PTT</td>
+</tr>
+<tr>
+  <td style="text-align:center">Power</td>
+  <td style="text-align:center">5V/500mA</td>
+</tr>
+<tr>
+  <td style="text-align:center">Mounting Holes</td>
+  <td style="text-align:center">2 × 2mm Positioning Holes</td>
+</tr>
+<tr>
+  <td style="text-align:center">Dimensions</td>
+  <td style="text-align:center">Product: <strong>126×39×29mm</strong> <br>Antenna: <strong>200mm</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Example-Support">Example Support</h3>
+
+<pre class="language-txt"><code class="language-txt">examples/
+├── Factory                         # TWR Factory Application
+├── GPS_Basic_Example               # GPS example
+├── GPS_Full_Example                # GPS example
+├── Pixels_RGBWstrandtest           # Pixels example
+├── Pixels_Strandtest_Example       # Pixels example
+├── SA868_ATDebug_Example           # Radio  AT Debug example
+├── SA868_ESPSendAudio_Example      # Radio frequency sends ESP32 signal
+├── SD_Test_Example                 # SD Test Example
+├── SD_Time_Example                 # SD Time Example
+├── WAV_Player                      # WAV Player
+├── TFT_ArcFill_Example             # Screen extension example
+├── TFT_Keypad_240x320_Example      # Screen extension example
+├── U8g2_FontUsage_Example          # Onboard OLED U8G2 example
+├── U8g2_GraphicsTest_Example       # Onboard OLED U8G2 example
+└── U8g2_UpdateArea_Example         # Onboard OLED U8G2 example
+</code></pre>
+<h3 id="PlatformIO">PlatformIO</h3>
+<ol>
+<li>Install <a href="https://code.visualstudio.com/"  target="_blank">Visual Studio Code</a> and <a href="https://www.python.org/"  target="_blank">Python</a></li>
+<li>Search for the <code>PlatformIO</code> plugin in the <code>VisualStudioCode</code> extension and install it.</li>
+<li>After the installation is complete, you need to restart <code>VisualStudioCode</code></li>
+<li>After restarting <code>VisualStudioCode</code>, select <code>File</code> in the upper left corner of <code>VisualStudioCode</code> -&gt; <code>Open Folder</code> -&gt; select the <code>T-TWR</code> directory</li>
+<li>Click on the <code>platformio.ini</code> file, and in the <code>platformio</code> column, cancel the sample line that needs to be used, please make sure that only one line is valid</li>
+<li>Click the (✔) symbol in the lower left corner to compile</li>
+<li>Connect the board to the computer USB</li>
+<li>Click (→) to upload firmware</li>
+<li>Click (plug symbol) to monitor serial output</li>
+</ol>
+<h3 id="Arduino">Arduino</h3>
+<ol>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></li>
+<li>Copy all the folders in the <code>T-TWR/lib</code> directory to <code>&lt;C:\Users\UserName\Documents\Arduino\libraries&gt;</code>. If there is no <code>libraries</code> directory, please create a new one. Please note that you are not copying the <code>lib</code> directory, but copying the folders in the lib directory</li>
+<li>Open ArduinoIDE -&gt; <code>Tools</code><br />
+ | Arduino IDE Setting                  | Value                             |<br />
+ | ------------------------------------ | --------------------------------- |<br />
+ | Board                                | <strong>ESP32S3 Dev Module</strong>            |<br />
+ | Port                                 | Your port                         |<br />
+ | USB CDC On Boot                      | Enable                            |<br />
+ | CPU Frequency                        | 240MHZ(WiFi)                      |<br />
+ | Core Debug Level                     | None                              |<br />
+ | USB DFU On Boot                      | Disable                           |<br />
+ | Erase All Flash Before Sketch Upload | Disable                           |<br />
+ | Events Run On                        | Core1                             |<br />
+ | Flash Mode                           | QIO 80MHZ                         |<br />
+ | Flash Size                           | <strong>16MB(128Mb)</strong>                   |<br />
+ | Arduino Runs On                      | Core1                             |<br />
+ | USB Firmware MSC On Boot             | Disable                           |<br />
+ | Partition Scheme                     | <strong>16M Flash(3M APP/9.9MB FATFS)</strong> |<br />
+ | PSRAM                                | <strong>OPI PSRAM</strong>                     |<br />
+ | Upload Mode                          | <strong>UART0/Hardware CDC</strong>            |<br />
+ | Upload Speed                         | 921600                            |<br />
+ | USB Mode                             | <strong>CDC and JTAG</strong>                  |<ul>
+<li>The options in bold are required, others are selected according to actual conditions.</li>
+</ul>
+</li>
+<li>Insert USB into the PC and click Upload &lt;If the upload fails, View the FAQ below&gt;</li>
+</ol>
+<h3 id="Development-Platforms">Development Platforms</h3>
+<ol>
+<li><a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li><a href="https://platformio.org/"  target="_blank">Platform IO</a></li>
+<li><a href="https://code.visualstudio.com/"  target="_blank">VS Code</a></li>
+</ol>
+<h2 id="Pin-Overview">Pin Overview</h2>
+<ol>
+<li><p>⚠⚠⚠ <strong>Precautions (special matters)</strong>:</p>
+<ol>
+<li>The <strong>glue stick (RF) antenna</strong> must be connected. If the antenna is not connected, the RF module may be damaged, and the PMU will automatically turn off the power output</li>
+<li>A separate USB power supply may not meet the power supply requirements, please connect the battery to use , <strong>The Rev2.1 version must use a battery to power the radio frequency unit and cannot use USB to work alone (because the RF current is very large and the noise can be minimized using battery power)</strong></li>
+<li>Please note that when adjusting to high power transmission, please ensure that the battery has sufficient discharge capacity, otherwise the PMU will automatically shut down due to insufficient current.</li>
+<li>TWR Rev2.0 has two versions, one comes with NiceRF AT firmware, and the other is a community version without any functions. For the community version, please jump to <a href="https://github.com/OpenRTX/OpenRTX"  target="_blank">OpenRTX</a> to burn <a href="https://github.com/OpenRTX/sa8x8-fw"  target="_blank">OpenRTX SA8x8 firmware</a> for use. For novices, it is recommended to use NiceRF firmware.</li>
+<li>TWR Rev2.1 is version agnostic. The built-in NiceRF firmware can be flashed to OpenRTX firmware, but the NiceRF firmware cannot be restored after flashing.</li>
+</ol>
+</li>
+<li><p>⚠ <strong>Unable to download the program, the error is shown below.</strong></p>
+  <details>
+  <summary>
+  Click to view detailed steps
+  </summary>
+
+<pre class="language-shell"><code class="language-shell">Flash: [====      ]  35.7% (used 467813 bytes from 1310720 bytes)
+Configuring upload protocol...
+AVAILABLE: cmsis-dap, esp-bridge, esp-builtin, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+Looking for upload port...
+Auto-detected: COM236
+Uploading .pio\build\uhf_band\firmware.bin
+esptool.py v4.5
+Serial port COM236
+Connecting...
+
+A serial exception error occurred: ClearCommError failed (PermissionError(13, 'The device does not recognize the command.', None, 22))
+Note: This error originates from pySerial. It is likely not a problem with esptool, but with the hardware connection or drivers.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+*** [upload] Error 1
+================================================================================================================ [FAILED] Took 8.75 seconds ================================================================================================================
+
+</code></pre>
+<ul>
+<li>Step</li>
+<li>Press the <strong>PWR</strong> button for one second to make sure the TWR is powered on</li>
+<li>Press and hold the <strong>BOOT</strong> button (without releasing it), then press the <strong>RST</strong> button, then release the <strong>RST</strong> button, and finally release the <strong>BOOT</strong> button</li>
+<li>Click the upload button in the IDE and wait for the upload to complete</li>
+<li>Press the <strong>RST</strong> button to exit the download mode</li>
+</ul>
+  </details>
+</li>
+<li><p>⚠ <strong>Can I change the voltage of the peripheral?</strong></p>
+   <details>
+   <summary>
+   Click to view detailed steps
+   </summary>
+     1. Not recommended, changing the peripheral voltage may cause abnormal operation, please do not change the default voltage setting of the peripheral, please refer to the voltage setting in the sample program.
+   </details>
+</li>
+<li><p>⚠ <strong>Why can't I test the charging current to reach the set current?</strong></p>
+   <details>
+   <summary>
+   Click to view detailed steps
+   </summary>
+    1. If you use a USBC cable with low quality or too large or too long wire resistance, there will be a large internal resistance, and there is no rated 5V input on the board, so the PMU will think that the power supply voltage is insufficient, so the rated charging current cannot be reached. ,The solution is to replace the high-quality USBC wire, reduce the length of the wire to meet the requirements of the PMU input voltage<br>
+    2. You can measure the voltage at both ends of the figure below to see if it can meet the 5V input voltage required by the PMU<br>
+      <img width="320"  src=images/input-voltage.jpg>
+<ol>
+<li>Please note that if the charging current is set to 1A, please install a suitable heat sink above the PMU to reduce the risk of heat and damage caused by overheating.</li>
+</ol>
+   </details>
+</li>
+<li><p>⚠  When you think there is a problem with the board, you can try to burn our <a href="https://github.com/Xinyuan-LilyGO/T-TWR/blob/master/firmware/README.MD"  target="_blank">factory firmware</a> for testing, you can first rule out whether it is a hardware problem</p>
+</li>
+<li><p>⚠ <strong>I don’t have a </strong>21700 battery<strong>, can I replace the battery holder with a </strong>18650** battery holder?**</p>
+   <details>
+   <summary>
+   Click to view detailed steps
+   </summary>
+   1. The board is compatible with 21700 and 18650 battery holders, if you have the ability to replace it, please note that **LilyGo does not bear the risk of replacing the battery holder without authorization, damage and Brought to work abnormally**
+   </details>
+</li>
+<li><p>⚠ <strong>Can't turn on automatically after connecting the battery?</strong></p>
+   <details>
+   <summary>
+   Click to view detailed steps
+   </summary>
+   1. Connect the battery separately, you need to press the **PWR button** for one second, the board will start the action, press and hold the **PWR** button for 6 seconds to shut down, the shutdown time can be set by software , In the latest version (Rev2.1), inserting the battery will automatically power on.
+   </details>
+</li>
+<li><p>TWR currently has two modes before leaving the factory, one is flashed with regular firmware and uses the esp built-in boot, and the other uses TinyUF2 as the boot program. For novices, please <a href="https://github.com/Xinyuan-LilyGO/T-TWR/blob/master/firmware/README.MD"  target="_blank">see here</a></p>
+</li>
+<li><p>How to enter TinyUF2 boot mode?</p>
+<p><img src="https://github.com/lyusupov/SoftRF/raw/master/documents/images/ham-1.jpg" width="400"><br></p>
+  <details>
+  <summary>
+  Click to view detailed steps
+  </summary>
+   1. Before entering TinyUF2, the boot program must have been flashed. If it has not been written, please [see here](https://github.com/Xinyuan-LilyGO/T-TWR/blob/master/firmware/README.MD)<br>
+   2. Press the RST button<br>
+   3. After pressing the RST button for one second, press the BOOT button. The disk will be ejected on the computer.<br>
+   4. At this time, drag the firmware with the suffix uf2 into the disk to upgrade the device.<br>
+  </details>
+</li>
+<li><p>⚠ <strong>There is a microphone port on the bottom of the board, do I need to install a microphone? Only for Rev2.0, Rev2.1 has removed the external microphone interface</strong></p>
+  <details>
+  <summary>
+  Click to view detailed steps
+  </summary>
+  1. No, there is already a condenser microphone on board. If you need to use a wired microphone, please remove the board microphone. Please note that **LilyGo will not be responsible for the damage and abnormality of the board caused by unauthorized disassembly of the microphone**
+  </details>
+</li>
+</ol>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html">
+                            <span class="icon"></span>
+                            <span class="label">T-Beam SUPREME</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/en/High_speed/T-Halow/T-Halow.html">
+                            <span class="label">T-Halow</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
