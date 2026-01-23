@@ -1,27 +1,24 @@
 ---
-title: 文章标题
-keywords: 关键词1, 关键词2
-desc: 这里写文章简介
-date: 2022-09-01
+title: LILYGO:专注开源硬件，赋能创新开发
+keywords: LILYGO, markdown, ESP32, Arduino, Platformio , github, lvgl, LoRa, GPS, AMOLED, E-Paper
+desc: LILYGO的官方文档（Wiki），包含了开源软件和开源硬件资料，AIOT资料等等
 ---
 
-## 添加文章
+官网: [LILYGO.cc](https://lilygo.cc/) 或 [Github](https://github.com/Xinyuan-LilyGO)
 
-* 在本文件所在目录创建 markdown 以  `.md` 结尾的文件，比如 `first.md`
-* 在 `sidebar.yaml` 中添加侧边栏链接
+我们设计并生产高品质、易用的开源硬件模块（如 ESP32、墨水屏、LoRa 等），致力于**降低物联网和嵌入式开发门槛**，让您的创意更快、更简单地转化为现实产品。
 
-```markdown
-items:
--   label: Brief
-    file: README.md
--   label: First
-    file: first.md
-```
+服务于**开发者、工程师、创客、物联网爱好者及寻求智能硬件解决方案的企业**，广泛应用于智能家居、工业监控、可穿戴设备、环境传感、低功耗远程通信等创新领域。
 
-## 更多例子
 
-更多请访问: [teedoc.neucrack.com](https://teedoc.neucrack.com/) 或者 [teedoc.github.io](https://teedoc.github.io/)
 
-更多例子访问: [github.com/teedoc/teedoc.github.io](https://github.com/teedoc/teedoc.github.io) 或者 [https://github.com/teedoc/template](https://github.com/teedoc/template) , 或 [sipeed wiki](https://github.com/sipeed/sipeed_wiki)
+**欢迎访问 LILYGO 官方资料中心！** 这里汇集了您开发所需的一切，践行我们的理念：**Make Development Easier**。
 
+*   📚 **详尽产品文档** - 深入了解每个模块的规格与能力。
+*   🎬 **实用开发教程与示例** - 快速上手，查看实际应用效果。
+*   ⚙️ **必备工具与软件** - 获取驱动、烧录工具和开发环境指南。
+*   💡 **专家级使用建议** - 规避常见问题，优化您的设计。
+*   🚀 **快速入门指南** - 零基础也能轻松迈出第一步。
+
+无论您是初次接触还是寻求深度支持，这里都是您的理想起点。
 

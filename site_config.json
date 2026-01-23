@@ -1,34 +1,46 @@
 {
-    "site_name": "mysite",
-    "site_slogon": "",
+    "site_name": "LILYGO Wiki",
+    "site_slogon": "happy to write",
     "site_root_url": "/",
-    "site_domain": "my_name.github.io",
+    "site_domain": "wiki.lilygo.cc",
     "site_protocol": "https",
     "config_template_dir": "config",
-    "source": "https://github.com/my_name/my_name.github.io/blob/main",
+    "source": "https://github.com/Xinyuan-LilyGO/LILYGO_wiki/blob/main",
     "route": {
         "docs": {
-            "/get_started/zh/": "docs/get_started/zh"
+            "/get_started/zh/": "docs/get_started/zh",
+            "/develop/zh/": "docs/develop/zh",
+            "/more/": "docs/more"
         },
         "pages": {
-            "/": "pages/index/zh"
+            "/": "pages/index/zh",
+            "/en/": "pages/index/en"
         },
         "assets": {
             "/static/": "static",
             "/get_started/assets/": "docs/get_started/assets"
         },
         "blog": {
-            "/blog/": "blog"
+            "/news/": "news"
         }
     },
     "translate": {
         "docs": {
-            "/get_started/zh/": [
-                {
+            "/get_started/zh/": [ {
                     "url": "/get_started/en/",
                     "src": "docs/get_started/en"
                 }
-            ]
+            ],
+            "/develop/zh/": [ {
+                    "url": "/develop/en/",
+                    "src": "docs/develop/en"
+                }
+            ],
+            "/more/": [ {
+                "url": "/more/en/",
+                "src": "docs/more/en"
+            }
+        ]
         },
         "pages": {
             "/": [
@@ -39,20 +51,64 @@
             ]
         }
     },
+    "executable": {
+        "python": "python3",
+        "pip": "pip3"
+    },
     "plugins": {
         "teedoc-plugin-markdown-parser":{
             "from": "pypi",
             "config": {
+                "mathjax": {
+                    "enable": true,
+                    "file_name": "tex-mml-svg",
+                    "config": {
+                        "loader": {
+                            "load": []
+                        }
+                    }
+                }
+            }
+        },
+        "teedoc-plugin-jupyter-notebook-parser": {
+            "from": "pypi",
+            "config": {
+            }
+        },
+        "teedoc-plugin-google-translate": {
+            "from": "pypi",
+            "config": {
+            }
+        },
+        "teedoc-plugin-blog": {
+            "from": "pypi",
+            "config": {
+            }
+        },
+        "teedoc-plugin-comments-gitalk": {
+            "from": "pypi",
+            "config": {
+                "contrainer": "comments-container",
+                "env": {
+                    "clientID": "Ov23liQXkB1pa7CIP1bd",
+                    "clientSecret": "3c55599fdff050063dddb3e4708a53cee6d4d77a",
+                    "repo": "LILYGO_wiki",
+                    "owner": "Xinyuan-LilyGO",
+                    "admin": ["puboy7"],
+                    "language": "en",
+                    "main_color": "#4caf7d",
+                    "second_color": "#0a7d43",
+                    "adminAutoCreate": false
+                }
             }
         },
         "teedoc-plugin-theme-default":{
             "from": "pypi",
             "config": {
                 "dark": true,
-                "show_print_page": true,
-                "heading_no_counter": false,
                 "env":{
-                    "main_color": "#4caf7d"
+                    "main_color": "#4caf7d",
+                    "link_color": "#4caf7d"
                 }
             }
         },
@@ -62,9 +118,25 @@
                 "search_hint": "Search"
             }
         },
+        "teedoc-plugin-baidu-tongji": {
+            "from": "pypi",
+            "config": {
+                "code": "4d52982572d5512e9762879ebf063c86"
+            }
+        },
         "teedoc-plugin-blog": {
             "from": "pypi",
             "config": {
+            }
+        },
+        "teedoc-plugin-ad-hint": {
+            "from": "pypi",
+            "config": {
+                "type": "hint",
+                "label": "☆",
+                "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀",
+                "show_after_s": 432000,
+                "date": "2021-11-16 14:40"
             }
         },
         "teedoc-plugin-assets": {

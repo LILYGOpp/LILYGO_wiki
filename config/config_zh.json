@@ -1,33 +1,44 @@
 {
     "locale": "zh_CN",
-    "class": "language_zh",
     "navbar": {
-        "title": "my_site",
+        "title": "LILYGO",
         "logo": {
-            "alt": "my_site logo",
+            "alt": "LILYGO logo",
             "src": "/static/image/logo.png"
         },
         "home_url": "/",
         "items": [
             {
                 "url": "/get_started/zh/",
-                "label": "安装使用",
+                "label": "产品",
                 "position": "left"
             },
             {
-                "url": "/blog/",
-                "label": "博客",
+                "url": "/news/",
+                "label": "START",
                 "position": "left"
             },
             {
-                "url": "https://github.com/neutree/teedoc",
-                "label": "github",
-                "target": "_blank",
-                "position": "right"
+                "label": "<img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'>",
+                "position": "right",
+                "url": "https://lilygo.cc/",
+                "target": "_blank"
+            },
+            {
+                "label": "<img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'>",
+                "position": "right",
+                "url": "https://www.youtube.com/@LILYGO",
+                "target": "_blank"
+            },
+            {
+                "label": "<img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'>",
+                "position": "right",
+                "url": "https://github.com/Xinyuan-LilyGO",
+                "target": "_blank"
             },
             {
                 "id": "language",
-                "label": "Language: ",
+                "label": "<img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;",
                 "position": "right",
                 "type": "language"
             }
@@ -36,16 +47,47 @@
     "footer":{
         "top":[
             {
-                "label": "链接",
+                "label": "相关链接",
                 "items": [
                     {
-                        "label": "使用 teedoc 构建",
-                        "url": "https://teedoc.neucrack.com",
+                        "label": "LILYGO 官网",
+                        "url": "https://lilygo.cc",
                         "target": "_blank"
                     },
                     {
-                        "label": "网站地图",
-                        "url": "/sitemap.xml"
+                        "label": "LILYGO 淘宝",
+                        "url": "https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y",
+                        "target": "_blank"
+                    }
+                ]
+            },
+            {
+                "label": "关注我们",
+                "items": [
+                    {
+                        "label": "Twitter",
+                        "url": "https://x.com/lilygo9",
+                        "target":"_blank"
+                    },
+                    {
+                        "label": "淘宝",
+                        "url": "https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y",
+                        "target":"_blank"
+                    },
+                    {
+                        "label": "Github",
+                        "url": "https://github.com/Xinyuan-LilyGO",
+                        "target":"_blank"
+                    },
+                    {
+                        "label": "YouTuBe",
+                        "url": "https://www.youtube.com/@LILYGO",
+                        "target":"_blank"
+                    },
+                    {
+                        "label": "FaceBook",
+                        "url": "https://www.facebook.com/lilygottgo",
+                        "target":"_blank"
                     }
                 ]
             },
@@ -53,18 +95,13 @@
                 "label": "源码",
                 "items": [
                     {
-                        "label": "github",
-                        "url": "https://github.com/neutree/teedoc",
+                        "label": "开源项目",
+                        "url": "https://github.com/Xinyuan-LilyGO",
                         "target": "_blank"
                     },
                     {
-                        "label": "gitee",
-                        "url": "https://gitee.com/teedoc/teedoc",
-                        "target": "_blank"
-                    },
-                    {
-                        "label": "本网站源文件",
-                        "url": "https://github.com/teedoc/teedoc.github.io",
+                        "label": "Wiki源码",
+                        "url": "https://github.com/Xinyuan-LilyGO/LILYGO_wiki",
                         "target": "_blank"
                     }
                 ]
@@ -72,26 +109,17 @@
         ],
         "bottom": [
             {
-                "label": "*ICP备********号",
-                "url": "https://beian.miit.gov.cn",
-                "target": "_blank"
-            },
-            {
-                "label": "*公网安备***********号",
-                "url": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=****************",
+                "label": "深圳市芯元电子科技有限公司",
+                "url": "https://lilygo.cc/",
                 "target": "_blank"
             }
         ]
     },
     "plugins": {
-        "teedoc-plugin-search":{
+        "teedoc-plugin-ad-hint": {
             "config": {
-                "search_hint": "搜索",
-                "input_hint": "输入关键词，多关键词空格隔开",
-                "loading_hint": "正在加载，请稍候。。。",
-                "download_err_hint": "下载文件失败，请刷新重试或检查网络",
-                "other_docs_result_hint": "来自其它文档的结果",
-                "curr_doc_result_hint": "当前文档搜索结果"
+                "label": "☆",
+                "content": "对我们的产品感兴趣可以关注我们的官网商店以及淘宝店铺<br>Github有感兴趣的项目可以 ☆ star哦~🦀🦀"
             }
         }
     },

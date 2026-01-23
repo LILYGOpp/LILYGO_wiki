@@ -1,0 +1,6 @@
+{
+    "import": "config_en",
+    "class": "language_en",
+    "name": "News",
+    "locale": "en"
+}
