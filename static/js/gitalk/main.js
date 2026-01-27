@@ -7,7 +7,7 @@
     return;
   }
   // render
-  var config = {"clientID": "Ov23liIY8TkGsUdAccq3", "clientSecret": "33ef77d204f03a1b5e847a03dc3efc50038a8aa48", "repo": "LILYGO_wiki", "owner": "LILYGOpp", "admin": ["LILYGOpp"], "language": "en", "adminAutoCreate": false};
+  var config = {"clientID": "Ov23liv42s1V7ifbZNcr", "clientSecret": "a554ff764999685e819975ebf43e6a33836d4105", "repo": "LILYGO_wiki", "owner": "LILYGOpp", "admin": ["LILYGOpp"], "language": "en", "adminAutoCreate": false};
   var html = document.getElementsByTagName("html")[0];
   var id = html.id;
   if(id){
