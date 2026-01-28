@@ -493,47 +493,95 @@ var _hmt = _hmt || [];
 </ol>
 <h3 id="Arduino">Arduino</h3>
 <ol>
-<li><p>安装 <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></p>
-</li>
-<li><p>安装 <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></p>
-</li>
-<li><p>将 <code>lib</code> 目录中的所有文件夹复制到 <code>Sketchbook location</code> 目录中。如何查找库文件位置，<a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">请参阅此处</a></p>
-<ul>
+<li>安装 <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>安装 <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></li>
+<li>将 <code>lib</code> 目录中的所有文件夹复制到 <code>Sketchbook location</code> 目录中。如何查找库文件位置，<a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">请参阅此处</a><ul>
 <li>Windows: <code>C:\Users\{用户名}\Documents\Arduino</code></li>
 <li>macOS: <code>/Users/{用户名}/Documents/Arduino</code></li>
 <li>Linux: <code>/home/{用户名}/Arduino</code></li>
 </ul>
 </li>
-<li><p>打开相应示例</p>
-<ul>
+<li>打开相应示例<ul>
 <li>打开已下载的 <code>LilyGo-LoRa-Series</code> 文件夹</li>
 <li>打开 <code>examples</code> 文件夹</li>
 <li>选择示例文件并打开后缀为 <code>ino</code> 的文件</li>
 </ul>
 </li>
-<li><p>在 Arduino IDE 工具菜单中选择对应开发板型号，点击下方列表中的对应选项进行选择</p>
-<p>| Name                                 | Value                                |<br />
-| ------------------------------------ | ------------------------------------ |<br />
-| Board                                | <strong>ESP32 Dev Module</strong>                 |<br />
-| Port                                 | Your port                            |<br />
-| CPU Frequency                        | 240MHZ(WiFi/BT)                      |<br />
-| Core Debug Level                     | None                                 |<br />
-| Erase All Flash Before Sketch Upload | Disable                              |<br />
-| Events Run On                        | Core1                                |<br />
-| Flash Frequency                      | 80MHZ                                |<br />
-| Flash Mode                           | QIO                                  |<br />
-| Flash Size                           | <strong>4MB(32Mb)</strong>                        |<br />
-| JTAG Adapter                         | Disabled                             |<br />
-| Arduino Runs On                      | Core1                                |<br />
-| Partition Scheme                     | <strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong> |<br />
-| PSRAM                                | <strong>Enable</strong>                           |<br />
-| Upload Speed                         | 921600                               |<br />
-| Programmer                           | <strong>Esptool</strong>                          |</p>
-</li>
-<li><p>请根据您的开发板型号取消 <code>utilities.h</code> 文件中对应型号的注释，例如 <code>T3_V3_0_SX1276_TCXO</code>，否则编译将报错</p>
-</li>
-<li><p>上传程序</p>
-</li>
+<li>在 Arduino IDE 工具菜单中选择对应开发板型号，点击下方列表中的对应选项进行选择</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>ESP32 Dev Module</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi/BT)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Flash Frequency</td>
+  <td>80MHZ</td>
+</tr>
+<tr>
+  <td>Flash Mode</td>
+  <td>QIO</td>
+</tr>
+<tr>
+  <td>Flash Size</td>
+  <td><strong>4MB(32Mb)</strong></td>
+</tr>
+<tr>
+  <td>JTAG Adapter</td>
+  <td>Disabled</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong></td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td><strong>Enable</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>Programmer</td>
+  <td><strong>Esptool</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>请根据您的开发板型号取消 <code>utilities.h</code> 文件中对应型号的注释，例如 <code>T3_V3_0_SX1276_TCXO</code>，否则编译将报错</li>
+<li>上传程序</li>
 </ol>
 <h3 id="%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0">开发平台</h3>
 <ol>

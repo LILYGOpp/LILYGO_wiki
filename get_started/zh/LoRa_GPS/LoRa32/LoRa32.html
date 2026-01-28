@@ -575,29 +575,81 @@ var _hmt = _hmt || [];
 <li>选择示例文件并打开以“ino”结尾的文件</li>
 </ul>
 <ol start="6">
-<li><p>在 Arduino 上，我先在 DE 工具项目中选择相应的板子，然后在下方的列表中点击相应的选项以进行选择。<br />
- | Name                                 | Value                                |<br />
- | ------------------------------------ | ------------------------------------ |<br />
- | Board                                | <strong>ESP32 Dev Module</strong>                 |<br />
- | Port                                 | Your port                            |<br />
- | CPU Frequency                        | 240MHZ(WiFi/BT)                      |<br />
- | Core Debug Level                     | None                                 |<br />
- | Erase All Flash Before Sketch Upload | Disable                              |<br />
- | Events Run On                        | Core1                                |<br />
- | Flash Frequency                      | 80MHZ                                |<br />
- | Flash Mode                           | QIO                                  |<br />
- | Flash Size                           | <strong>4MB(32Mb)</strong>                        |<br />
- | JTAG Adapter                         | Disabled                             |<br />
- | Arduino Runs On                      | Core1                                |<br />
- | Partition Scheme                     | <strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong> |<br />
- | PSRAM                                | <strong>Enable</strong>                           |<br />
- | Upload Speed                         | 921600                               |<br />
- | Programmer                           | <strong>Esptool</strong>                          |</p>
-</li>
-<li><p>请根据您的开发板型号取消每个示例中的 <code>utilities.h</code> 文件的注释，例如 <code>T3_V1_3_SX1276</code> 或 <code>T3_V1_3_SX1278</code>，否则编译时会报错。</p>
-</li>
-<li><p>上传示例</p>
-</li>
+<li>在 Arduino 上，我先在 DE 工具项目中选择相应的板子，然后在下方的列表中点击相应的选项以进行选择。</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>ESP32 Dev Module</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi/BT)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Flash Frequency</td>
+  <td>80MHZ</td>
+</tr>
+<tr>
+  <td>Flash Mode</td>
+  <td>QIO</td>
+</tr>
+<tr>
+  <td>Flash Size</td>
+  <td><strong>4MB(32Mb)</strong></td>
+</tr>
+<tr>
+  <td>JTAG Adapter</td>
+  <td>Disabled</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong></td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td><strong>Enable</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>Programmer</td>
+  <td><strong>Esptool</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>请根据您的开发板型号取消每个示例中的 <code>utilities.h</code> 文件的注释，例如 <code>T3_V1_3_SX1276</code> 或 <code>T3_V1_3_SX1278</code>，否则编译时会报错。</li>
+<li>上传示例</li>
 </ol>
 <h3 id="%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0">开发平台</h3>
 <ol>
