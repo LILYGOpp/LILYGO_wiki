@@ -215,23 +215,24 @@ LILYGO T3_V1.6.1（LoRa32 V2.1.6）多协议物联网开发板是一款集成 ES
 * 打开“示例”
 * 选择示例文件并打开以“ino”结尾的文件
 6. 在 Arduino 上，我先在 DE 工具项目中选择相应的板子，然后在下方的列表中点击相应的选项以进行选择。
-    | Name                                 | Value                                |
-    | ------------------------------------ | ------------------------------------ |
-    | Board                                | **ESP32 Dev Module**                 |
-    | Port                                 | Your port                            |
-    | CPU Frequency                        | 240MHZ(WiFi/BT)                      |
-    | Core Debug Level                     | None                                 |
-    | Erase All Flash Before Sketch Upload | Disable                              |
-    | Events Run On                        | Core1                                |
-    | Flash Frequency                      | 80MHZ                                |
-    | Flash Mode                           | QIO                                  |
-    | Flash Size                           | **4MB(32Mb)**                        |
-    | JTAG Adapter                         | Disabled                             |
-    | Arduino Runs On                      | Core1                                |
-    | Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
-    | PSRAM                                | **Enable**                           |
-    | Upload Speed                         | 921600                               |
-    | Programmer                           | **Esptool**                          |
+
+| Name                                 | Value                                |
+| ------------------------------------ | ------------------------------------ |
+| Board                                | **ESP32 Dev Module**                 |
+| Port                                 | Your port                            |
+| CPU Frequency                        | 240MHZ(WiFi/BT)                      |
+| Core Debug Level                     | None                                 |
+| Erase All Flash Before Sketch Upload | Disable                              |
+| Events Run On                        | Core1                                |
+| Flash Frequency                      | 80MHZ                                |
+| Flash Mode                           | QIO                                  |
+| Flash Size                           | **4MB(32Mb)**                        |
+| JTAG Adapter                         | Disabled                             |
+| Arduino Runs On                      | Core1                                |
+| Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
+| PSRAM                                | **Enable**                           |
+| Upload Speed                         | 921600                               |
+| Programmer                           | **Esptool**                          |
 
 7. 请根据您的开发板型号取消每个示例中的 `utilities.h` 文件的注释，例如 `T3_V1_3_SX1276` 或 `T3_V1_3_SX1278`，否则编译时会报错。
 8. 上传示例

@@ -129,23 +129,23 @@ LILYGO LORA32 TCXO 是一款基于 LoRa 技术的无线通信模块，支持 868
     * 选择示例文件并打开后缀为 `ino` 的文件
 5.  在 Arduino IDE 工具菜单中选择对应开发板型号，点击下方列表中的对应选项进行选择
 
-    | Name                                 | Value                                |
-    | ------------------------------------ | ------------------------------------ |
-    | Board                                | **ESP32 Dev Module**                 |
-    | Port                                 | Your port                            |
-    | CPU Frequency                        | 240MHZ(WiFi/BT)                      |
-    | Core Debug Level                     | None                                 |
-    | Erase All Flash Before Sketch Upload | Disable                              |
-    | Events Run On                        | Core1                                |
-    | Flash Frequency                      | 80MHZ                                |
-    | Flash Mode                           | QIO                                  |
-    | Flash Size                           | **4MB(32Mb)**                        |
-    | JTAG Adapter                         | Disabled                             |
-    | Arduino Runs On                      | Core1                                |
-    | Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
-    | PSRAM                                | **Enable**                           |
-    | Upload Speed                         | 921600                               |
-    | Programmer                           | **Esptool**                          |
+| Name                                 | Value                                |
+| ------------------------------------ | ------------------------------------ |
+| Board                                | **ESP32 Dev Module**                 |
+| Port                                 | Your port                            |
+| CPU Frequency                        | 240MHZ(WiFi/BT)                      |
+| Core Debug Level                     | None                                 |
+| Erase All Flash Before Sketch Upload | Disable                              |
+| Events Run On                        | Core1                                |
+| Flash Frequency                      | 80MHZ                                |
+| Flash Mode                           | QIO                                  |
+| Flash Size                           | **4MB(32Mb)**                        |
+| JTAG Adapter                         | Disabled                             |
+| Arduino Runs On                      | Core1                                |
+| Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
+| PSRAM                                | **Enable**                           |
+| Upload Speed                         | 921600                               |
+| Programmer                           | **Esptool**                          |
 
 6. 请根据您的开发板型号取消 `utilities.h` 文件中对应型号的注释，例如 `T3_V3_0_SX1276_TCXO`，否则编译将报错
 7. 上传程序

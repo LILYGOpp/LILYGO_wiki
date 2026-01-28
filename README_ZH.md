@@ -8,7 +8,7 @@ LILYGO Wiki
 
 ## 修改意见
 
-如果有任何修改意见或建议, 可以提交1。 [issue](https://github.com/Xinyuan-LilyGO/LILYGO_wiki/issues/new) 反馈, 我们会及时处理.
+如果有任何修改意见或建议, 可以提交。 [issue](https://github.com/Xinyuan-LilyGO/LILYGO_wiki/issues/new) 反馈, 我们会及时处理.
 
 ## 部署本地
 
