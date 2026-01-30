@@ -219,21 +219,6 @@ The T3-S3-MVSRBoard is a backplane design for the T3-S3_V1.2 main board, featuri
 | DATA         | IO39       |
 | SD_MODE         | IO38       |
 
- #### T3-S3-MVSRBoard_V1.0 Version
-  | Microphone Pins  | ESP32S3 Pins|
- | :------------------: | :------------------:|
- | BCLK         | IO47        |
- | WS         | IO15       |
- | DATA         | IO48        |
- | EN         | IO35       |
-
- #### T3-S3-MVSRBoard_V1.1 Version
- | Microphone Pins  | ESP32S3 Pins|
- | :------------------: | :------------------:|
- | LRCLK         | IO15       |
- | DATA         | IO48       |
- | EN         | IO35       |
-
 | Vibration Motor Pins  | ESP32S3 Pins|
 | :------------------: | :------------------:|
 | DATA         | IO46       |
@@ -279,6 +264,24 @@ The T3-S3-MVSRBoard is a backplane design for the T3-S3_V1.2 main board, featuri
 | BUSY         | IO36       |
 | TX         | IO10       |
 | RX         | IO21       |
+
+>T3-S3-MVSRBoard_V1.0 Version
+
+| Microphone Pins  | ESP32S3 Pins|
+| :------------------: | :------------------:|
+| BCLK         | IO47        |
+| WS         | IO15       |
+| DATA         | IO48        |
+| EN         | IO35       |
+
+>T3-S3-MVSRBoard_V1.1 Version
+
+| Microphone Pins  | ESP32S3 Pins|
+| :------------------: | :------------------:|
+| LRCLK         | IO15       |
+| DATA         | IO48       |
+| EN         | IO35       |
+
 
 ## Related Tests
 

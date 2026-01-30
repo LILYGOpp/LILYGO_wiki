@@ -207,23 +207,23 @@ The development board supports SX1276/SX1278 dual-band LoRa modules, provides Wi
 * Open "examples"
 * Select the example file and open the file ending with "ino"
 6. In Arduino IDE, first select the corresponding board in the Tools menu, then click the corresponding option in the list below to select
-    | Name                                 | Value                                |
-    | ------------------------------------ | ------------------------------------ |
-    | Board                                | **ESP32 Dev Module**                 |
-    | Port                                 | Your port                            |
-    | CPU Frequency                        | 240MHZ(WiFi/BT)                      |
-    | Core Debug Level                     | None                                 |
-    | Erase All Flash Before Sketch Upload | Disable                              |
-    | Events Run On                        | Core1                                |
-    | Flash Frequency                      | 80MHZ                                |
-    | Flash Mode                           | QIO                                  |
-    | Flash Size                           | **4MB(32Mb)**                        |
-    | JTAG Adapter                         | Disabled                             |
-    | Arduino Runs On                      | Core1                                |
-    | Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
-    | PSRAM                                | **Enable**                           |
-    | Upload Speed                         | 921600                               |
-    | Programmer                           | **Esptool**                          |
+| Name                                 | Value                                |
+| ------------------------------------ | ------------------------------------ |
+| Board                                | **ESP32 Dev Module**                 |
+| Port                                 | Your port                            |
+| CPU Frequency                        | 240MHZ(WiFi/BT)                      |
+| Core Debug Level                     | None                                 |
+| Erase All Flash Before Sketch Upload | Disable                              |
+| Events Run On                        | Core1                                |
+| Flash Frequency                      | 80MHZ                                |
+| Flash Mode                           | QIO                                  |
+| Flash Size                           | **4MB(32Mb)**                        |
+| JTAG Adapter                         | Disabled                             |
+| Arduino Runs On                      | Core1                                |
+| Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
+| PSRAM                                | **Enable**                           |
+| Upload Speed                         | 921600                               |
+| Programmer                           | **Esptool**                          |
 
 7. Please uncomment the `utilities.h` file in each example according to your board model, for example `T3_V1_3_SX1276` or `T3_V1_3_SX1278`, otherwise compilation will report an error.
 8. Upload the example

@@ -129,23 +129,23 @@ LILYGO LORA32 TCXO is a wireless communication module based on LoRa technology, 
     * Select the example file and open the file with the `ino` extension
 5.  Select the corresponding development board model in the Arduino IDE Tools menu, click the corresponding option in the list below to select
 
-    | Name                                 | Value                                |
-    | ------------------------------------ | ------------------------------------ |
-    | Board                                | **ESP32 Dev Module**                 |
-    | Port                                 | Your port                            |
-    | CPU Frequency                        | 240MHZ(WiFi/BT)                      |
-    | Core Debug Level                     | None                                 |
-    | Erase All Flash Before Sketch Upload | Disable                              |
-    | Events Run On                        | Core1                                |
-    | Flash Frequency                      | 80MHZ                                |
-    | Flash Mode                           | QIO                                  |
-    | Flash Size                           | **4MB(32Mb)**                        |
-    | JTAG Adapter                         | Disabled                             |
-    | Arduino Runs On                      | Core1                                |
-    | Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
-    | PSRAM                                | **Enable**                           |
-    | Upload Speed                         | 921600                               |
-    | Programmer                           | **Esptool**                          |
+| Name                                 | Value                                |
+| ------------------------------------ | ------------------------------------ |
+| Board                                | **ESP32 Dev Module**                 |
+| Port                                 | Your port                            |
+| CPU Frequency                        | 240MHZ(WiFi/BT)                      |
+| Core Debug Level                     | None                                 |
+| Erase All Flash Before Sketch Upload | Disable                              |
+| Events Run On                        | Core1                                |
+| Flash Frequency                      | 80MHZ                                |
+| Flash Mode                           | QIO                                  |
+| Flash Size                           | **4MB(32Mb)**                        |
+| JTAG Adapter                         | Disabled                             |
+| Arduino Runs On                      | Core1                                |
+| Partition Scheme                     | **Huge APP (3MB No OTA/1MB SPIFFS)** |
+| PSRAM                                | **Enable**                           |
+| Upload Speed                         | 921600                               |
+| Programmer                           | **Esptool**                          |
 
 6. Please uncomment the corresponding model in the `utilities.h` file according to your development board model, for example `T3_V3_0_SX1276_TCXO`, otherwise compilation will report an error
 7. Upload the program

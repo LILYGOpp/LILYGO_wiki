@@ -74,19 +74,19 @@ T-Display-P4有Amoled、TFT两个版本，引脚图如下
 
 ### T-Display-P4 主板
 
-#### 1. 核心处理器
+####  核心处理器
 * **芯片**：ESP32-P4
 * **FLASH**：16MB
 * **资料**：[Espressif 官方文档](https://www.espressif.com/en/support/documents/technical-documents)
 
-#### 2. 辅助处理器
+####  辅助处理器
 * **模组**：ESP32-C6-MINI-1U
 * **芯片**：ESP32-C6-FH4
 * **PSRAM**：4MB
 * **通信协议**：SDIO
 * **资料**：[ESP32-C6-MINI-1U 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-c6-mini-1_mini-1u_datasheet_en.pdf)
 
-#### 3. 屏幕与触摸
+####  屏幕与触摸
 | 型号 | H0405S002T002-V0 (TFT) | H0410S001AMT001-V0 (AMOLED) |
 | :--- | :--- | :--- |
 | **尺寸** | 4.05 英寸 | 4.1 英寸 |
@@ -99,76 +99,76 @@ T-Display-P4有Amoled、TFT两个版本，引脚图如下
 | **触控点数** | 10 点 | 10 点 |
 | **资料** | [HI8561](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/HI8561_Preliminary%20_DS_V0.00_20230511.pdf) | [RM69A10](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/RM69A10_DataSheet_V0.2_20230330%20(Public%20version).pdf) <br> [GT9895](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/GT9895_Datasheet_V1.1.pdf) |
 
-#### 4. 音频模块
+#### 音频模块
 * **DAC芯片**：ES8311
 * **功放芯片**：NS4150B
 * **麦克风**：咪头
 * **通信协议**：I2S
 * **资料**：[ES8311](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/ES8311.pdf) 、[NS4150B](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/NS4150B.pdf)
 
-#### 5. 振动马达
+#### 振动马达
 * **驱动芯片**：AW86224AFCR
 * **通信协议**：I2C
 * **资料**：[AW86224](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/AW86224AFCR.pdf)
 
-#### 6. LoRa 模块
+#### LoRa 模块
 * **模组**：HPD16A
 * **芯片**：SX1262
 * **通信协议**：SPI
 * **资料**：[SX1261-2](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/DS_SX1261-2_V2_1.pdf)
 
-#### 7. GPS 模块
+#### GPS 模块
 * **模组**：L76K
 * **通信协议**：UART
 * **资料**：[L76K](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/L76KB-A58.pdf)
 
-#### 8. RTC 时钟
+#### RTC 时钟
 * **芯片**：PCF8563
 * **通信协议**：I2C
 * **资料**：[PCF8563](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/PCF8563.pdf)
 
-#### 9. 充电管理
+#### 充电管理
 * **芯片**：LGS4056H
 * **说明**：支持三线电池 NTC 温度检测
 * **资料**：[LGS4056H](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/LGS4056H.pdf)
 
-#### 10. 电量监测
+#### 电量监测
 * **芯片**：BQ27220
 * **通信协议**：I2C
 * **资料**：[BQ27220](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/bq27220_en.pdf)
 
-#### 11. 摄像头
+#### 摄像头
 * **型号**：OV2710（MIPI 接口）
 * **资料**：[OV2710](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/OV2710_CSP3_DS_2.0_KING%20HORN%20ENTERPRISES%20Ltd..pdf)
 
-#### 12. 惯性传感器
+#### 惯性传感器
 * **芯片**：ICM20948
 * **通信协议**：I2C
 * **资料**：[ICM20948](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/ICM20948.pdf)
 
-#### 13. IO 扩展
+#### IO 扩展
 * **芯片**：XL9535
 * **通信协议**：I2C
 * **资料**：[XL9535](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/XL95x5.pdf)
 
 ### T-Display-P4-Keyboard 扩展板
 
-#### 1. 键盘驱动
+#### 键盘驱动
 * **芯片**：TCA8418
 * **通信协议**：I2C
 * **资料**：[TCA8418](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/tca8418.pdf)
 
-#### 2. 背光驱动
+####  背光驱动
 * **芯片**：SY7200A
 * **通信协议**：PWM
 * **资料**：[SY7200A](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/SY7200AABC.pdf)
 
-#### 3. IO 扩展
+#### IO 扩展
 * **芯片**：XL9555
 * **通信协议**：I2C
 * **资料**：[XL9555](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/XL95x5.pdf)
 
-#### 4. 无线模块（T-MixRF）
+#### 无线模块（T-MixRF）
 | 模块 | 芯片 | 协议 | 资料 |
 | :--- | :--- | :--- | :--- |
 | **CC1101** | CC1101 | SPI | [CC1101](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/cc1101.pdf) |

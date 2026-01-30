@@ -6,7 +6,7 @@ tags: ESP32-S3, LoRa, GPS, Trackball, Keyboard
 
 <div style="width:100%; display:flex;justify-content: center;">
 
-![T-Deck](./assets/T-Deck-1.jpg)
+![T-Deck](./assets/T-Deck-Plus-1.jpg)
 
 </div>
 
