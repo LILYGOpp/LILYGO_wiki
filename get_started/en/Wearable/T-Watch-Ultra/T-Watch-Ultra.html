@@ -599,30 +599,85 @@ ArduinoIDE will prompt that new library versions are available for upgrade every
 Please confirm normal operation before attempting to update to the latest versions. If you encounter issues, please revert to the dependent library versions that worked properly. The current dependent library version list can be viewed <a href="./third_party.md#t-watch-ultra-third-party"  >here</a></p>
 </blockquote>
 <ol start="6">
-<li><p><code>File</code> -&gt; <code>Examples</code> -&gt; <code>LilyGOLib</code> -&gt; <code>helloworld</code></p>
-</li>
-<li><p><code>Tools</code> -&gt; <code>Board</code> -&gt; <code>esp32</code>, please select from the table below:<br />
-| Arduino IDE Setting                  | Value                             |<br />
-| ------------------------------------ | --------------------------------- |<br />
-| Board                                | <strong>LilyGo T-Watch-Ultra</strong>          |<br />
-| Port                                 | Your port                         |<br />
-| USB CDC On Boot                      | Enabled                           |<br />
-| CPU Frequency                        | 240MHZ(WiFi)                      |<br />
-| Core Debug Level                     | None                              |<br />
-| USB DFU On Boot                      | Disable                           |<br />
-| Erase All Flash Before Sketch Upload | Disable                           |<br />
-| Events Run On                        | Core 1                            |<br />
-| JTAG Adapter                         | Disable                           |<br />
-| Arduino Runs On                      | Core 1                            |<br />
-| USB Firmware MSC On Boot             | Disable                           |<br />
-| Partition Scheme                     | <strong>16M Flash(3M APP/9.9MB FATFS)</strong> |<br />
-| Board Revision                       | <strong>Radio-SX1262</strong>                  |<br />
-| Upload Mode                          | <strong>UART0/Hardware CDC</strong>            |<br />
-| Upload Speed                         | 921600                            |<br />
-| USB Mode                             | <strong>CDC and JTAG</strong>                  |</p>
-</li>
-<li><p><strong>Board Revision Option</strong>, please select according to the actual purchased RF type. Current options include:</p>
-</li>
+<li><code>File</code> -&gt; <code>Examples</code> -&gt; <code>LilyGOLib</code> -&gt; <code>helloworld</code></li>
+<li><code>Tools</code> -&gt; <code>Board</code> -&gt; <code>esp32</code>, please select from the table below:</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Arduino IDE Setting</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>LilyGo T-Watch-Ultra</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>USB CDC On Boot</td>
+  <td>Enabled</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>USB DFU On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core 1</td>
+</tr>
+<tr>
+  <td>JTAG Adapter</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core 1</td>
+</tr>
+<tr>
+  <td>USB Firmware MSC On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>16M Flash(3M APP/9.9MB FATFS)</strong></td>
+</tr>
+<tr>
+  <td>Board Revision</td>
+  <td><strong>Radio-SX1262</strong></td>
+</tr>
+<tr>
+  <td>Upload Mode</td>
+  <td><strong>UART0/Hardware CDC</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>USB Mode</td>
+  <td><strong>CDC and JTAG</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="8">
+<li><strong>Board Revision Option</strong>, please select according to the actual purchased RF type. Current options include:</li>
 </ol>
 <ul>
 <li>Radio-SX1262 (Sub 1G LoRa)</li>

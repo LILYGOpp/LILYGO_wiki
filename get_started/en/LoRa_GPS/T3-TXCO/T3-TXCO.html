@@ -493,47 +493,95 @@ var _hmt = _hmt || [];
 </ol>
 <h3 id="Arduino">Arduino</h3>
 <ol>
-<li><p>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></p>
-</li>
-<li><p>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></p>
-</li>
-<li><p>Copy all folders in the <code>lib</code> directory to the <code>Sketchbook location</code> directory. To find the library location, <a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">refer here</a></p>
-<ul>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></li>
+<li>Copy all folders in the <code>lib</code> directory to the <code>Sketchbook location</code> directory. To find the library location, <a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">refer here</a><ul>
 <li>Windows: <code>C:\Users\{username}\Documents\Arduino</code></li>
 <li>macOS: <code>/Users/{username}/Documents/Arduino</code></li>
 <li>Linux: <code>/home/{username}/Arduino</code></li>
 </ul>
 </li>
-<li><p>Open the corresponding example</p>
-<ul>
+<li>Open the corresponding example<ul>
 <li>Open the downloaded <code>LilyGo-LoRa-Series</code> folder</li>
 <li>Open the <code>examples</code> folder</li>
 <li>Select the example file and open the file with the <code>ino</code> extension</li>
 </ul>
 </li>
-<li><p>Select the corresponding development board model in the Arduino IDE Tools menu, click the corresponding option in the list below to select</p>
-<p>| Name                                 | Value                                |<br />
-| ------------------------------------ | ------------------------------------ |<br />
-| Board                                | <strong>ESP32 Dev Module</strong>                 |<br />
-| Port                                 | Your port                            |<br />
-| CPU Frequency                        | 240MHZ(WiFi/BT)                      |<br />
-| Core Debug Level                     | None                                 |<br />
-| Erase All Flash Before Sketch Upload | Disable                              |<br />
-| Events Run On                        | Core1                                |<br />
-| Flash Frequency                      | 80MHZ                                |<br />
-| Flash Mode                           | QIO                                  |<br />
-| Flash Size                           | <strong>4MB(32Mb)</strong>                        |<br />
-| JTAG Adapter                         | Disabled                             |<br />
-| Arduino Runs On                      | Core1                                |<br />
-| Partition Scheme                     | <strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong> |<br />
-| PSRAM                                | <strong>Enable</strong>                           |<br />
-| Upload Speed                         | 921600                               |<br />
-| Programmer                           | <strong>Esptool</strong>                          |</p>
-</li>
-<li><p>Please uncomment the corresponding model in the <code>utilities.h</code> file according to your development board model, for example <code>T3_V3_0_SX1276_TCXO</code>, otherwise compilation will report an error</p>
-</li>
-<li><p>Upload the program</p>
-</li>
+<li>Select the corresponding development board model in the Arduino IDE Tools menu, click the corresponding option in the list below to select</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>ESP32 Dev Module</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi/BT)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Flash Frequency</td>
+  <td>80MHZ</td>
+</tr>
+<tr>
+  <td>Flash Mode</td>
+  <td>QIO</td>
+</tr>
+<tr>
+  <td>Flash Size</td>
+  <td><strong>4MB(32Mb)</strong></td>
+</tr>
+<tr>
+  <td>JTAG Adapter</td>
+  <td>Disabled</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>Huge APP (3MB No OTA/1MB SPIFFS)</strong></td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td><strong>Enable</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>Programmer</td>
+  <td><strong>Esptool</strong></td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>Please uncomment the corresponding model in the <code>utilities.h</code> file according to your development board model, for example <code>T3_V3_0_SX1276_TCXO</code>, otherwise compilation will report an error</li>
+<li>Upload the program</li>
 </ol>
 <h3 id="Development-Platforms">Development Platforms</h3>
 <ol>
