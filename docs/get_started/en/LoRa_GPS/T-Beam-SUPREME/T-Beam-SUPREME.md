@@ -47,7 +47,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 ### Physical Image
 
-<div style="width:100%; display:flex;justify-content: center;">
+<div style="width:100%; display:flex;justify-content: center">
 
 ![T-Beam SUPREME](./assets/T-Beam-SUPREME-2.jpg)
 
@@ -55,7 +55,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 ### Pinout Diagram
 
-<img src="./assets/T-Beam-Supreme-pin-en.jpg" alt="summary" width=100%>
+<img src="./assets/T-BEAM-Supreme-pin-en.jpg" alt="summary" width=100%>
 
 ### Core Board & Expansion Board
 
@@ -151,6 +151,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 
 ### Overview
+
 <img src="./assets/T-BEAM-SUPREME-info-en.jpg" alt="summary" width=100%>
 
 | Component | Description |

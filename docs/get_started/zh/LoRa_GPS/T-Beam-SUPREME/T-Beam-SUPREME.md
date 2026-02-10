@@ -55,7 +55,7 @@ T-BEAM-SUPREME V3.0 是一款高性能多功能的物联网开发板，基于 ES
 
 ### 引脚图
 
-<img src="./assets/T-Beam-Supreme-pin-en.jpg" alt="summary" width=100%>
+<img src="./assets/T-BEAM-Supreme-pin-en.jpg" alt="summary" width=100%>
 
 ### 核心板与拓展板
 

@@ -19,6 +19,12 @@
                 "position": "left"
             },
             {
+                "label": "<img src='/static/image/setting.svg' style='height: 1.5em;vertical-align: middle;'>",
+                "position": "right",
+                "url": "https://puboy7.github.io/LILYGO_Launchpad/",
+                "target": "_blank"
+            },            
+            {
                 "label": "<img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'>",
                 "position": "right",
                 "url": "https://lilygo.cc/",
