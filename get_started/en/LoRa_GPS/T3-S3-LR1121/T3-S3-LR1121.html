@@ -93,6 +93,7 @@ var _hmt = _hmt || [];
             </div>
             <div>
                 <ul id="nav_right">
+<li class=""><a target="_blank" href="https://puboy7.github.io/LILYGO_Launchpad/"><img src='/static/image/setting.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
 <li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
 <li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
 <li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
@@ -524,50 +525,105 @@ var _hmt = _hmt || [];
 </ol>
 <h3 id="Arduino">Arduino</h3>
 <ol>
-<li><p>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></p>
-</li>
-<li><p>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></p>
-</li>
-<li><p>Copy all folders in the <code>lib</code> directory to the <code>Sketchbook location</code> directory. To find the library location, <a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">refer here</a></p>
-<ul>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li>Install <a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/"  target="_blank">Arduino ESP32</a></li>
+<li>Copy all folders in the <code>lib</code> directory to the <code>Sketchbook location</code> directory. To find the library location, <a href="https://support.arduino.cc/hc/en-us/articles/4415103213714-Find-sketches-libraries-board-cores-and-other-files-on-your-computer"  target="_blank">refer here</a><ul>
 <li>Windows: <code>C:\Users\{username}\Documents\Arduino</code></li>
 <li>macOS: <code>/Users/{username}/Documents/Arduino</code></li>
 <li>Linux: <code>/home/{username}/Arduino</code></li>
 </ul>
 </li>
-<li><p>Open the corresponding example</p>
-<ul>
+<li>Open the corresponding example<ul>
 <li>Open the downloaded <code>LilyGo-LoRa-Series</code> folder</li>
 <li>Open the <code>examples</code> folder</li>
 <li>Select the example file and open the file with the <code>ino</code> extension</li>
 </ul>
 </li>
-<li><p>Select the corresponding development board model in the Arduino IDE Tools menu, click the corresponding option in the list below to select</p>
-<p>| Name                                 | Value                                                |<br />
- | ------------------------------------ | ---------------------------------------------------- |<br />
- | Board                                | <strong>LilyGo T3-S3</strong>                                     |<br />
- | Port                                 | Your port                                            |<br />
- | USB CDC On Boot                      | Enable                                               |<br />
- | CPU Frequency                        | 240MHZ(WiFi)                                         |<br />
- | Core Debug Level                     | None                                                 |<br />
- | USB DFU On Boot                      | Disable                                              |<br />
- | Erase All Flash Before Sketch Upload | Disable                                              |<br />
- | Events Run On                        | Core1                                                |<br />
- | Arduino Runs On                      | Core1                                                |<br />
- | USB Firmware MSC On Boot             | Disable                                              |<br />
- | Partition Scheme                     | <strong>Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)</strong> |<br />
- | PSRAM                                | <strong>QSPI PSRAM</strong>                                       |<br />
- | <strong>Board Revision</strong>*                  | <strong>Radio-LR1121</strong>                                     |<br />
- | Upload Mode                          | <strong>UART0/Hardware CDC</strong>                               |<br />
- | Upload Speed                         | 921600                                               |<br />
- | USB Mode                             | <strong>CDC and JTAG</strong>                                     |<br />
- | Programmer                           | <strong>Esptool</strong>                                          |</p>
+<li>Select the corresponding development board model in the Arduino IDE Tools menu, click the corresponding option in the list below to select</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>LilyGo T3-S3</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>USB CDC On Boot</td>
+  <td>Enable</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>USB DFU On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>USB Firmware MSC On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)</strong></td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td><strong>QSPI PSRAM</strong></td>
+</tr>
+<tr>
+  <td><strong>Board Revision</strong>*</td>
+  <td><strong>Radio-LR1121</strong></td>
+</tr>
+<tr>
+  <td>Upload Mode</td>
+  <td><strong>UART0/Hardware CDC</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>USB Mode</td>
+  <td><strong>CDC and JTAG</strong></td>
+</tr>
+<tr>
+  <td>Programmer</td>
+  <td><strong>Esptool</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Board Revision please select according to the actual model</strong></li>
 </ul>
-</li>
-<li><p>Upload the program</p>
-</li>
+<ol start="6">
+<li>Upload the program</li>
 </ol>
 <h3 id="Development-Platforms">Development Platforms</h3>
 <ol>
