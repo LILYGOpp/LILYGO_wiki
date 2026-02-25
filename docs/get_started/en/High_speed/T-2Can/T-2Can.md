@@ -89,7 +89,7 @@ LILYGO T-2CAN is a high-performance, compact embedded communication module based
 | MCU | ESP32-S3-WROOM-1U（MCN16R8） |
 | FLASH| 16MB |
 | PSRAM | 8MB |
-| CAN Controller | Dual MCP2515 |
+| CAN Controller | MCP2515 |
 | Wireless | 2.4 GHz Wi-Fi & Bluetooth 5 (LE) |
 | USB | 1 × USB Port and OTG(TYPE-C) |
 | Power Input | 12V~24V DC |
