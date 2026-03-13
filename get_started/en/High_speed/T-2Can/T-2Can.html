@@ -383,53 +383,53 @@ var _hmt = _hmt || [];
 <thead>
 <tr>
   <th style="text-align:center">Component</th>
-  <th style="text-align:center">Description</th>
+  <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td style="text-align:center">MCU</td>
-  <td style="text-align:center">ESP32-S3-WROOM-1U（MCN16R8）</td>
+  <td style="text-align:left">ESP32-S3-WROOM-1U (MCN16R8)</td>
 </tr>
 <tr>
   <td style="text-align:center">FLASH</td>
-  <td style="text-align:center">16MB</td>
+  <td style="text-align:left">16MB</td>
 </tr>
 <tr>
   <td style="text-align:center">PSRAM</td>
-  <td style="text-align:center">8MB</td>
+  <td style="text-align:left">8MB (OPI PSRAM)</td>
 </tr>
 <tr>
   <td style="text-align:center">CAN Controller</td>
-  <td style="text-align:center">MCP2515</td>
+  <td style="text-align:left">MCP2515</td>
 </tr>
 <tr>
   <td style="text-align:center">Wireless</td>
-  <td style="text-align:center">2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</td>
+  <td style="text-align:left">2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</td>
 </tr>
 <tr>
   <td style="text-align:center">USB</td>
-  <td style="text-align:center">1 × USB Port and OTG(TYPE-C)</td>
+  <td style="text-align:left">1 × USB Port and OTG (TYPE-C)</td>
 </tr>
 <tr>
   <td style="text-align:center">Power Input</td>
-  <td style="text-align:center">12V~24V DC</td>
+  <td style="text-align:left">12V~24V DC</td>
 </tr>
 <tr>
   <td style="text-align:center">Expansion Interface</td>
-  <td style="text-align:center">2 × CAN Interface + 2 x 2.54mm Pitch 13pin Interface + 2 x QWIIC Interface</td>
+  <td style="text-align:left">2 × CAN Interface + 2 × 2.54mm Pitch 13pin Interface + 2 × QWIIC Interface</td>
 </tr>
 <tr>
   <td style="text-align:center">Buttons</td>
-  <td style="text-align:center">1 x RESET Button + 1 x BOOT Button</td>
+  <td style="text-align:left">1 × RESET Button + 1 × BOOT Button</td>
 </tr>
 <tr>
   <td style="text-align:center">Antenna</td>
-  <td style="text-align:center">IPEX Antenna Interface</td>
+  <td style="text-align:left">IPEX Antenna Interface</td>
 </tr>
 <tr>
   <td style="text-align:center">Dimensions</td>
-  <td style="text-align:center"><strong>18x39x91mm</strong></td>
+  <td style="text-align:left"><strong>18 × 39 × 91 mm</strong></td>
 </tr>
 </tbody>
 </table>
@@ -448,13 +448,13 @@ var _hmt = _hmt || [];
 <tr>
   <td><a href="https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/can"  target="_blank">can</a></td>
   <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
-  <td></td>
+  <td>Basic CAN communication example</td>
   <td></td>
 </tr>
 <tr>
   <td><a href="https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/original_test"  target="_blank">Original_Test</a></td>
   <td><p align="center"><img src="https://img.shields.io/badge/-supported-green" alt="alt text" title="example" /></td>
-  <td>Factory Program</td>
+  <td>Factory test program with CAN bus testing</td>
   <td></td>
 </tr>
 </tbody>
@@ -598,8 +598,8 @@ A. Please hold down the &quot;BOOT&quot; button and try uploading the program ag
 </ul>
 <h2 id="Dependent-Libraries">Dependent Libraries</h2>
 <ul>
-<li><a href="https://github.com/FastLED/FastLED"  target="_blank">FastLED</a></li>
-<li><a href="https://github.com/autowp/arduino-mcp2515"  target="_blank">mcp2515</a></li>
+<li><a href="https://github.com/FastLED/FastLED"  target="_blank">FastLED</a> - For LED control</li>
+<li><a href="https://github.com/autowp/arduino-mcp2515"  target="_blank">mcp2515</a> - For CAN bus communication</li>
 </ul>
 
                         
