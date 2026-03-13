@@ -85,18 +85,18 @@ LILYGO T-2CAN is a high-performance, compact embedded communication module based
 <img src="./assets/T-2Can-info.jpg" alt="summary" width=100%>
 
 | Component | Description |
-| :--: | :--: |
-| MCU | ESP32-S3-WROOM-1U（MCN16R8） |
-| FLASH| 16MB |
-| PSRAM | 8MB |
+| :-----: | :--------------------- |
+| MCU | ESP32-S3-WROOM-1U (MCN16R8) |
+| FLASH | 16MB |
+| PSRAM | 8MB (OPI PSRAM) |
 | CAN Controller | MCP2515 |
 | Wireless | 2.4 GHz Wi-Fi & Bluetooth 5 (LE) |
-| USB | 1 × USB Port and OTG(TYPE-C) |
+| USB | 1 × USB Port and OTG (TYPE-C) |
 | Power Input | 12V~24V DC |
-| Expansion Interface | 2 × CAN Interface + 2 x 2.54mm Pitch 13pin Interface + 2 x QWIIC Interface |
-| Buttons | 1 x RESET Button + 1 x BOOT Button |
+| Expansion Interface | 2 × CAN Interface + 2 × 2.54mm Pitch 13pin Interface + 2 × QWIIC Interface |
+| Buttons | 1 × RESET Button + 1 × BOOT Button |
 | Antenna | IPEX Antenna Interface |
-| Dimensions | **18x39x91mm** |
+| Dimensions | **18 × 39 × 91 mm** |
 
 ## Quick Start
 
@@ -104,8 +104,8 @@ LILYGO T-2CAN is a high-performance, compact embedded communication module based
 
 | Example | `[Platformio IDE][espressif32-v6.5.0]`<br />`[Arduino IDE][esp32_v2.0.14]` | Description | Picture |
 | ------  | ------ | ------ | ------ | 
-| [can](https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/can) |  <p align="center">![alt text][supported] | | |
-| [Original_Test](https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/original_test) |  <p align="center">![alt text][supported] | Factory Program | |
+| [can](https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/can) |  <p align="center">![alt text][supported] | Basic CAN communication example | |
+| [Original_Test](https://github.com/Xinyuan-LilyGO/T-2Can/blob/main/examples/original_test) |  <p align="center">![alt text][supported] | Factory test program with CAN bus testing | |
 
 [supported]: https://img.shields.io/badge/-supported-green "example"
 
@@ -180,5 +180,5 @@ LILYGO T-2CAN is a high-performance, compact embedded communication module based
 * [TD501D485H-A](https://github.com/Xinyuan-LilyGO/T-2Can-Pro/blob/main/information/TD501D485H-A_K-CUT.pdf)
 
 ## Dependent Libraries
-* [FastLED](https://github.com/FastLED/FastLED)
-* [mcp2515](https://github.com/autowp/arduino-mcp2515)
+* [FastLED](https://github.com/FastLED/FastLED) - For LED control
+* [mcp2515](https://github.com/autowp/arduino-mcp2515) - For CAN bus communication

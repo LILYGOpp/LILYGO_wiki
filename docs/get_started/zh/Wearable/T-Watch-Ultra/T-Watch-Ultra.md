@@ -53,7 +53,7 @@ LILYGO T-Watch Ultra 是一款高性能智能手表开发模组，基于 ESP32-S
 
 <div style="width:100%; display:flex;justify-content: center;">
 
-<img src="./assets/T-Watch-Ultra-2.jpg.jpg" alt="summary" width=100%>
+<img src="./assets/T-Watch-Ultra-2.jpg" alt="summary" width=100%>
 
 </div>
 

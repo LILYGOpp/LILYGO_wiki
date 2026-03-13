@@ -129,10 +129,6 @@ T-LoraPager 是一款 LILYGO 推出的手持式 AIOT 可编程开发设备，集
 | Operating Temperature | -20～70°C     |
 
 
-### 触摸
-
-* 芯片：GT911
-* 总线通信协议：IIC
 
 ### LoRa
 

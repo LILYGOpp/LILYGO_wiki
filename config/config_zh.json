@@ -71,29 +71,29 @@
                 "label": "关注我们",
                 "items": [
                     {
-                        "label": "Twitter",
+                        "label": "X",
                         "url": "https://x.com/lilygo9",
-                        "target":"_blank"
+                        "target": "_blank"
                     },
                     {
-                        "label": "淘宝",
-                        "url": "https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y",
-                        "target":"_blank"
-                    },
+                "label": "淘宝店铺",
+                "url": "https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y",
+                "target": "_blank"
+            },
                     {
                         "label": "Github",
                         "url": "https://github.com/Xinyuan-LilyGO",
                         "target":"_blank"
                     },
                     {
-                        "label": "YouTuBe",
+                        "label": "YouTube",
                         "url": "https://www.youtube.com/@LILYGO",
-                        "target":"_blank"
+                        "target": "_blank"
                     },
                     {
-                        "label": "FaceBook",
+                        "label": "Facebook",
                         "url": "https://www.facebook.com/lilygottgo",
-                        "target":"_blank"
+                        "target": "_blank"
                     }
                 ]
             },
@@ -115,7 +115,7 @@
         ],
         "bottom": [
             {
-                "label": "深圳市芯元电子科技有限公司",
+                "label": "深圳市芯元电子科技有限公司 © 2026",
                 "url": "https://lilygo.cc/",
                 "target": "_blank"
             }
@@ -129,5 +129,7 @@
             }
         }
     },
-    "show_source": "编辑本页"
+    "show_source": "编辑本页",
+    "description": "LILYGO 官方文档与产品信息",
+    "keywords": "LILYGO, ESP32, 开发板, 物联网, Arduino, 嵌入式系统"
 }

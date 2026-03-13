@@ -129,10 +129,6 @@ The development board is feature-rich, integrating QWERT keyboard, AI-enabled IM
 | Operating Temperature | -20～70°C     |
 
 
-### Touch
-
-* Chip: GT911
-* Bus Communication Protocol: IIC
 
 ### LoRa
 
