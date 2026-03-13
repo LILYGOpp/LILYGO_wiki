@@ -164,7 +164,6 @@ T-LoraPager 是一款 LILYGO 推出的手持式 AIOT 可编程开发设备，集
 | FLASH| 16MB |
 | PSRAM | 8MB|
 | 屏幕 | 2.33 英寸 ST7796 LCD |
-| 触摸 | GT911 触摸电容屏 |
 | LoRa | SX1262 (433-920MHz) |
 | GPS | MIA-M10Q |
 | NFC | ST25R3916 (SPI) |

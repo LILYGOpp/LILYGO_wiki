@@ -164,7 +164,6 @@ The development board is feature-rich, integrating QWERT keyboard, AI-enabled IM
 | FLASH| 16MB |
 | PSRAM | 8MB|
 | Display | 2.33-inch ST7796 LCD |
-| Touch | GT911 Capacitive Touchscreen |
 | LoRa | SX1262 (433-920MHz) |
 | GPS | MIA-M10Q |
 | NFC | ST25R3916 (SPI) |
