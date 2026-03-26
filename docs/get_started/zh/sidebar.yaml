@@ -42,7 +42,7 @@ items:
     -   label: T5 E-Paper S3 Pro
         file: Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.md
     -   label: T5 E-Paper S3 Lite
-        file: Wearable/T5-E-Paper-S3-Lite/T5-E-Paper-S3-Lite.md        
+        file: Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.md        
     -   label: T-Deck 
         file: Wearable/T-Deck/T-Deck.md
     -   label: T-Deck Plus
