@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T5 E-Paper - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["E-Paper", "ESP32-S3", "Touch", "E-Ink", "Lite"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://xinyuan-lilygo.github.io/Launchpad/"><img src='/static/image/setting.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.html">English</a></li>
+<li class=""><a  href="/get_started/zh/Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/Wearable/T5-E-Paper-S3-Lite/T5-E-Paper-S3-Lite.html&from=/get_started/en/Wearable/T5-E-Paper-S3-Lite/T5-E-Paper-S3-Lite.html"><span class="label">T5 E-Paper S3 Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T5 E-Paper</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>E-Paper</li>
+                            
+                                <li>ESP32-S3</li>
+                            
+                                <li>Touch</li>
+                            
+                                <li>E-Ink</li>
+                            
+                                <li>Lite</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T5-E-Paper-Lite-1.jpg" alt="T5 E-Paper" /></p>
+</div>
+<div style="padding: 1em 0 0 0; display: flex; justify-content: center">
+    <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(63, 201, 28)" href="#">Purchase on Official Store</a>
+</div>
+<h2 id="Version-History%3A">Version History:</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Update date</th>
+  <th style="text-align:left">Update description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T5-ePaper-S3-V2.4</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:left">Current version (Pro edition)</td>
+</tr>
+<tr>
+  <td style="text-align:center">T5-ePaper-S3-Lite</td>
+  <td style="text-align:center"></td>
+  <td style="text-align:left">New Lite edition (GPS/LoRa removed, AG glass + warm backlight)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Purchase-Links">Purchase Links</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Product</th>
+  <th style="text-align:center">SOC</th>
+  <th style="text-align:center">FLASH</th>
+  <th style="text-align:center">PSRAM</th>
+  <th style="text-align:center">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T5-4.7-S3 Pro</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+  <td style="text-align:center">16MB</td>
+  <td style="text-align:center">8MB</td>
+  <td style="text-align:center"><a href="#"  >LILYGO Mall</a></td>
+</tr>
+<tr>
+  <td style="text-align:center">T5-4.7-S3 Lite</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+  <td style="text-align:center">16MB</td>
+  <td style="text-align:center">8MB</td>
+  <td style="text-align:center"><a href="#"  >LILYGO Mall</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Table-of-Contents">Table of Contents</h2>
+<ul>
+<li><a href="#description"  >Description</a></li>
+<li><a href="#version-differences"  >Version Differences</a></li>
+<li><a href="#preview"  >Preview</a></li>
+<li><a href="#modules"  >Modules</a></li>
+<li><a href="#quick-start"  >Quick Start</a></li>
+<li><a href="#pin-overview"  >Pin Overview</a></li>
+<li><a href="#related-tests"  >Related Tests</a></li>
+<li><a href="#faq"  >FAQ</a></li>
+<li><a href="#projects"  >Projects</a></li>
+<li><a href="#resources"  >Resources</a></li>
+<li><a href="#libraries"  >Libraries</a></li>
+</ul>
+<h2 id="Description">Description</h2>
+<p>The LILYGO T5-4.7-S3 series is a 4.7-inch e‑paper development solution based on the ESP32-S3-WROOM-1-N16R8 chip (with 8MB PSRAM and 16MB Flash). It is available in two models: <strong>Pro edition</strong> and <strong>Lite edition</strong>.</p>
+<h3 id="Pro-Edition">Pro Edition</h3>
+<p>Integrates capacitive touch (supporting two‑point touch), a PCF8563 real‑time clock, a Type‑C USB port, and a Li‑Po battery connector (JST‑PH 2.0mm). It also features battery voltage monitoring (Bat ADC), a 40‑pin GPIO expansion header compatible with Raspberry Pi, an onboard TF card slot, dedicated screen control signals (STV/LE), and an SPI interface (CS/SCLK/MOSI/MISO). The 2.5D curved design makes it suitable for full‑featured low‑power e‑paper application development.</p>
+<h3 id="Lite-Edition">Lite Edition</h3>
+<p><strong>Optimized for cost‑sensitive e‑paper applications</strong>. The GPS and LoRa modules have been removed, significantly reducing hardware cost and making it ideal for pure display applications such as e‑books, digital photo frames, and weather stations. Key upgrades:</p>
+<ul>
+<li>Screen uses <strong>AG (anti‑glare) glass</strong> for dramatically improved outdoor visibility.</li>
+<li>Backlight changed to <strong>warm tone</strong>, providing a more comfortable reading experience during extended use.</li>
+<li>Retains the core ESP32‑S3 performance, e‑paper display, touch, RTC, and other essential functions.</li>
+</ul>
+<h2 id="Version-Differences">Version Differences</h2>
+<p><img src="assets/%E5%AF%B9%E6%AF%94%E5%9B%BE.jpg" alt="alt text" /></p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Feature</th>
+  <th style="text-align:center">T5-4.7-S3 Pro</th>
+  <th style="text-align:center">T5-4.7-S3 Lite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">Core Chip</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+</tr>
+<tr>
+  <td style="text-align:center">Flash/PSRAM</td>
+  <td style="text-align:center">16MB/8MB</td>
+  <td style="text-align:center">16MB/8MB</td>
+</tr>
+<tr>
+  <td style="text-align:center">E‑Paper Display</td>
+  <td style="text-align:center">4.7‑inch EDO47TC1 (540×960)</td>
+  <td style="text-align:center">4.7‑inch EDO47TC1 (540×960)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Touch Function</td>
+  <td style="text-align:center">GT911 two‑point capacitive touch</td>
+  <td style="text-align:center">GT911 two‑point capacitive touch</td>
+</tr>
+<tr>
+  <td style="text-align:center">RTC Clock</td>
+  <td style="text-align:center">PCF8563</td>
+  <td style="text-align:center">PCF8563</td>
+</tr>
+<tr>
+  <td style="text-align:center">GPS/LoRa Module</td>
+  <td style="text-align:center">✅ Supported</td>
+  <td style="text-align:center">❌ Removed</td>
+</tr>
+<tr>
+  <td style="text-align:center">Glass Process</td>
+  <td style="text-align:center">Standard glass</td>
+  <td style="text-align:center">AG anti‑glare glass</td>
+</tr>
+<tr>
+  <td style="text-align:center">Backlight</td>
+  <td style="text-align:center">Standard white</td>
+  <td style="text-align:center">Warm‑tone backlight</td>
+</tr>
+<tr>
+  <td style="text-align:center">Use Case</td>
+  <td style="text-align:center">Full‑featured IoT terminal</td>
+  <td style="text-align:center">Pure display applications (e‑books, photo frames, weather stations)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Cost</td>
+  <td style="text-align:center">Higher</td>
+  <td style="text-align:center">Significantly reduced</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Preview">Preview</h2>
+<h3 id="Physical-Photos">Physical Photos</h3>
+<div style="width:100%; display:flex;justify-content: center;">
+<p><img src="./assets/T5-E-Paper-Lite-2.jpg" alt="T5 E-Paper Lite" /></p>
+<p><img src="./assets/T5-E-Paper-Lite-3.jpg" alt="T5 E-Paper Lite" /></p>
+</div>
+<h3 id="Pinout-Diagram">Pinout Diagram</h3>
+<img src="./assets/T5-4.7-S3-Pro-pin.jpg" alt="summary" width=100%>
+<h3 id="Product-Info-Graphic">Product Info Graphic</h3>
+<div style="width:100%; display:flex;justify-content: center; gap: 1em; flex-wrap: wrap;">
+  <img src="./assets/T5-4.7-S3-Pro-info-zh.jpg" alt="info-zh" width="48%">
+</div>
+<h2 id="Modules">Modules</h2>
+<h3 id="MCU">MCU</h3>
+<ul>
+<li>Chip: ESP32-S3-WROOM-1-N16R8</li>
+<li>PSRAM: 8MB</li>
+<li>FLASH: 16MB</li>
+<li>Wireless: Wi‑Fi 802.11 b/g/n; Bluetooth 5.0 (BLE)</li>
+<li>Additional Information: For more details, please refer to the <a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">Espressif official ESP32-S3 datasheet</a></li>
+</ul>
+<h3 id="E%E2%80%91Paper-Display">E‑Paper Display</h3>
+<ul>
+<li>Model: EDO47TC1</li>
+<li>Size: 4.7 inches</li>
+<li>Resolution: 540×960 pixels</li>
+<li>Type: Low‑power e‑paper display</li>
+<li>Interface: SPI + dedicated control signals (STV/LE)</li>
+<li>Lite Edition Upgrade: AG anti‑glare glass + warm backlight</li>
+</ul>
+<h3 id="Touch-Screen">Touch Screen</h3>
+<ul>
+<li>Chip: GT911</li>
+<li>Type: Capacitive touch screen</li>
+<li>Support: Two‑point touch</li>
+<li>Interface: I²C</li>
+</ul>
+<h3 id="Real%E2%80%91Time-Clock">Real‑Time Clock</h3>
+<ul>
+<li>Chip: PCF8563</li>
+<li>Function: Real‑time clock, timekeeping</li>
+<li>Interface: I²C</li>
+</ul>
+<h3 id="Power-Management">Power Management</h3>
+<ul>
+<li>Battery Connector: JST‑PH 2.0mm Li‑Po battery connector</li>
+<li>Voltage Monitoring: Battery voltage ADC monitoring</li>
+<li>USB Power: Type‑C interface</li>
+</ul>
+<h3 id="Overview">Overview</h3>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Component</th>
+  <th style="text-align:center">Pro Edition Description</th>
+  <th style="text-align:center">Lite Edition Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">MCU</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+  <td style="text-align:center">ESP32-S3-WROOM-1-N16R8</td>
+</tr>
+<tr>
+  <td style="text-align:center">FLASH</td>
+  <td style="text-align:center">16MB</td>
+  <td style="text-align:center">16MB</td>
+</tr>
+<tr>
+  <td style="text-align:center">PSRAM</td>
+  <td style="text-align:center">8MB</td>
+  <td style="text-align:center">8MB</td>
+</tr>
+<tr>
+  <td style="text-align:center">Display</td>
+  <td style="text-align:center">EDO47TC1 4.7‑inch e‑paper (540×960)</td>
+  <td style="text-align:center">EDO47TC1 4.7‑inch e‑paper (540×960) + AG glass + warm backlight</td>
+</tr>
+<tr>
+  <td style="text-align:center">Touch</td>
+  <td style="text-align:center">GT911 capacitive touch (two‑point)</td>
+  <td style="text-align:center">GT911 capacitive touch (two‑point)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Clock</td>
+  <td style="text-align:center">PCF8563 RTC</td>
+  <td style="text-align:center">PCF8563 RTC</td>
+</tr>
+<tr>
+  <td style="text-align:center">GPS/LoRa</td>
+  <td style="text-align:center">✅ Supported</td>
+  <td style="text-align:center">❌ Removed</td>
+</tr>
+<tr>
+  <td style="text-align:center">Storage</td>
+  <td style="text-align:center">TF card slot</td>
+  <td style="text-align:center">TF card slot</td>
+</tr>
+<tr>
+  <td style="text-align:center">Wireless</td>
+  <td style="text-align:center">2.4 GHz Wi‑Fi &amp; Bluetooth 5 (LE)</td>
+  <td style="text-align:center">2.4 GHz Wi‑Fi &amp; Bluetooth 5 (LE)</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB</td>
+  <td style="text-align:center">1 × USB port and OTG (Type‑C)</td>
+  <td style="text-align:center">1 × USB port and OTG (Type‑C)</td>
+</tr>
+<tr>
+  <td style="text-align:center">I/O Expansion</td>
+  <td style="text-align:center">2 × 20‑pin expansion headers (compatible with Raspberry Pi 40‑pin)</td>
+  <td style="text-align:center">2 × 20‑pin expansion headers (compatible with Raspberry Pi 40‑pin)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Expansion Connectors</td>
+  <td style="text-align:center">1 × JST‑PH 2.0mm battery connector + 2 × 4‑pin Molex connectors</td>
+  <td style="text-align:center">1 × JST‑PH 2.0mm battery connector</td>
+</tr>
+<tr>
+  <td style="text-align:center">Buttons</td>
+  <td style="text-align:center">1 × RST button + 1 × SIR_io0 button + 1 × io21 button</td>
+  <td style="text-align:center">1 × RST button + 1 × SIR_io0 button + 1 × io21 button</td>
+</tr>
+<tr>
+  <td style="text-align:center">Mounting Holes</td>
+  <td style="text-align:center">6 × 3.8mm mounting holes</td>
+  <td style="text-align:center">6 × 3.8mm mounting holes</td>
+</tr>
+<tr>
+  <td style="text-align:center">Dimensions</td>
+  <td style="text-align:center"><strong>121×67×12mm</strong></td>
+  <td style="text-align:center"><strong>121×67×12mm</strong></td>
+</tr>
+<tr>
+  <td style="text-align:center">Design</td>
+  <td style="text-align:center">2.5D curved design</td>
+  <td style="text-align:center">2.5D curved design</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Example-Support">Example Support</h3>
+
+<pre class="language-txt"><code class="language-txt">examples/
+├── button              ; Keystroke example
+├── demo                ; Comprehensive test example including sleep current test
+├── drawExample         ; Simple examples of drawing lines and circles
+├── drawImages          ; Show image example
+├── grayscale_test      ; Grayscale example
+├── screen_repair       ; Full screen refresh example
+├── spi_driver          ; Display as slave device
+├── touch               ; Touch example
+└── wifi_sync           ; WiFi Comprehensive Example
+</code></pre>
+<h3 id="PlatformIO">PlatformIO</h3>
+<ol>
+<li>Install <a href="https://code.visualstudio.com/Download"  target="_blank">Visual Studio Code</a>, choosing the version for your operating system.</li>
+<li>Open the &quot;Extensions&quot; sidebar in VSCode (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>), search for the &quot;PlatformIO IDE&quot; extension and install it.</li>
+<li>While the extension is installing, you can download the project code from GitHub. You can download the main branch by clicking the green &quot;&lt;&gt; Code&quot; button, or download a release version from the &quot;Releases&quot; section.</li>
+<li>After the extension is installed, open the Explorer sidebar (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>), click &quot;Open Folder&quot;, select the project folder you just downloaded, and click &quot;Add&quot;. The project will now be in your workspace.</li>
+<li>Open the &quot;platformio.ini&quot; file in the project folder (PlatformIO will automatically open it after adding the folder). Under the &quot;[platformio]&quot; section, uncomment the example you want to burn (look for &quot;default_envs = xxx&quot;), then click the &quot;<kbd>√</kbd>&quot; button in the bottom left to compile. If compilation succeeds, connect the board to your computer, and click the &quot;<kbd>→</kbd>&quot; button to upload.</li>
+</ol>
+<h3 id="Arduino">Arduino</h3>
+<ol>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a>, choosing the version for your operating system.</li>
+<li>Open the &quot;<code>example</code>&quot; folder inside the project directory, select the example project folder, and open the file ending with &quot;.ino&quot; to launch the Arduino IDE workspace.</li>
+<li>Open the &quot;<code>Tools</code>&quot; menu, select &quot;<code>Board</code>&quot; -&gt; &quot;<code>Boards Manager</code>&quot;. Search for &quot;<code>esp32</code>&quot; and install the board package by &quot;<code>Espressif Systems</code>&quot;. Then go back to &quot;Board&quot; and choose the appropriate board under &quot;<code>ESP32 Arduino</code>&quot;.</li>
+<li>Open the &quot;File&quot; menu -&gt; &quot;Preferences&quot;. Locate the &quot;Sketchbook location&quot; field. Copy all the library folders from the project's &quot;<code>libraries</code>&quot; folder and paste them into the &quot;<code>libraries</code>&quot; folder inside the sketchbook location.</li>
+<li>In the &quot;<code>Tools</code>&quot; menu, select the correct settings as shown in the table below.</li>
+</ol>
+<h4 id="ESP32-S3">ESP32-S3</h4>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Setting</th>
+  <th style="text-align:center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">Board</td>
+  <td style="text-align:center">ESP32S3 Dev Module</td>
+</tr>
+<tr>
+  <td style="text-align:center">Upload Speed</td>
+  <td style="text-align:center">921600</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB Mode</td>
+  <td style="text-align:center">Hardware CDC and JTAG</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB CDC On Boot</td>
+  <td style="text-align:center">Enabled</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB Firmware MSC On Boot</td>
+  <td style="text-align:center">Disabled</td>
+</tr>
+<tr>
+  <td style="text-align:center">USB DFU On Boot</td>
+  <td style="text-align:center">Disabled</td>
+</tr>
+<tr>
+  <td style="text-align:center">CPU Frequency</td>
+  <td style="text-align:center">240MHz (WiFi)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Flash Mode</td>
+  <td style="text-align:center">QIO 80MHz</td>
+</tr>
+<tr>
+  <td style="text-align:center">Flash Size</td>
+  <td style="text-align:center">16MB (128Mb)</td>
+</tr>
+<tr>
+  <td style="text-align:center">Core Debug Level</td>
+  <td style="text-align:center">None</td>
+</tr>
+<tr>
+  <td style="text-align:center">Partition Scheme</td>
+  <td style="text-align:center">16M Flash (3MB APP/9.9MB FATFS)</td>
+</tr>
+<tr>
+  <td style="text-align:center">PSRAM</td>
+  <td style="text-align:center">OPI PSRAM</td>
+</tr>
+<tr>
+  <td style="text-align:center">Arduino Runs On</td>
+  <td style="text-align:center">Core 1</td>
+</tr>
+<tr>
+  <td style="text-align:center">Events Run On</td>
+  <td style="text-align:center">Core 1</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>Select the correct port.</li>
+<li>Click the &quot;<kbd>√</kbd>&quot; button in the top left to compile. If compilation succeeds, connect the board to your computer and click the &quot;<kbd>→</kbd>&quot; button to upload.</li>
+</ol>
+<h3 id="Development-Platforms">Development Platforms</h3>
+<ol>
+<li><a href="https://www.espressif.com/zh-hans/products/sdks/esp-idf"  target="_blank">ESP-IDF</a></li>
+<li><a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></li>
+<li><a href="https://code.visualstudio.com/"  target="_blank">VS Code</a></li>
+<li><a href="https://micropython.org/"  target="_blank">Micropython</a></li>
+</ol>
+<h2 id="Pin-Overview">Pin Overview</h2>
+<table>
+<thead>
+<tr>
+  <th>ESP32S3 GPIO</th>
+  <th>Connect To</th>
+  <th>Free</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>13</td>
+  <td>74HCT4094D CFG_DATA</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>74HCT4094D CFG_CLK</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>74HCT4094D CFG_STR</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>38</td>
+  <td>E-paper CKV</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>40</td>
+  <td>E-paper STH</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>41</td>
+  <td>E-paper CKH</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>E-paper D0</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>E-paper D1</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>E-paper D2</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>E-paper D3</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>E-paper D4</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>E-paper D5</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>E-paper D6</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>E-paper D7</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>Button</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>Battery ADC</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>SD MISO</td>
+  <td>❌*</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>SD MOSI</td>
+  <td>❌*</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>SD  SCK</td>
+  <td>❌*</td>
+</tr>
+<tr>
+  <td>42</td>
+  <td>SD  CS</td>
+  <td>❌*</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>SDA</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td>SCL</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>47</td>
+  <td>TouchPanel IRQ</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>45</td>
+  <td>No Connect any</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>No Connect any</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>48</td>
+  <td>No Connect any</td>
+  <td>✅</td>
+</tr>
+<tr>
+  <td>39</td>
+  <td>No Connect any</td>
+  <td>✅</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>GPIOs marked ✅ are free to use. GPIO10 can be used for analog input but not for other purposes.</li>
+<li>SD pins: if you are not using the SD card, these GPIOs (16, 15, 11, 42) can be used freely.</li>
+<li>In the design, RTC_GPIO is not connected to the touch interrupt, so the ESP cannot be woken up by touch. However, GPIO10 can be connected to GPIO47 to enable touch wake‑up. For details, see <a href="https://github.com/Xinyuan-LilyGO/LilyGo-EPD47/issues/93#issuecomment-2488500117"  target="_blank">issues/93</a></li>
+</ul>
+<h2 id="Related-Tests">Related Tests</h2>
+<h2 id="FAQ">FAQ</h2>
+<ul>
+<li><p><strong>Q. I still don't know how to set up the programming environment after reading the above tutorials. What should I do?</strong><br />
+A. If you still have trouble setting up the environment, you can refer to the <a href="https://github.com/Xinyuan-LilyGO/LilyGo-Document"  target="_blank">LilyGo-Document</a> for setup instructions.</p>
+</li>
+<li><p><strong>Q. Why does Arduino IDE prompt me to update library files when I open it? Should I update or not?</strong><br />
+A. Choose <strong>not</strong> to update. Different versions of libraries may not be compatible with each other, so updating is not recommended.</p>
+</li>
+<li><p><strong>Q. What is the refresh rate of the e‑paper display?</strong><br />
+A. E‑paper displays have very low power consumption but relatively slow refresh rates, making them suitable for static or infrequently updated content.</p>
+</li>
+<li><p><strong>Q. Why does my board keep failing to upload the program?</strong><br />
+A. Please hold the &quot;BOOT&quot; button and try uploading again.</p>
+</li>
+<li><p><strong>Q. Are the codes for the Lite and Pro editions interchangeable?</strong><br />
+A. Core display, touch, RTC, and other basic functions are fully compatible.</p>
+</li>
+<li><p><strong>Q. What are the benefits of AG glass and warm backlight?</strong><br />
+A. AG (anti‑glare) glass significantly reduces screen reflections, greatly improving outdoor visibility. The warm backlight provides a more paper‑like reading experience, reducing eye strain during long reading sessions – ideal for e‑books and reading devices.</p>
+</li>
+</ul>
+<h2 id="Projects">Projects</h2>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGo-EPD47/blob/esp32s3/schematic/T5-ePaper-S3-V2.4.pdf"  target="_blank">T5-ePaper-S3-V2.4</a></li>
+</ul>
+<h2 id="Resources">Resources</h2>
+<ul>
+<li><a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">ESP32-S3 Datasheet</a></li>
+<li><a href="https://github.com/Xinyuan-LilyGO/LilyGo-EPD47/blob/esp32s3/datasheet/ED047TC1.pdf"  target="_blank">ED047TC1 Screen Datasheet</a></li>
+</ul>
+<h2 id="Libraries">Libraries</h2>
+<ul>
+<li><a href="https://github.com/LennartHennigs/Button2"  target="_blank">Button2</a></li>
+<li><a href="https://github.com/lewisxhe/SensorsLib"  target="_blank">SensorLib@0.19</a></li>
+<li><a href="https://github.com/ZinggJM/GxEPD2"  target="_blank">GxEPD2</a></li>
+<li><a href="https://github.com/adafruit/Adafruit-GFX-Library"  target="_blank">Adafruit_GFX</a></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
