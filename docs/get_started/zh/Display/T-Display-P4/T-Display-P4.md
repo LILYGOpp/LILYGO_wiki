@@ -310,17 +310,59 @@ T-Display-P4有Amoled、TFT两个版本，引脚图如下
 
 ## 常见问题
 
-* Q. 看了以上教程我还是不会搭建编程环境怎么办？
+### Q. 看了以上教程我还是不会搭建编程环境怎么办？
 * A. 如果看了以上教程还不懂如何搭建环境的可以参考[LilyGo-Document](https://github.com/Xinyuan-LilyGO/LilyGo-Document)文档说明来搭建。
 
 <br />
 
-* Q. 为什么我的板子一直烧录失败呢？
+### Q. 为什么我的板子一直烧录失败呢？
 * A. 请按住“BOOT”按键重新下载程序。
 
 <br />
 
-* Q. 为什么我使用espidf框架在选择目标编译芯片或者在配置SDK的menuconfig的时候配置失败，报以下错误：
+### Q. 使用出厂固件时为什么找不到定位
+* A. <br />
+(1)这边建议烧录我们这边的最新的测试程序再试一下 [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin) 其他第三方固件可能有些bug没有解决。<br />
+
+<br />
+
+### Q. 关于关机无法充电、续航严重缩水问题
+* A. T-Display-P4正常情况下设备支持关机充电，出厂固件最多使用时间就是3-5小时,
+没有加入睡眠，如果需要可以参考[睡眠示例](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/sleep/(%E4%BF%AE%E6%94%B9mipi%E7%94%B5%E5%8E%8B%E5%9F%9F%E4%B8%BA1.8v)%5BT-Display-P4%5D%5Bdeep_sleep%5D%5Bsingle_board%2Brm69a10%2Bov2710%5D_firmware_202507281406.bin)
+<br />
+
+### Q. 关于 OLED 屏幕出现波浪纹问题
+* A. 建议在观察屏幕波纹时，留意设备电量变化：若低电量时波纹更明显，基本可判定与电池相关；若电量充足仍频繁出现，需检查主板上屏幕供电回路的元器件。
+<br />
+
+
+### Q. 关于测试页面偶尔卡住问题
+* A. 建议您在刷写最新固件后，再次测试；若卡顿现象仍随机出现，可联系我们提供测试页面卡死时的具体界面，我们会针对性优化固件 最新固件地址：[Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin)。
+
+<br />
+
+### Q. 关于天线接口功能、发射电平及 GPS 定位问题
+* A. 天线接口功能、发射电平及 GPS 定位问题，请参考以下图片设置：
+![alt text](assets/天线设置图.png)
+当前sx1262版本外壳上的两个天线接口只有一个能用另一个没有接线，所以只能用一个天线接口。
+![alt text](assets/天线接口图.png)
+附带LoRa测试图：
+![alt text](assets/Lora测试图.jpg)
+<br />
+
+### Q. 关于私自拆卸设备问题
+* A.背面的硅胶是用永久胶固定的。拆解会损害硅胶的外观，[拆解视频：](https://github.com/Xinyuan-LilyGO/T-Display-P4/issues/6#issuecomment-3840475791)
+
+
+### Q. 关于电量显示不准及关机无法充电的问题
+* A.在固件中设置 set_design_capacity 参数为 1000mAh，之后完成一次满电→自然放电至关机→再充满电的循环，电量芯片会自动校准。注意：完全断电后需重新校准。
+
+### Q. 天线接口相关问题
+* A.外壳标识的MMCX2 接口为内部测试预留接口，实际无电路连接，首次测试时该接口无信号电平输出。此设备为工程组装的内部测试版本
+
+
+
+### Q. 为什么我使用espidf框架在选择目标编译芯片或者在配置SDK的menuconfig的时候配置失败，报以下错误：
 
         asyncio.exceptions.LimitOverrunError: Separator is found, but chunk is longer than limit
 

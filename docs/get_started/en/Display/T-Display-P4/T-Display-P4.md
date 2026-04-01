@@ -17,8 +17,8 @@ tags: ESP32-P4, MIPI, AMOLED, LoRa, GPS, ESP32-C6
 ## Version History:
 | Version | Update date | Update description |
 | :-----: | :---------: | :---------------- |
-| T-Display-P4_V1.0 | 2025-06-13 | Initial Version |
-| T-Display-P4-Keyboard_V1.0 | 2025-09-12 | Keyboard Expansion Board Initial Version |
+| T-Display-P4_V1.0 | 2025-06-13 | Initial version |
+| T-Display-P4-Keyboard_V1.0 | 2025-09-12 | Keyboard expansion board initial version |
 
 ## Purchase Links
 
@@ -39,11 +39,11 @@ tags: ESP32-P4, MIPI, AMOLED, LoRa, GPS, ESP32-C6
 
 ## Description
 
-T-Display-P4 is a multi-functional development board based on the **ESP32-P4** high-performance core, designed for complex graphics processing, multimedia interaction, and IoT applications. Main features include:
+T-Display-P4 is a multi‑functional development board based on the **ESP32‑P4** high‑performance core, designed for complex graphics processing, multimedia interaction, and IoT applications. Main features include:
 
-1.  **High-Performance Processing**: Equipped with ESP32-P4 processor, supports complex graphics and video task processing.
-2.  **HD Display**: Features a 4.05-inch MIPI interface screen with a resolution of 540×1168px, supporting touch.
-3.  **Dual-Core Collaboration**: Onboard ESP32-C6 auxiliary processor, supports Wi-Fi 6 and Bluetooth 5.3.
+1.  **High‑Performance Processing**: Equipped with ESP32‑P4 processor, supports complex graphics and video tasks.
+2.  **HD Display**: Features a 4.05‑inch MIPI interface screen with a resolution of 540×1168px, supporting touch.
+3.  **Dual‑Core Collaboration**: Onboard ESP32‑C6 auxiliary processor, supports Wi‑Fi 6 and Bluetooth 5.3.
 4.  **Rich Peripherals**: Integrates speaker, microphone, linear vibration motor, LoRa, GPS, Ethernet, camera, battery monitoring, and other modules.
 5.  **High Expandability**: Provides abundant GPIO interfaces, supports keyboard expansion board (T-Display-P4-Keyboard).
 
@@ -57,13 +57,16 @@ T-Display-P4 is a multi-functional development board based on the **ESP32-P4** h
 
 </div>
 
-### Pin Diagram
+### Pin Diagrams
+
 T-Display-P4 has two versions: Amoled and TFT. Pin diagrams are as follows:
+
 #### Amoled Version
 
 ![alt text](assets/T-Display-P4-Amoled.jpg)
 
 #### TFT Version
+
 ![alt text](assets/T-Display-P4-tft.jpg)
 
 
@@ -71,19 +74,19 @@ T-Display-P4 has two versions: Amoled and TFT. Pin diagrams are as follows:
 
 ### T-Display-P4 Main Board
 
-#### 1. Core Processor
+#### Core Processor
 * **Chip**: ESP32-P4
 * **FLASH**: 16MB
 * **Documentation**: [Espressif Official Documentation](https://www.espressif.com/en/support/documents/technical-documents)
 
-#### 2. Auxiliary Processor
+#### Auxiliary Processor
 * **Module**: ESP32-C6-MINI-1U
 * **Chip**: ESP32-C6-FH4
 * **PSRAM**: 4MB
 * **Communication Protocol**: SDIO
 * **Documentation**: [ESP32-C6-MINI-1U Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6-mini-1_mini-1u_datasheet_en.pdf)
 
-#### 3. Display and Touch
+#### Display and Touch
 | Model | H0405S002T002-V0 (TFT) | H0410S001AMT001-V0 (AMOLED) |
 | :--- | :--- | :--- |
 | **Size** | 4.05 inch | 4.1 inch |
@@ -96,76 +99,76 @@ T-Display-P4 has two versions: Amoled and TFT. Pin diagrams are as follows:
 | **Touch Points** | 10 points | 10 points |
 | **Documentation** | [HI8561](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/HI8561_Preliminary%20_DS_V0.00_20230511.pdf) | [RM69A10](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/RM69A10_DataSheet_V0.2_20230330%20(Public%20version).pdf) <br> [GT9895](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/GT9895_Datasheet_V1.1.pdf) |
 
-#### 4. Audio Module
+#### Audio Module
 * **DAC Chip**: ES8311
 * **Amplifier Chip**: NS4150B
-* **Microphone**: Mic Head
+* **Microphone**: Mic head
 * **Communication Protocol**: I2S
-* **Documentation**: [ES8311](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/ES8311.pdf) , [NS4150B](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/NS4150B.pdf)
+* **Documentation**: [ES8311](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/ES8311.pdf) 、[NS4150B](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/NS4150B.pdf)
 
-#### 5. Vibration Motor
+#### Vibration Motor
 * **Driver Chip**: AW86224AFCR
 * **Communication Protocol**: I2C
 * **Documentation**: [AW86224](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/AW86224AFCR.pdf)
 
-#### 6. LoRa Module
+#### LoRa Module
 * **Module**: HPD16A
 * **Chip**: SX1262
 * **Communication Protocol**: SPI
 * **Documentation**: [SX1261-2](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/DS_SX1261-2_V2_1.pdf)
 
-#### 7. GPS Module
+#### GPS Module
 * **Module**: L76K
 * **Communication Protocol**: UART
 * **Documentation**: [L76K](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/L76KB-A58.pdf)
 
-#### 8. RTC Clock
+#### RTC Clock
 * **Chip**: PCF8563
 * **Communication Protocol**: I2C
 * **Documentation**: [PCF8563](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/PCF8563.pdf)
 
-#### 9. Charging Management
+#### Charging Management
 * **Chip**: LGS4056H
-* **Description**: Supports three-wire battery NTC temperature detection
+* **Description**: Supports three‑wire battery NTC temperature detection
 * **Documentation**: [LGS4056H](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/LGS4056H.pdf)
 
-#### 10. Battery Monitoring
+#### Battery Monitoring
 * **Chip**: BQ27220
 * **Communication Protocol**: I2C
 * **Documentation**: [BQ27220](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/bq27220_en.pdf)
 
-#### 11. Camera
+#### Camera
 * **Model**: OV2710 (MIPI interface)
 * **Documentation**: [OV2710](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/OV2710_CSP3_DS_2.0_KING%20HORN%20ENTERPRISES%20Ltd..pdf)
 
-#### 12. Inertial Sensor
+#### Inertial Sensor
 * **Chip**: ICM20948
 * **Communication Protocol**: I2C
 * **Documentation**: [ICM20948](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/ICM20948.pdf)
 
-#### 13. IO Expansion
+#### IO Expansion
 * **Chip**: XL9535
 * **Communication Protocol**: I2C
 * **Documentation**: [XL9535](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/XL95x5.pdf)
 
 ### T-Display-P4-Keyboard Expansion Board
 
-#### 1. Keyboard Driver
+#### Keyboard Driver
 * **Chip**: TCA8418
 * **Communication Protocol**: I2C
 * **Documentation**: [TCA8418](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/tca8418.pdf)
 
-#### 2. Backlight Driver
+#### Backlight Driver
 * **Chip**: SY7200A
 * **Communication Protocol**: PWM
 * **Documentation**: [SY7200A](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/SY7200AABC.pdf)
 
-#### 3. IO Expansion
+#### IO Expansion
 * **Chip**: XL9555
 * **Communication Protocol**: I2C
 * **Documentation**: [XL9555](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/XL95x5.pdf)
 
-#### 4. Wireless Module (T-MixRF)
+#### Wireless Module (T-MixRF)
 | Module | Chip | Protocol | Documentation |
 | :--- | :--- | :--- | :--- |
 | **CC1101** | CC1101 | SPI | [CC1101](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/information/cc1101.pdf) |
@@ -257,9 +260,9 @@ T-Display-P4 has two versions: Amoled and TFT. Pin diagrams are as follows:
    - **ESP-IDF Tools directory (IDF_TOOLS_PATH):** `Your installation path xxx\Espressif`  
     Click the "install" button in the bottom right corner to install the framework.
 
-5. Click the ESP-IDF extension menu "SDK Configuration Editor" in the bottom menu bar of Visual Studio Code, search for the "Select the example to build" field in the search bar, select the project you need to compile, then search for the "Select the camera type" field in the search bar, select the camera type onboard your board, and click Save.
+5. Click the ESP-IDF extension menu "SDK Configuration Editor" in the bottom menu bar of Visual Studio Code, search for the "Select the example to build" field in the search bar, select the project you need to compile, then search for the "Select the camera type" field, select the camera type onboard your board, and click Save.
 
-6. Click "Set Espressif device target" in the bottom menu bar of Visual Studio Code, select **ESP32P4**, click "Build Project" in the bottom menu bar, wait for the build to complete, then click "Select port to use" in the bottom menu bar, then click "Flash Project" in the bottom menu bar to flash the program.
+6. Click "Set Espressif device target" in the bottom menu bar of Visual Studio Code, select **ESP32P4**, click "Build Project" in the bottom menu bar, wait for the build to complete, then click "Select port to use" in the bottom menu bar, then click "Flash Project" to flash the program.
 
 <p align="center" width="100%">
     <img src="./assets/1.jpg" alt="example">
@@ -296,7 +299,7 @@ For pin definitions, please refer to the configuration files:
 
 | firmware | program | description | picture |
 | ------  | ------  | ------ | ------ | 
-| [deep_sleep(single_board)](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/firmware/sleep/[T-Display-P4][deep_sleep][single_board]_firmware_202505301450.bin) |[deep_sleep](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/main/examples/deep_sleep/)| Average current consumption: 1.2mA For more information, please view [Power Consumption Test Log](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/relevant_test/PowerConsumptionTestLog_[T-Display-P4_V1.0]_20250605.pdf) | |
+| [deep_sleep(single_board)](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/firmware/sleep/[T-Display-P4][deep_sleep][single_board]_firmware_202505301450.bin) |[deep_sleep](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/main/examples/deep_sleep/)| Average current consumption: 1.2mA. For more information, see [Power Consumption Test Log](https://github.com/Xinyuan-LilyGO/T-Display-P4/tree/main/relevant_test/PowerConsumptionTestLog_[T-Display-P4_V1.0]_20250605.pdf) | |
 
 ### Camera
 
@@ -307,17 +310,55 @@ For pin definitions, please refer to the configuration files:
 
 ## FAQ
 
-* Q. I still don't know how to set up the programming environment after reading the above tutorial. What should I do?
+### Q. I still don't know how to set up the programming environment after reading the above tutorial. What should I do?
 * A. If you still don't understand how to set up the environment after reading the above tutorial, you can refer to the [LilyGo-Document](https://github.com/Xinyuan-LilyGO/LilyGo-Document) documentation for setup instructions.
 
 <br />
 
-* Q. Why does my board keep failing to upload programs?
+### Q. Why does my board keep failing to upload programs?
 * A. Please hold down the "BOOT" button and try uploading the program again.
 
 <br />
 
-* Q. Why do I fail when selecting the target compilation chip in the espidf framework or when configuring menuconfig in the SDK, reporting the following error:
+### Q. Why can't I get a GPS fix when using the factory firmware?
+* A. <br />
+(1) We suggest flashing the latest test firmware from our side and try again: [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin). Some third‑party firmware may have unresolved bugs.<br />
+
+<br />
+
+### Q. Problems with not charging when powered off and severely shortened battery life
+* A. The T-Display-P4 normally supports charging when powered off. The factory firmware can run for about 3‑5 hours at most; it does not include sleep. If you need sleep, refer to the [sleep example](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/sleep/(%E4%BF%AE%E6%94%B9mipi%E7%94%B5%E5%8E%8B%E5%9F%9F%E4%B8%BA1.8v)%5BT-Display-P4%5D%5Bdeep_sleep%5D%5Bsingle_board%2Brm69a10%2Bov2710%5D_firmware_202507281406.bin).
+<br />
+
+### Q. About ripple patterns on the OLED screen
+* A. When observing screen ripples, pay attention to the battery level: if ripples become more noticeable at low battery, it is likely related to the battery; if ripples still occur frequently even with sufficient battery, check the components of the screen power supply circuit on the main board.
+<br />
+
+
+### Q. About occasional freezing in the test page
+* A. Please re‑test after flashing the latest firmware. If the freeze still appears randomly, you can contact us with a specific screenshot of the frozen page, and we will optimize the firmware accordingly. Latest firmware address: [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin).
+
+<br />
+
+### Q. About antenna interface function, transmission level, and GPS positioning issues
+* A. For antenna interface function, transmission level, and GPS positioning issues, please refer to the following image settings:
+![alt text](assets/天线设置图.png)
+On the current sx1262 version, only one of the two antenna ports on the case is connected; the other is not wired, so only one antenna port can be used.
+![alt text](assets/天线接口图.png)
+Attached LoRa test image:
+![alt text](assets/Lora测试图.jpg)
+<br />
+
+### Q. About disassembling the device by yourself
+* A. The silicone on the back is fixed with permanent adhesive. Disassembly will damage the appearance of the silicone. [Disassembly video:](https://github.com/Xinyuan-LilyGO/T-Display-P4/issues/6#issuecomment-3840475791)
+
+### Q. About inaccurate battery level display and inability to charge when powered off
+* A. Set the set_design_capacity parameter to 1000mAh in the firmware, then perform a full charge → natural discharge until power off → recharge cycle. The battery gauge will calibrate automatically. Note: after a complete power loss, recalibration is needed.
+
+### Q. Antenna interface related issues
+* A. The MMCX2 interface marked on the case is reserved for internal testing and has no circuit connection. During initial testing, no signal level is output from that port. This device is an internal test version assembled for engineering purposes.
+
+### Q. Why do I fail when selecting the target compilation chip in the espidf framework or when configuring menuconfig in the SDK, reporting the following error:
 
         asyncio.exceptions.LimitOverrunError: Separator is found, but chunk is longer than limit
 
