@@ -11,6 +11,8 @@ items:
         file: Display/T-Display-K230/T-Display-K230.md 
     -   label: T-Display S3 Long
         file: Display/T-Display-S3-Long/T-Display-S3-Long.md
+    -   label: T-Display S3 Pro
+        file: Display/T-Display-S3-Pro/T-Display-S3-Pro.md
     -   label : T-Display S3 Pro LR1121
         file: Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.md
     -   label : T-Display S3 AMOLED Plus

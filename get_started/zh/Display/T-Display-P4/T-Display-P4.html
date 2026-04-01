@@ -127,6 +127,7 @@ var _hmt = _hmt || [];
 <li class="active with_link"><a href="/get_started/zh/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Pro/T-Display-S3-Pro.html"><span class="label">T-Display S3 Pro</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
@@ -976,25 +977,68 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <h2 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</h2>
+<h3 id="Q.-%E7%9C%8B%E4%BA%86%E4%BB%A5%E4%B8%8A%E6%95%99%E7%A8%8B%E6%88%91%E8%BF%98%E6%98%AF%E4%B8%8D%E4%BC%9A%E6%90%AD%E5%BB%BA%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F">Q. 看了以上教程我还是不会搭建编程环境怎么办？</h3>
 <ul>
-<li>Q. 看了以上教程我还是不会搭建编程环境怎么办？</li>
 <li>A. 如果看了以上教程还不懂如何搭建环境的可以参考<a href="https://github.com/Xinyuan-LilyGO/LilyGo-Document"  target="_blank">LilyGo-Document</a>文档说明来搭建。</li>
 </ul>
 <br />
+<h3 id="Q.-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E7%9A%84%E6%9D%BF%E5%AD%90%E4%B8%80%E7%9B%B4%E7%83%A7%E5%BD%95%E5%A4%B1%E8%B4%A5%E5%91%A2%EF%BC%9F">Q. 为什么我的板子一直烧录失败呢？</h3>
 <ul>
-<li>Q. 为什么我的板子一直烧录失败呢？</li>
 <li>A. 请按住“BOOT”按键重新下载程序。</li>
 </ul>
 <br />
+<h3 id="Q.-%E4%BD%BF%E7%94%A8%E5%87%BA%E5%8E%82%E5%9B%BA%E4%BB%B6%E6%97%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E6%89%BE%E4%B8%8D%E5%88%B0%E5%AE%9A%E4%BD%8D">Q. 使用出厂固件时为什么找不到定位</h3>
 <ul>
-<li><p>Q. 为什么我使用espidf框架在选择目标编译芯片或者在配置SDK的menuconfig的时候配置失败，报以下错误：</p>
+<li>A. <br /></li>
+</ul>
+<p>(1)这边建议烧录我们这边的最新的测试程序再试一下 <a href="https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin"  target="_blank">Factory.bin</a> 其他第三方固件可能有些bug没有解决。<br /></p>
+<br />
+<h3 id="Q.-%E5%85%B3%E4%BA%8E%E5%85%B3%E6%9C%BA%E6%97%A0%E6%B3%95%E5%85%85%E7%94%B5%E3%80%81%E7%BB%AD%E8%88%AA%E4%B8%A5%E9%87%8D%E7%BC%A9%E6%B0%B4%E9%97%AE%E9%A2%98">Q. 关于关机无法充电、续航严重缩水问题</h3>
+<ul>
+<li>A. T-Display-P4正常情况下设备支持关机充电，出厂固件最多使用时间就是3-5小时,</li>
+</ul>
+<p>没有加入睡眠，如果需要可以参考<a href="https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/sleep/(%E4%BF%AE%E6%94%B9mipi%E7%94%B5%E5%8E%8B%E5%9F%9F%E4%B8%BA1.8v)%5BT-Display-P4%5D%5Bdeep_sleep%5D%5Bsingle_board%2Brm69a10%2Bov2710%5D_firmware_202507281406.bin"  target="_blank">睡眠示例</a></p>
+<br />
+<h3 id="Q.-%E5%85%B3%E4%BA%8E-OLED-%E5%B1%8F%E5%B9%95%E5%87%BA%E7%8E%B0%E6%B3%A2%E6%B5%AA%E7%BA%B9%E9%97%AE%E9%A2%98">Q. 关于 OLED 屏幕出现波浪纹问题</h3>
+<ul>
+<li>A. 建议在观察屏幕波纹时，留意设备电量变化：若低电量时波纹更明显，基本可判定与电池相关；若电量充足仍频繁出现，需检查主板上屏幕供电回路的元器件。</li>
+</ul>
+<br />
+<h3 id="Q.-%E5%85%B3%E4%BA%8E%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2%E5%81%B6%E5%B0%94%E5%8D%A1%E4%BD%8F%E9%97%AE%E9%A2%98">Q. 关于测试页面偶尔卡住问题</h3>
+<ul>
+<li>A. 建议您在刷写最新固件后，再次测试；若卡顿现象仍随机出现，可联系我们提供测试页面卡死时的具体界面，我们会针对性优化固件 最新固件地址：<a href="https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin"  target="_blank">Factory.bin</a>。</li>
+</ul>
+<br />
+<h3 id="Q.-%E5%85%B3%E4%BA%8E%E5%A4%A9%E7%BA%BF%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD%E3%80%81%E5%8F%91%E5%B0%84%E7%94%B5%E5%B9%B3%E5%8F%8A-GPS-%E5%AE%9A%E4%BD%8D%E9%97%AE%E9%A2%98">Q. 关于天线接口功能、发射电平及 GPS 定位问题</h3>
+<ul>
+<li>A. 天线接口功能、发射电平及 GPS 定位问题，请参考以下图片设置：</li>
+</ul>
+<p><img src="assets/%E5%A4%A9%E7%BA%BF%E8%AE%BE%E7%BD%AE%E5%9B%BE.png" alt="alt text" /><br />
+当前sx1262版本外壳上的两个天线接口只有一个能用另一个没有接线，所以只能用一个天线接口。<br />
+<img src="assets/%E5%A4%A9%E7%BA%BF%E6%8E%A5%E5%8F%A3%E5%9B%BE.png" alt="alt text" /><br />
+附带LoRa测试图：<br />
+<img src="assets/Lora%E6%B5%8B%E8%AF%95%E5%9B%BE.jpg" alt="alt text" /></p>
+<br />
+<h3 id="Q.-%E5%85%B3%E4%BA%8E%E7%A7%81%E8%87%AA%E6%8B%86%E5%8D%B8%E8%AE%BE%E5%A4%87%E9%97%AE%E9%A2%98">Q. 关于私自拆卸设备问题</h3>
+<ul>
+<li>A.背面的硅胶是用永久胶固定的。拆解会损害硅胶的外观，<a href="https://github.com/Xinyuan-LilyGO/T-Display-P4/issues/6#issuecomment-3840475791"  target="_blank">拆解视频：</a></li>
+</ul>
+<h3 id="Q.-%E5%85%B3%E4%BA%8E%E7%94%B5%E9%87%8F%E6%98%BE%E7%A4%BA%E4%B8%8D%E5%87%86%E5%8F%8A%E5%85%B3%E6%9C%BA%E6%97%A0%E6%B3%95%E5%85%85%E7%94%B5%E7%9A%84%E9%97%AE%E9%A2%98">Q. 关于电量显示不准及关机无法充电的问题</h3>
+<ul>
+<li>A.在固件中设置 set_design_capacity 参数为 1000mAh，之后完成一次满电→自然放电至关机→再充满电的循环，电量芯片会自动校准。注意：完全断电后需重新校准。</li>
+</ul>
+<h3 id="Q.-%E5%A4%A9%E7%BA%BF%E6%8E%A5%E5%8F%A3%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98">Q. 天线接口相关问题</h3>
+<ul>
+<li>A.外壳标识的MMCX2 接口为内部测试预留接口，实际无电路连接，首次测试时该接口无信号电平输出。此设备为工程组装的内部测试版本</li>
+</ul>
+<h3 id="Q.-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BD%BF%E7%94%A8espidf%E6%A1%86%E6%9E%B6%E5%9C%A8%E9%80%89%E6%8B%A9%E7%9B%AE%E6%A0%87%E7%BC%96%E8%AF%91%E8%8A%AF%E7%89%87%E6%88%96%E8%80%85%E5%9C%A8%E9%85%8D%E7%BD%AESDK%E7%9A%84menuconfig%E7%9A%84%E6%97%B6%E5%80%99%E9%85%8D%E7%BD%AE%E5%A4%B1%E8%B4%A5%EF%BC%8C%E6%8A%A5%E4%BB%A5%E4%B8%8B%E9%94%99%E8%AF%AF%EF%BC%9A">Q. 为什么我使用espidf框架在选择目标编译芯片或者在配置SDK的menuconfig的时候配置失败，报以下错误：</h3>
 
-<pre class="language-none"><code class="language-none">  asyncio.exceptions.LimitOverrunError: Separator is found, but chunk is longer than limit
+<pre class="language-none"><code class="language-none">    asyncio.exceptions.LimitOverrunError: Separator is found, but chunk is longer than limit
 
-  ValueError: Separator is found, but chunk is longer than limit
+    ValueError: Separator is found, but chunk is longer than limit
 
 </code></pre>
-</li>
+<ul>
 <li><p>A. 这个是espidf框架v5.4~v5.5的一个bug，需要将路径为 <code>esp-idf-v5.x\tools\idf_py_actions\tools.py</code> 文件的第351行做如下修改：</p>
 
 <pre class="language-none"><code class="language-none">  原始代码：
