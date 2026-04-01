@@ -321,9 +321,8 @@ For pin definitions, please refer to the configuration files:
 <br />
 
 ### Q. Why can't I get a GPS fix when using the factory firmware?
-* A. <br />
-(1) We suggest flashing the latest test firmware from our side and try again: [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin). Some third‑party firmware may have unresolved bugs.<br />
-
+* A.Burn the latest test program for our side and conduct the tests with the equipment placed outdoors or in an area with good signal. Other third-party firmware may still have some bugs that have not been resolved. The latest firmware address:
+[Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin),
 <br />
 
 ### Q. Problems with not charging when powered off and severely shortened battery life

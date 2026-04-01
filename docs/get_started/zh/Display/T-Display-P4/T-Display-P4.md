@@ -321,8 +321,8 @@ T-Display-P4有Amoled、TFT两个版本，引脚图如下
 <br />
 
 ### Q. 使用出厂固件时为什么找不到定位
-* A. <br />
-(1)这边建议烧录我们这边的最新的测试程序再试一下 [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin) 其他第三方固件可能有些bug没有解决。<br />
+* A.
+烧录我们这边的最新的测试程序 [Factory.bin](https://github.com/Xinyuan-LilyGO/T-Display-P4/blob/main/firmware/%5BT-Display-P4%5D%5Blvgl_9_ui%5D/%5BT-Display-P4%5D%5Blvgl_9_ui%5D%5Brm69a10%5D%5Bov2710%5D_firmware_202601211405.bin),并且保持设备在室外或者信号良好处进行测试,其他第三方固件可能有些bug没有解决。<br />
 
 <br />
 
