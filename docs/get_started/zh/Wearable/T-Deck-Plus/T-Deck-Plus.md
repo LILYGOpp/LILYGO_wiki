@@ -51,13 +51,13 @@ LILYGO T-Deck 是一款高度集成的多功能嵌入式开发平台，基于 ES
 
 <div style="width:100%; display:flex;justify-content: center;">
 
-![T-Deck](./assets/T-Deck-2.jpg)
+![T-Deck](./assets/T-Deck-Plus-2.jpg)
 
 </div>
 
 ### 引脚图
 
-<img src="./assets/T-Deck-pin-zh.jpg" alt="summary" width=100%>
+<img src="./assets/T-Deck-Plus-zh.jpg" alt="summary" width=100%>
 
 ## 模块
 

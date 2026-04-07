@@ -6,7 +6,7 @@ tags: ESP32-S3, LoRa, GPS, Trackball, Keyboard
 
 <div style="width:100%; display:flex;justify-content: center;">
 
-![T-Deck](./assets/T-Deck-1.jpg)
+![T-Deck](./assets/T-Deck-Plus-1.jpg)
 
 </div>
 
@@ -15,13 +15,13 @@ tags: ESP32-S3, LoRa, GPS, Trackball, Keyboard
 </div>
 
 ## Version History:
-| Version | Update Date | Update Description |
+| Version | Update date | Update description |
 | :-----: | :---------: | :---------------- |
 |  |  |  |
 
 
-1. T-Deck-Plus has allocated the pins on the **Grove** interface for GPS module use, so the **Grove** interface on T-Deck-Plus cannot be used
-2. T-Deck updated the [TFT_eSPI ST7789 initialization sequence](https://github.com/Xinyuan-LilyGO/T-Deck/commit/6adb8884c689f174c29a6d7172a0daa367a582eb) on 20240726. Currently, this change has not been pushed to the TFT_eSPI upstream branch. If you encounter incorrect screen display during use, please check if this matches the initialization sequence in the repository.
+1. T-Deck-Plus has allocated the pins on the **Grove** interface for the GPS module, so the **Grove** interface on the T-Deck-Plus cannot be used.
+2. T-Deck updated the [TFT_eSPI ST7789 initialization sequence](https://github.com/Xinyuan-LilyGO/T-Deck/commit/6adb8884c689f174c29a6d7172a0daa367a582eb) on 2024-07-26. This change has not been pushed to the TFT_eSPI upstream branch. If you find that the screen display is incorrect when using it, please check whether the initialization sequence here is consistent with that in the repository.
 
 ## Purchase Links
 
@@ -43,7 +43,7 @@ tags: ESP32-S3, LoRa, GPS, Trackball, Keyboard
 
 ## Description
 
-LILYGO T-Deck is a highly integrated multi-functional embedded development platform based on the ESP32-S3 main control chip, integrating a 2.8-inch 320x240 resolution ST7789 display, trackball navigation module (with directional keys and BOOT button), physical keyboard interface (via I²C communication), TF card storage expansion, LoRa wireless communication module (supporting SCK/MISO/MOSI and control pins), and ES7210 microphone array (for audio input). Its pin layout accommodates display driving (DC/BL/SPI), touch control, sensor interaction (SDA/SCL/INT), power management (BAT ADC), and modular expansion (SPI/I²C/UART), enabling rapid development of IoT terminals, portable interactive devices, or low-power wireless communication projects.
+The LILYGO T-Deck is a highly integrated, multi-functional embedded development platform based on the ESP32-S3 main controller. It integrates a 2.8‑inch 320×240 ST7789 display, a trackball navigation module (including direction keys and BOOT button), a physical keyboard interface (I²C communication), a TF card slot for storage expansion, a LoRa wireless communication module (supporting SCK/MISO/MOSI and control pins), and an ES7210 microphone array (for audio input). The pin layout covers display drive (DC/BL/SPI), touch control, sensor interaction (SDA/SCL/INT), power management (BAT ADC), and modular expansion (SPI/I²C/UART), enabling rapid development of IoT terminals, portable interactive devices, or low‑power wireless communication projects.
 
 ## Preview
 
@@ -51,13 +51,13 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 
 <div style="width:100%; display:flex;justify-content: center;">
 
-![T-Deck](./assets/T-Deck-2.jpg)
+![T-Deck](./assets/T-Deck-Plus-2.jpg)
 
 </div>
 
-### Pinout Diagram
+### Pin Diagram
 
-<img src="./assets/T-Deck-pin-en.jpg" alt="summary" width=100%>
+<img src="./assets/T-Deck-Plus-en.jpg" alt="summary" width=100%>
 
 ## Modules
 
@@ -67,17 +67,17 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 * PSRAM: 8MB
 * FLASH: 16MB
 * Wireless: Wi-Fi 802.11 b/g/n; Bluetooth 5.0 (LE)
-* Other Notes: For more information, please visit [Espressif Official ESP32-S3 Datasheet](https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+* Additional Information: More information available at [Espressif Official ESP32-S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
 ### Communication Modules
 
-* LoRa: SX1262 chip, supports 433MHz~915MHz frequency bands (optional)
+* LoRa: SX1262 chip, supports 433MHz~915MHz bands (optional)
 * GPS: MIA-M10Q GNSS module
 * Wireless: 2.4GHz Wi-Fi & Bluetooth 5.0 (LE)
 
-### Display and Input
+### Display & Input
 
-* Screen: 2.8-inch ST7789 LCD
+* Screen: 2.8‑inch ST7789 LCD
 * Resolution: 320×240 pixels
 * Control Method: Trackball navigation module (replaces touch screen)
 * Keyboard: Physical keyboard interface (I²C communication)
@@ -85,18 +85,18 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 ### Audio System
 
 * Microphone: MSM381A3729H9CP microphone array
-* Audio Chip: ES7210 audio codec
+* Audio Codec: ES7210 audio codec
 
 ### Power Management
 
-* Battery: 2000mAh lithium polymer battery
-* Switch: Supports power switch
-* USB Power: Type-C interface
+* Battery: 2000mAh Li‑Polymer battery
+* Switch: Power switch
+* USB Power: Type‑C interface
 
 ### Overview
 <img src="./assets/T-Deck-info-en.jpg" alt="summary" width=100%>
 
-> The T-Deck version does not have a touch screen, using a trackball navigation module instead.
+> The T-Deck version has no touch screen; a trackball navigation module is used instead.
 
 | Component | Description |
 | :--: | :--: |
@@ -105,58 +105,61 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 | PSRAM | 8MB |
 | LoRa | SX1262 (433MHz~915MHz optional) |
 | GPS | MIA-M10Q GNSS module |
-| Screen | 2.8-inch ST7789 LCD (320×240) |
+| Screen | 2.8‑inch ST7789 LCD (320×240) |
 | Control Method | Trackball navigation module |
 | Input | Physical keyboard (I²C interface) |
 | Audio | ES7210 audio codec |
 | Microphone | MSM381A3729H9CP microphone array |
-| Battery | 2000mAh lithium polymer battery |
+| Battery | 2000mAh Li‑Polymer battery |
 | Storage | TF card expansion |
 | Wireless | 2.4 GHz Wi-Fi & Bluetooth 5 (LE) |
-| USB | 1 × Type-C interface |
-| IO Expansion | 2mm pitch 6-pin expansion interface |
-| Expansion Interface | GPS expansion interface + 2 × JST GH 1.25mm + 1 × 4-pin expansion interface |
+| USB | 1 × Type‑C interface |
+| IO Expansion | 2mm pitch 6‑pin expansion interface |
+| Expansion Interfaces | GPS expansion interface + 2 × JST GH 1.25mm + 1 × 4‑pin expansion interface |
 | Buttons | 1 x RST button + 1 x BOOT button (trackball) |
 | Switch | Power switch |
-| Mounting Holes | 2mm mounting holes |
+| Mounting Holes | 2mm positioning holes |
 | Dimensions | **10×6.8×1.1 cm** |
 
 ## Quick Start
 
 ### Example Support
 
-```c
-├─Keyboard_ESP32C3 # ESP32C3 keyboard I2C slave
+````
+examples 
+├─Keyboard_ESP32C3       # ESP32C3 keyboard I2C slave
 ├─Keyboard_T_Deck_Master # T-Deck read from keyboard
-├─Microphone # Noise detection
-├─Touchpad # Read touch coordinates
-├─GPSShield # GPS Shield example
-└─UnitTest # Factory hardware unit testing
-```
+├─Microphone             # Noise detection  
+├─Touchpad               # Read touch coordinates 
+├─GPSShield              # GPS Shield example
+└─UnitTest               # Factory hardware unit testing           
 
-1. If microphone is enabled, then the middle button on the board, GPIO0, is not available.
-2. If you encounter issues uploading sketches, you need to press the trackball middle button, then insert USB. This puts the chip in download mode, then click upload sketch.
-3. The ESP32C3 programming interface is on the 6-pin header on the RST button side. Starting from above the RST button, the order is: 3V3, GND, RST, BOOT, RX, TX.
+````
+
+
+1. If the microphone is enabled, the button in the middle of the board (GPIO0) is not available.
+2. If you cannot upload a sketch, press and hold the trackball (BOOT), then insert the USB cable to put the chip into download mode, and then click upload. After upload is complete, press RST to exit download mode.
+3. The programming/flashing interface for the ESP32C3 is the 6‑pin header on the side of the RST button. Starting from above the RST button, the pins are: 3V3, GND, RST, BOOT, RX, TX.
 
 ### PlatformIO
 
-1. Install [VisualStudioCode](https://code.visualstudio.com/) and [Python](https://www.python.org/)
-2. Search for the `PlatformIO` plugin in `VisualStudioCode` extensions and install it.
-3. After installation, you need to restart `VisualStudioCode`
-4. After restarting `VisualStudioCode`, select `File` -> `Open Folder` -> select the `T-Deck` directory
-5. Click on the `platformio.ini` file, in the `platformio` section, uncomment the example line you want to use, ensuring only one line is active
-6. Click the (✔) symbol at the bottom left to compile
-7. Connect the board to computer USB
-8. Click (→) to upload firmware
-9. Click (plug symbol) to monitor serial output
+1. Install [Visual Studio Code](https://code.visualstudio.com/) and [Python](https://www.python.org/)
+2. Search for the `PlatformIO` plugin in `Visual Studio Code` extensions and install it.
+3. After installation, restart `Visual Studio Code`.
+4. After restarting, select `File` -> `Open Folder` in the upper left corner, then select the `T-Deck` directory.
+5. Click on the `platformio.ini` file, and under the `platformio` section uncomment the example line you want to use. Make sure only one line is active.
+6. Click the (✔) symbol at the bottom left to compile.
+7. Connect the board to the computer via USB.
+8. Click (→) to upload the firmware.
+9. Click (plug symbol) to monitor the serial output.
 
-### ArduinoIDE
+### Arduino IDE
 
-1. Install [ArduinoIDE](https://www.arduino.cc/en/software)
-2. Copy all folders from the `T-Deck/lib` directory to `<C:\Users\UserName\Documents\Arduino\libraries>`. If there is no `libraries` directory, please create one. Note: do not copy the `lib` directory itself, but the folders inside the lib directory.
-3. Open ArduinoIDE -> Tools 
+1. Install [Arduino IDE](https://www.arduino.cc/en/software).
+2. Copy all folders inside `T-Deck/lib` to `<C:\Users\UserName\Documents\Arduino\libraries>`. If the `libraries` folder does not exist, create it. Note: do not copy the `lib` folder itself, but the folders inside it.
+3. Open Arduino IDE -> Tools 
    - Board -> ESP32S3 Dev Module
-   - USB CDC On Boot -> Enable   # Note: when not connected to USB, you need to change Enable to Disable so USB CDC does not block board startup
+   - USB CDC On Boot -> Enable   # Note: when the board is not connected via USB, you should change this to Disable so that USB CDC does not block the board startup.
    - CPU Frequency -> 240MHz
    - USB DFU On Boot -> Disable
    - Flash Mode -> QIO 80MHz
@@ -167,7 +170,8 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
    - USB Mode -> Hardware CDC and JTAG
    - Upload Mode -> UART0/Hardware CDC
    - Upload Speed -> 921600
-4. Insert USB to PC, click Upload <If unable to upload successfully, keep pressing BOOT button, then click RST, then click Upload. After upload completes, click RST to exit download mode>
+4. Insert the USB cable to the PC, click Upload. (If upload fails, hold down the BOOT button, press RST once, then click Upload. After upload completes, press RST to exit download mode.)
+5. Select the correct settings in the "Tools" menu as shown in the table below.
 
 ### Development Platforms
 1. [VS Code](https://code.visualstudio.com/)
@@ -254,6 +258,7 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
     #define DEFAULT_OPA          100
 
 ~~~
+
 ## Related Tests
 
 
@@ -262,20 +267,20 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 * **Q. I still don't know how to set up the programming environment after reading the above tutorial. What should I do?**  
   A. If you still don't understand how to set up the environment after reading the above tutorial, you can refer to the [LilyGo-Document](https://github.com/Xinyuan-LilyGO/LilyGo-Document) documentation for setup instructions.
 
-* **Q. Why does Arduino IDE prompt me to upgrade library files when I open it? Should I upgrade or not?**  
-  A. Choose not to upgrade library files, as different versions of library files may not be compatible with each other, so upgrading is not recommended.
+* **Q. Why does Arduino IDE prompt me to update library files when I open it? Should I update or not?**  
+  A. Choose not to update library files. Different versions of library files may not be compatible with each other, so it is not recommended to update library files.
 
-* **Q. Does T-Deck have touch screen functionality?**  
-  A. The T-Deck version does not have a touch screen, using a trackball navigation module instead of touch operation.
+* **Q. Does the T-Deck have a touch screen?**  
+  A. The T-Deck version has no touch screen; a trackball navigation module is used instead of touch operation.
 
-* **Q. Why does my board keep failing to program?**  
-  A. Please hold the "BOOT" button and try downloading the program again.
+* **Q. Why does my board keep failing to upload programs?**  
+  A. Please hold down the "BOOT" button and try uploading the program again.
 
 ## Projects
 * [T-Deck Schematic](https://github.com/Xinyuan-LilyGO/T-Deck/blob/master/schematic/schematic.pdf)
 
 ## Resources
-* [ESP32-S3 Datasheet](https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+* [ESP32-S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 * [T-Deck ANT 868-915MHz](https://github.com/Xinyuan-LilyGO/T-Deck/blob/master/datasheet/T-Deck%20ANT%20868-915MHZ.pdf.pdf)
 * [T-Deck ANT 433MHz](https://github.com/Xinyuan-LilyGO/T-Deck/blob/master/datasheet/T-Deck%20ANT%20433MHZ.pdf)
 
@@ -289,3 +294,4 @@ LILYGO T-Deck is a highly integrated multi-functional embedded development platf
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus)
 * [TouchLib](https://github.com/mmMicky/TouchLib)
 * [LVGL](https://github.com/lvgl/lvgl/tree/v8.4.0)
+```
