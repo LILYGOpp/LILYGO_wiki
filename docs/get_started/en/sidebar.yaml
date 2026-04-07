@@ -4,25 +4,29 @@ items:
     -   label: T-Circle
         file: Display/T-Circle/T-Circle.md
     -   label: T-Circle S3
-        file: Display/T-Circle-S3/T-Circle-S3.md  
-    -   label: T-Display P4
-        file: Display/T-Display-P4/T-Display-P4.md    
-    -   label: T-Display K230
-        file: Display/T-Display-K230/T-Display-K230.md 
-    -   label: T-Display S3 Long
-        file: Display/T-Display-S3-Long/T-Display-S3-Long.md
-    -   label: T-Display S3 Pro
-        file: Display/T-Display-S3-Pro/T-Display-S3-Pro.md
-    -   label : T-Display S3 Pro LR1121
-        file: Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.md
-    -   label : T-Display S3 AMOLED Plus
-        file: Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.md        
-    -   label: T-Display S3 AMOLED 1.43
-        file: Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.md
-    -   label: T-Display S3 AMOLED 1.64
-        file: Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.md
-    -   label: T-Display S3 AMOLED 1.75
-        file: Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.md
+        file: Display/T-Circle-S3/T-Circle-S3.md
+    -   label: T-Display
+        items:
+        -   label: T-Display P4
+            file: Display/T-Display-P4/T-Display-P4.md  
+        -   label: T-Display K230
+            file: Display/T-Display-K230/T-Display-K230.md 
+        -   label: T-Display S3 Long
+            file: Display/T-Display-S3-Long/T-Display-S3-Long.md
+        -   label: T-Display S3 Pro
+            file: Display/T-Display-S3-Pro/T-Display-S3-Pro.md        
+        -   label : T-Display S3 Pro LR1121
+            file: Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.md
+        -   label : T-Display S3 AMOLED Plus
+            file: Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.md        
+        -   label: T-Display S3 AMOLED 1.43
+            file: Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.md
+        -   label: T-Display S3 AMOLED 1.64
+            file: Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.md
+        -   label: T-Display S3 AMOLED 1.75
+            file: Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.md
+        -   label: T-Display Bar
+            file: Display/T-Display-Bar/T-Display-Bar.md
     -   label: T-Pico 2350
         file: Display/T-Pico-2350/T-Pico-2350.md 
     -   label: T-QT C6
@@ -33,8 +37,6 @@ items:
         file: Display/T-Camera-Plus-S3/T-Camera-Plus-S3.md
     -   label: T-Keyboard-S3 Pro
         file: Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.md
-    -   label: T-Display Bar
-        file: Display/T-Display-Bar/T-Display-Bar.md
 -   label: Wearable and Handheld Kit
     items:
     -   label: T-Watch S3 Plus
