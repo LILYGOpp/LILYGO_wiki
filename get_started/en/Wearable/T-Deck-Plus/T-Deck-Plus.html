@@ -295,7 +295,7 @@ var _hmt = _hmt || [];
                     <div id="article_content">
                         
                             <div style="width:100%; display:flex;justify-content: center;">
-<p><img src="./assets/T-Deck-1.jpg" alt="T-Deck" /></p>
+<p><img src="./assets/T-Deck-Plus-1.jpg" alt="T-Deck" /></p>
 </div>
 <div style="padding: 1em 0 0 0; display: flex; justify-content: center">
     <a target="_blank" style="margin: 1em;color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color:rgb(63, 201, 28)" href="https://lilygo.cc/products/t-deck">Official Store</a>
@@ -305,8 +305,8 @@ var _hmt = _hmt || [];
 <thead>
 <tr>
   <th style="text-align:center">Version</th>
-  <th style="text-align:center">Update Date</th>
-  <th style="text-align:left">Update Description</th>
+  <th style="text-align:center">Update date</th>
+  <th style="text-align:left">Update description</th>
 </tr>
 </thead>
 <tbody>
@@ -318,8 +318,8 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <ol>
-<li>T-Deck-Plus has allocated the pins on the <strong>Grove</strong> interface for GPS module use, so the <strong>Grove</strong> interface on T-Deck-Plus cannot be used</li>
-<li>T-Deck updated the <a href="https://github.com/Xinyuan-LilyGO/T-Deck/commit/6adb8884c689f174c29a6d7172a0daa367a582eb"  target="_blank">TFT_eSPI ST7789 initialization sequence</a> on 20240726. Currently, this change has not been pushed to the TFT_eSPI upstream branch. If you encounter incorrect screen display during use, please check if this matches the initialization sequence in the repository.</li>
+<li>T-Deck-Plus has allocated the pins on the <strong>Grove</strong> interface for the GPS module, so the <strong>Grove</strong> interface on the T-Deck-Plus cannot be used.</li>
+<li>T-Deck updated the <a href="https://github.com/Xinyuan-LilyGO/T-Deck/commit/6adb8884c689f174c29a6d7172a0daa367a582eb"  target="_blank">TFT_eSPI ST7789 initialization sequence</a> on 2024-07-26. This change has not been pushed to the TFT_eSPI upstream branch. If you find that the screen display is incorrect when using it, please check whether the initialization sequence here is consistent with that in the repository.</li>
 </ol>
 <h2 id="Purchase-Links">Purchase Links</h2>
 <table>
@@ -356,14 +356,14 @@ var _hmt = _hmt || [];
 <li><a href="#dependent-libraries"  >Dependent Libraries</a></li>
 </ul>
 <h2 id="Description">Description</h2>
-<p>LILYGO T-Deck is a highly integrated multi-functional embedded development platform based on the ESP32-S3 main control chip, integrating a 2.8-inch 320x240 resolution ST7789 display, trackball navigation module (with directional keys and BOOT button), physical keyboard interface (via I²C communication), TF card storage expansion, LoRa wireless communication module (supporting SCK/MISO/MOSI and control pins), and ES7210 microphone array (for audio input). Its pin layout accommodates display driving (DC/BL/SPI), touch control, sensor interaction (SDA/SCL/INT), power management (BAT ADC), and modular expansion (SPI/I²C/UART), enabling rapid development of IoT terminals, portable interactive devices, or low-power wireless communication projects.</p>
+<p>The LILYGO T-Deck is a highly integrated, multi-functional embedded development platform based on the ESP32-S3 main controller. It integrates a 2.8‑inch 320×240 ST7789 display, a trackball navigation module (including direction keys and BOOT button), a physical keyboard interface (I²C communication), a TF card slot for storage expansion, a LoRa wireless communication module (supporting SCK/MISO/MOSI and control pins), and an ES7210 microphone array (for audio input). The pin layout covers display drive (DC/BL/SPI), touch control, sensor interaction (SDA/SCL/INT), power management (BAT ADC), and modular expansion (SPI/I²C/UART), enabling rapid development of IoT terminals, portable interactive devices, or low‑power wireless communication projects.</p>
 <h2 id="Preview">Preview</h2>
 <h3 id="Physical-Image">Physical Image</h3>
 <div style="width:100%; display:flex;justify-content: center;">
-<p><img src="./assets/T-Deck-2.jpg" alt="T-Deck" /></p>
+<p><img src="./assets/T-Deck-Plus-2.jpg" alt="T-Deck" /></p>
 </div>
-<h3 id="Pinout-Diagram">Pinout Diagram</h3>
-<img src="./assets/T-Deck-pin-en.jpg" alt="summary" width=100%>
+<h3 id="Pin-Diagram">Pin Diagram</h3>
+<img src="./assets/T-Deck-Plus-en.jpg" alt="summary" width=100%>
 <h2 id="Modules">Modules</h2>
 <h3 id="MCU">MCU</h3>
 <ul>
@@ -371,17 +371,17 @@ var _hmt = _hmt || [];
 <li>PSRAM: 8MB</li>
 <li>FLASH: 16MB</li>
 <li>Wireless: Wi-Fi 802.11 b/g/n; Bluetooth 5.0 (LE)</li>
-<li>Other Notes: For more information, please visit <a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">Espressif Official ESP32-S3 Datasheet</a></li>
+<li>Additional Information: More information available at <a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">Espressif Official ESP32-S3 Datasheet</a></li>
 </ul>
 <h3 id="Communication-Modules">Communication Modules</h3>
 <ul>
-<li>LoRa: SX1262 chip, supports 433MHz~915MHz frequency bands (optional)</li>
+<li>LoRa: SX1262 chip, supports 433MHz~915MHz bands (optional)</li>
 <li>GPS: MIA-M10Q GNSS module</li>
 <li>Wireless: 2.4GHz Wi-Fi &amp; Bluetooth 5.0 (LE)</li>
 </ul>
-<h3 id="Display-and-Input">Display and Input</h3>
+<h3 id="Display-%26amp%3B-Input">Display &amp; Input</h3>
 <ul>
-<li>Screen: 2.8-inch ST7789 LCD</li>
+<li>Screen: 2.8‑inch ST7789 LCD</li>
 <li>Resolution: 320×240 pixels</li>
 <li>Control Method: Trackball navigation module (replaces touch screen)</li>
 <li>Keyboard: Physical keyboard interface (I²C communication)</li>
@@ -389,18 +389,18 @@ var _hmt = _hmt || [];
 <h3 id="Audio-System">Audio System</h3>
 <ul>
 <li>Microphone: MSM381A3729H9CP microphone array</li>
-<li>Audio Chip: ES7210 audio codec</li>
+<li>Audio Codec: ES7210 audio codec</li>
 </ul>
 <h3 id="Power-Management">Power Management</h3>
 <ul>
-<li>Battery: 2000mAh lithium polymer battery</li>
-<li>Switch: Supports power switch</li>
-<li>USB Power: Type-C interface</li>
+<li>Battery: 2000mAh Li‑Polymer battery</li>
+<li>Switch: Power switch</li>
+<li>USB Power: Type‑C interface</li>
 </ul>
 <h3 id="Overview">Overview</h3>
 <img src="./assets/T-Deck-info-en.jpg" alt="summary" width=100%>
 <blockquote>
-<p>The T-Deck version does not have a touch screen, using a trackball navigation module instead.</p>
+<p>The T-Deck version has no touch screen; a trackball navigation module is used instead.</p>
 </blockquote>
 <table>
 <thead>
@@ -432,7 +432,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td style="text-align:center">Screen</td>
-  <td style="text-align:center">2.8-inch ST7789 LCD (320×240)</td>
+  <td style="text-align:center">2.8‑inch ST7789 LCD (320×240)</td>
 </tr>
 <tr>
   <td style="text-align:center">Control Method</td>
@@ -452,7 +452,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td style="text-align:center">Battery</td>
-  <td style="text-align:center">2000mAh lithium polymer battery</td>
+  <td style="text-align:center">2000mAh Li‑Polymer battery</td>
 </tr>
 <tr>
   <td style="text-align:center">Storage</td>
@@ -464,15 +464,15 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td style="text-align:center">USB</td>
-  <td style="text-align:center">1 × Type-C interface</td>
+  <td style="text-align:center">1 × Type‑C interface</td>
 </tr>
 <tr>
   <td style="text-align:center">IO Expansion</td>
-  <td style="text-align:center">2mm pitch 6-pin expansion interface</td>
+  <td style="text-align:center">2mm pitch 6‑pin expansion interface</td>
 </tr>
 <tr>
-  <td style="text-align:center">Expansion Interface</td>
-  <td style="text-align:center">GPS expansion interface + 2 × JST GH 1.25mm + 1 × 4-pin expansion interface</td>
+  <td style="text-align:center">Expansion Interfaces</td>
+  <td style="text-align:center">GPS expansion interface + 2 × JST GH 1.25mm + 1 × 4‑pin expansion interface</td>
 </tr>
 <tr>
   <td style="text-align:center">Buttons</td>
@@ -484,7 +484,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td style="text-align:center">Mounting Holes</td>
-  <td style="text-align:center">2mm mounting holes</td>
+  <td style="text-align:center">2mm positioning holes</td>
 </tr>
 <tr>
   <td style="text-align:center">Dimensions</td>
@@ -495,37 +495,39 @@ var _hmt = _hmt || [];
 <h2 id="Quick-Start">Quick Start</h2>
 <h3 id="Example-Support">Example Support</h3>
 
-<pre class="language-c"><code class="language-c">├─Keyboard_ESP32C3 # ESP32C3 keyboard I2C slave
+<pre class="language-none"><code class="language-none">examples 
+├─Keyboard_ESP32C3       # ESP32C3 keyboard I2C slave
 ├─Keyboard_T_Deck_Master # T-Deck read from keyboard
-├─Microphone # Noise detection
-├─Touchpad # Read touch coordinates
-├─GPSShield # GPS Shield example
-└─UnitTest # Factory hardware unit testing
+├─Microphone             # Noise detection  
+├─Touchpad               # Read touch coordinates 
+├─GPSShield              # GPS Shield example
+└─UnitTest               # Factory hardware unit testing           
+
 </code></pre>
 <ol>
-<li>If microphone is enabled, then the middle button on the board, GPIO0, is not available.</li>
-<li>If you encounter issues uploading sketches, you need to press the trackball middle button, then insert USB. This puts the chip in download mode, then click upload sketch.</li>
-<li>The ESP32C3 programming interface is on the 6-pin header on the RST button side. Starting from above the RST button, the order is: 3V3, GND, RST, BOOT, RX, TX.</li>
+<li>If the microphone is enabled, the button in the middle of the board (GPIO0) is not available.</li>
+<li>If you cannot upload a sketch, press and hold the trackball (BOOT), then insert the USB cable to put the chip into download mode, and then click upload. After upload is complete, press RST to exit download mode.</li>
+<li>The programming/flashing interface for the ESP32C3 is the 6‑pin header on the side of the RST button. Starting from above the RST button, the pins are: 3V3, GND, RST, BOOT, RX, TX.</li>
 </ol>
 <h3 id="PlatformIO">PlatformIO</h3>
 <ol>
-<li>Install <a href="https://code.visualstudio.com/"  target="_blank">VisualStudioCode</a> and <a href="https://www.python.org/"  target="_blank">Python</a></li>
-<li>Search for the <code>PlatformIO</code> plugin in <code>VisualStudioCode</code> extensions and install it.</li>
-<li>After installation, you need to restart <code>VisualStudioCode</code></li>
-<li>After restarting <code>VisualStudioCode</code>, select <code>File</code> -&gt; <code>Open Folder</code> -&gt; select the <code>T-Deck</code> directory</li>
-<li>Click on the <code>platformio.ini</code> file, in the <code>platformio</code> section, uncomment the example line you want to use, ensuring only one line is active</li>
-<li>Click the (✔) symbol at the bottom left to compile</li>
-<li>Connect the board to computer USB</li>
-<li>Click (→) to upload firmware</li>
-<li>Click (plug symbol) to monitor serial output</li>
+<li>Install <a href="https://code.visualstudio.com/"  target="_blank">Visual Studio Code</a> and <a href="https://www.python.org/"  target="_blank">Python</a></li>
+<li>Search for the <code>PlatformIO</code> plugin in <code>Visual Studio Code</code> extensions and install it.</li>
+<li>After installation, restart <code>Visual Studio Code</code>.</li>
+<li>After restarting, select <code>File</code> -&gt; <code>Open Folder</code> in the upper left corner, then select the <code>T-Deck</code> directory.</li>
+<li>Click on the <code>platformio.ini</code> file, and under the <code>platformio</code> section uncomment the example line you want to use. Make sure only one line is active.</li>
+<li>Click the (✔) symbol at the bottom left to compile.</li>
+<li>Connect the board to the computer via USB.</li>
+<li>Click (→) to upload the firmware.</li>
+<li>Click (plug symbol) to monitor the serial output.</li>
 </ol>
-<h3 id="ArduinoIDE">ArduinoIDE</h3>
+<h3 id="Arduino-IDE">Arduino IDE</h3>
 <ol>
-<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">ArduinoIDE</a></li>
-<li>Copy all folders from the <code>T-Deck/lib</code> directory to <code>&lt;C:\Users\UserName\Documents\Arduino\libraries&gt;</code>. If there is no <code>libraries</code> directory, please create one. Note: do not copy the <code>lib</code> directory itself, but the folders inside the lib directory.</li>
-<li>Open ArduinoIDE -&gt; Tools<ul>
+<li>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a>.</li>
+<li>Copy all folders inside <code>T-Deck/lib</code> to <code>&lt;C:\Users\UserName\Documents\Arduino\libraries&gt;</code>. If the <code>libraries</code> folder does not exist, create it. Note: do not copy the <code>lib</code> folder itself, but the folders inside it.</li>
+<li>Open Arduino IDE -&gt; Tools<ul>
 <li>Board -&gt; ESP32S3 Dev Module</li>
-<li>USB CDC On Boot -&gt; Enable   # Note: when not connected to USB, you need to change Enable to Disable so USB CDC does not block board startup</li>
+<li>USB CDC On Boot -&gt; Enable   # Note: when the board is not connected via USB, you should change this to Disable so that USB CDC does not block the board startup.</li>
 <li>CPU Frequency -&gt; 240MHz</li>
 <li>USB DFU On Boot -&gt; Disable</li>
 <li>Flash Mode -&gt; QIO 80MHz</li>
@@ -538,7 +540,8 @@ var _hmt = _hmt || [];
 <li>Upload Speed -&gt; 921600</li>
 </ul>
 </li>
-<li>Insert USB to PC, click Upload &lt;If unable to upload successfully, keep pressing BOOT button, then click RST, then click Upload. After upload completes, click RST to exit download mode&gt;</li>
+<li>Insert the USB cable to the PC, click Upload. (If upload fails, hold down the BOOT button, press RST once, then click Upload. After upload completes, press RST to exit download mode.)</li>
+<li>Select the correct settings in the &quot;Tools&quot; menu as shown in the table below.</li>
 </ol>
 <h3 id="Development-Platforms">Development Platforms</h3>
 <ol>
@@ -632,14 +635,14 @@ var _hmt = _hmt || [];
 <li><p><strong>Q. I still don't know how to set up the programming environment after reading the above tutorial. What should I do?</strong><br />
 A. If you still don't understand how to set up the environment after reading the above tutorial, you can refer to the <a href="https://github.com/Xinyuan-LilyGO/LilyGo-Document"  target="_blank">LilyGo-Document</a> documentation for setup instructions.</p>
 </li>
-<li><p><strong>Q. Why does Arduino IDE prompt me to upgrade library files when I open it? Should I upgrade or not?</strong><br />
-A. Choose not to upgrade library files, as different versions of library files may not be compatible with each other, so upgrading is not recommended.</p>
+<li><p><strong>Q. Why does Arduino IDE prompt me to update library files when I open it? Should I update or not?</strong><br />
+A. Choose not to update library files. Different versions of library files may not be compatible with each other, so it is not recommended to update library files.</p>
 </li>
-<li><p><strong>Q. Does T-Deck have touch screen functionality?</strong><br />
-A. The T-Deck version does not have a touch screen, using a trackball navigation module instead of touch operation.</p>
+<li><p><strong>Q. Does the T-Deck have a touch screen?</strong><br />
+A. The T-Deck version has no touch screen; a trackball navigation module is used instead of touch operation.</p>
 </li>
-<li><p><strong>Q. Why does my board keep failing to program?</strong><br />
-A. Please hold the &quot;BOOT&quot; button and try downloading the program again.</p>
+<li><p><strong>Q. Why does my board keep failing to upload programs?</strong><br />
+A. Please hold down the &quot;BOOT&quot; button and try uploading the program again.</p>
 </li>
 </ul>
 <h2 id="Projects">Projects</h2>
@@ -648,7 +651,7 @@ A. Please hold the &quot;BOOT&quot; button and try downloading the program again
 </ul>
 <h2 id="Resources">Resources</h2>
 <ul>
-<li><a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">ESP32-S3 Datasheet</a></li>
+<li><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"  target="_blank">ESP32-S3 Datasheet</a></li>
 <li><a href="https://github.com/Xinyuan-LilyGO/T-Deck/blob/master/datasheet/T-Deck%20ANT%20868-915MHZ.pdf.pdf"  target="_blank">T-Deck ANT 868-915MHz</a></li>
 <li><a href="https://github.com/Xinyuan-LilyGO/T-Deck/blob/master/datasheet/T-Deck%20ANT%20433MHZ.pdf"  target="_blank">T-Deck ANT 433MHz</a></li>
 </ul>
@@ -664,6 +667,9 @@ A. Please hold the &quot;BOOT&quot; button and try downloading the program again
 <li><a href="https://github.com/mmMicky/TouchLib"  target="_blank">TouchLib</a></li>
 <li><a href="https://github.com/lvgl/lvgl/tree/v8.4.0"  target="_blank">LVGL</a></li>
 </ul>
+
+<pre class="language-none"><code class="language-none">
+</code></pre>
 
                         
                     </div>
