@@ -2,9 +2,11 @@ items:
 -   label: DISPLAY
     items:
     -   label: T-Circle
-        file: Display/T-Circle/T-Circle.md
-    -   label: T-Circle S3
-        file: Display/T-Circle-S3/T-Circle-S3.md
+        items:
+        -   label: T-Circle
+            file: Display/T-Circle/T-Circle.md
+        -   label: T-Circle S3
+            file: Display/T-Circle-S3/T-Circle-S3.md
     -   label: T-Display
         items:
         -   label: T-Display P4
@@ -15,9 +17,9 @@ items:
             file: Display/T-Display-S3-Long/T-Display-S3-Long.md
         -   label: T-Display S3 Pro
             file: Display/T-Display-S3-Pro/T-Display-S3-Pro.md        
-        -   label : T-Display S3 Pro LR1121
+        -   label: T-Display S3 Pro LR1121
             file: Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.md
-        -   label : T-Display S3 AMOLED Plus
+        -   label: T-Display S3 AMOLED Plus
             file: Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.md        
         -   label: T-Display S3 AMOLED 1.43
             file: Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.md
@@ -39,24 +41,34 @@ items:
         file: Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.md
 -   label: Wearable and Handheld Kit
     items:
-    -   label: T-Watch S3 Plus
-        file: Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.md
+    -   label: T-Watch
+        items:
+        -   label: T-Watch S3 Plus
+            file: Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.md
+        -   label: T-Watch Ultra
+            file: Wearable/T-Watch-Ultra/T-Watch-Ultra.md
     -   label: T5 E-Paper
-        file: Wearable/T5-E-Paper/T5-E-Paper.md       
-    -   label: T5 E-Paper S3 Pro
-        file: Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.md
-    -   label: T5 E-Paper S3 Lite
-        file: Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.md              
-    -   label: T-Deck 
-        file: Wearable/T-Deck/T-Deck.md
-    -   label: T-Deck Plus
-        file: Wearable/T-Deck-Plus/T-Deck-Plus.md
-    -   label: T-Deck Pro
-        file: Wearable/T-Deck-Pro/T-Deck-Pro.md
+        items:
+        -   label: T5 E-Paper
+            file: Wearable/T5-E-Paper/T5-E-Paper.md       
+        -   label: T5 E-Paper S3 Pro
+            file: Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.md
+        -   label: T5 E-Paper S3 Lite
+            file: Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.md
+    -   label: T-Deck
+        items:
+        -   label: T-Deck
+            file: Wearable/T-Deck/T-Deck.md
+        -   label: T-Deck Plus
+            file: Wearable/T-Deck-Plus/T-Deck-Plus.md
+        -   label: T-Deck Pro
+            file: Wearable/T-Deck-Pro/T-Deck-Pro.md
     -   label: T-Echo
-        file: Wearable/T-Echo/T-Echo.md
-    -   label: T-Echo-Lite
-        file: Wearable/T-Echo-Lite/T-Echo-Lite.md
+        items:
+        -   label: T-Echo
+            file: Wearable/T-Echo/T-Echo.md
+        -   label: T-Echo Lite
+            file: Wearable/T-Echo-Lite/T-Echo-Lite.md
     -   label: T-Embed CC1101
         file: Wearable/T-Embed-CC1101/T-Embed-CC1101.md
     -   label: T-Embed SI4732
@@ -64,9 +76,7 @@ items:
     -   label: T-Glass  
         file: Wearable/T-Glass/T-Glass.md 
     -   label: T-Mini E-paper-S3
-        file: Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.md                      
-    -   label: T-Watch Ultra
-        file: Wearable/T-Watch-Ultra/T-Watch-Ultra.md
+        file: Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.md
 -   label: Wireless Kit
     items:   
     -   label: LoRa/GPS
@@ -88,7 +98,7 @@ items:
         -   label: T3-S3 E-paper
             file: LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.md            
         -   label: T3-S3_MVSRBoard
-            file : LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.md
+            file: LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.md
         -   label: T-LoraPager
             file: LoRa_GPS/T-LoraPager/T-LoraPager.md
         -   label: T-Beam 1W
@@ -133,16 +143,16 @@ items:
             -   label: T-A7670    
                 items:
                 -   label: T-A7670E
-                    file : High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.md
+                    file: High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.md
                 -   label: T-A7670G
-                    file:  High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.md
+                    file: High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.md
                 -   label: T-A7670SA
-                    file:  High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.md            
+                    file: High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.md            
 -   label: AI Kit
     items:
     -   label: T-Display K230
         file: AI/T-Display-K230/T-Display-K230.md 
-    -   label : T-Bao
+    -   label: T-Bao
         file: AI/T-Bao/T-Bao.md      
     -   label: T-Circle S3
         file: AI/T-Circle-S3/T-Circle-S3.md
