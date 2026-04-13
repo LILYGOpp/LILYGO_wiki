@@ -186,3 +186,5 @@ items:
     items:
     -   label: Meshcore 使用
         file: Meshcore/meshcore.md
+-   label: LILYGO-Spark
+    file: LILYGO-Spark/LILYGO-Spark-zh.md
