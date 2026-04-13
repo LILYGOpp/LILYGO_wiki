@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO Spark 使用指南 - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "对我们的产品感兴趣可以关注我们的官网商店以及淘宝店铺<br>Github有感兴趣的项目可以 ☆ star哦~🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/zh/">产品</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://xinyuan-lilygo.github.io/Launchpad/"><img src='/static/image/setting.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;中文 简体</a><ul><li class=""><a  href="/get_started/en/LILYGO-Spark/LILYGO-Spark-zh.html">English</a></li>
+<li class="active"><a  href="/get_started/zh/LILYGO-Spark/LILYGO-Spark-zh.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">显示设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">T-Circle</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Display</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Pro/T-Display-S3-Pro.html"><span class="label">T-Display S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">可穿戴以及可手持设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">T-Watch</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T5 E-Paper</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.html"><span class="label">T5 E-Paper S3 Lite</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Deck</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Echo</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo Lite</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">无线通讯设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">高速通讯设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">人工智能设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">基础设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">拓展设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/no_translate.html?ref=maixIV/m4ndock/FAQ.html&from=/get_started/zh/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic 设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic 设备</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic 下载</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/zh/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore 设备</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/zh/Meshcore/meshcore.html"><span class="label">Meshcore 使用</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active with_link"><a href="/get_started/zh/LILYGO-Spark/LILYGO-Spark-zh.html"><span class="label">LILYGO-Spark</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO Spark 使用指南</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2026-04-13">
+                                    2026-04-13
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                            <div id="source_link">
+                                <a href="https://github.com/LILYGOpp/LILYGO_wiki/blob/main/docs/get_started/zh/LILYGO-Spark/LILYGO-Spark-zh.md" target="_blank">
+                                    编辑本页
+                                </a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h1 id="%E8%BD%AF%E4%BB%B6%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%AE%89%E8%A3%85">软件获取与安装</h1>
+<h2 id="%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD">软件下载</h2>
+<ol>
+<li>访问 LILYGO Spark 官方GitHub仓库：<a href="https://github.com/Xinyuan-LilyGO/LILYGO-Spark"  target="_blank">https://github.com/Xinyuan-LilyGO/LILYGO-Spark</a>；</li>
+</ol>
+<p><img src="image-1.png" alt="alt text" /></p>
+<ol start="2">
+<li>进入仓库页面后，点击顶部导航栏中的「Releases」选项，进入版本发布页面</li>
+</ol>
+<p><img src="image.png" alt="alt text" /></p>
+<ol start="3">
+<li>根据自身电脑操作系统（Windows、macOS、Linux），选择对应版本的安装包进行下载，等待下载完成。</li>
+</ol>
+<p><img src="image-2.png" alt="alt text" /></p>
+<h2 id="%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">软件安装</h2>
+<ol>
+<li>找到下载完成的安装包，双击启动安装程序；</li>
+</ol>
+<p><img src="image-3.png" alt="alt text" /></p>
+<ol start="2">
+<li>Windows系统用户：安装过程中若出现系统安全提示，按弹窗指引依次点击 <code>继续</code>，完成安装流程；</li>
+</ol>
+<p><img src="image-4.png" alt="alt text" /></p>
+<ol start="3">
+<li>安装完成后，软件将自动启动，无需手动触发启动操作。</li>
+</ol>
+<h1 id="%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0">软件功能概述</h1>
+<p>软件启动后，界面包含多个功能模块，各模块功能明确、操作便捷，具体说明如下：</p>
+<p><img src="image-5.png" alt="alt text" /></p>
+<h2 id="%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE">基础设置</h2>
+<p>进入「设置」界面，可对软件进行个性化配置，满足不同使用需求：</p>
+<p><img src="image-6.png" alt="alt text" /></p>
+<ul>
+<li><p>主题设置：支持切换黑色主题等多种风格，适配不同使用场景及视觉习惯；</p>
+</li>
+<li><p>其他配置：可在设置中开启对应更新通道、调整软件语言（支持简体中文、英文、繁体中文、日文），以及配置缓存、自定义固件清单等。</p>
+</li>
+</ul>
+<h2 id="GitHub-%E7%99%BB%E5%BD%95">GitHub 登录</h2>
+<p>软件支持 GitHub OAuth 授权登录，登录后可解锁固件上传等进阶功能。操作流程：点击界面「登录」按钮，跟随网页弹窗完成身份验证即可。</p>
+<p><img src="image-7.png" alt="alt text" /></p>
+<h2 id="Spark-Discovery">Spark Discovery</h2>
+<p>该模块用于发布及展示官方资讯、公告等内容，用户可通过此模块及时了解 LILYGO 最新动态、产品资讯及开发相关内容。</p>
+<p><img src="image-8.png" alt="alt text" /></p>
+<h2 id="2.4-%E5%9B%BA%E4%BB%B6%E4%B8%AD%E5%BF%83">2.4 固件中心</h2>
+<p>汇总 LILYGO 全系列产品的出厂固件，以及优质开发者分享的第三方固件资源。同时支持开发者上传自有研发的固件及示例，共同丰富固件生态。</p>
+<p><img src="image-9.png" alt="alt text" /></p>
+<h2 id="%E5%9B%BA%E4%BB%B6%E5%B7%A5%E5%85%B7%EF%BC%88%E5%9B%BA%E4%BB%B6%E7%A0%94%E7%A9%B6%E6%89%80%EF%BC%89">固件工具（固件研究所）</h2>
+<p>内置专业固件处理工具，核心功能包括：<br />
+截图说明：截图展示固件研究所模块主界面，红框分别标注固件烧录、固件提取、固件分析、分区表编辑四个核心功能的入口按钮。</p>
+<ul>
+<li><p>固件烧录：将下载完成的固件写入 ESP32 系列设备；</p>
+</li>
+<li><p>固件提取：从已连接的设备中读取并导出固件文件；</p>
+</li>
+<li><p>固件分析：解析 .bin 格式固件文件，自动识别芯片类型、分区表、引导程序、应用信息及文件系统镜像等关键内容；</p>
+</li>
+</ul>
+<p>截图说明：截图展示固件分析界面，红框标注.bin文件选择入口及分析结果展示区域（如芯片类型、分区表信息），清晰显示分析后的核心数据。</p>
+<ul>
+<li>分区表编辑：提供 ESP32 分区表可视化编辑功能，支持分区表的导入与导出操作。</li>
+</ul>
+<p><img src="image-10.png" alt="alt text" /></p>
+<h2 id="%E4%B8%B2%E5%8F%A3%E5%B7%A5%E5%85%B7">串口工具</h2>
+<p>具备标准串口工具的全部功能，操作流程：选择目标设备对应的串口及合适的波特率，点击「连接」按钮，即可实现电脑与设备的串口通信，并查看设备日志输出。</p>
+<p><img src="image-11.png" alt="alt text" /></p>
+<h2 id="Embedded-Tools">Embedded Tools</h2>
+<p>集成嵌入式开发常用工具，覆盖多种开发场景，提升开发效率，主要包括：</p>
+<p>电阻色环计算器、贴片电阻计算器、LED 限流电阻计算器、欧姆定律计算器、555定时器计算器、电池续航计算器、ESP32 功耗估算器、串/并联电阻计算器、电路原理图查看器等。</p>
+<p><img src="image-12.png" alt="alt text" /></p>
+<h2 id="LILYGO-%E7%A4%BE%E5%8C%BA%E4%B8%8E%E4%BA%A7%E5%93%81%E8%B5%84%E6%96%99">LILYGO 社区与产品资料</h2>
+<p>模块内包含 LILYGO 全系列产品的详细技术资料、使用手册，以及官方购买渠道链接，方便用户快速查询产品信息、获取购买路径。</p>
+<p><img src="image-13.png" alt="alt text" /></p>
+<h2 id="Spark-Lab">Spark Lab</h2>
+<p>展示 LILYGO Spark 软件的功能开发路线图及灵感规划，开发团队将结合用户反馈及行业技术趋势，持续迭代优化软件功能，为开发者提供更便捷的使用体验。</p>
+<p><img src="image-14.png" alt="alt text" /></p>
+<h1 id="%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0">软件版本更新</h1>
+<p>为确保使用到软件最新功能及 bug 修复，可按以下步骤开启更新通道并检查更新：</p>
+<p>截图说明：截图展示设置界面中「更新」相关区域的入口，红框标注「检查更新」选项及更新通道设置入口。</p>
+<ol>
+<li>启动软件并进入「设置」界面、下拉页面找到「Advanced（高级）」选项，展开后勾选「Canary Channel（金丝雀频道）」，开启测试版更新通道；</li>
+</ol>
+<p><img src="image-15.png" alt="alt text" /></p>
+<ol start="4">
+<li>点击「检查更新」，即可检测并更新至 LILYGO Spark 最新版本（金丝雀版，包含最新开发功能及优化）。</li>
+</ol>
+<p><img src="image-16.png" alt="alt text" /></p>
+<h1 id="%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8E%E7%83%A7%E5%BD%95%EF%BC%88%E4%BB%A5-T-Lora-Pager-%E4%B8%BA%E4%BE%8B%EF%BC%89">固件下载与烧录（以 T-Lora Pager 为例）</h1>
+<h2 id="%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD">固件下载</h2>
+<ol>
+<li>启动软件，点击进入「固件中心」模块在固件列表中检索并找到 T-Lora Pager 对应的固件资源；</li>
+</ol>
+<p><img src="image-18.png" alt="alt text" /></p>
+<ol start="2">
+<li>根据自身使用的设备型号，选择对应版本的固件（如 SX1262 版本）点击「下载固件」按钮，等待固件下载完成；</li>
+</ol>
+<p>截图说明：截图展示固件对应的「下载固件」按钮（红框标注），以及下载过程中的进度条，显示下载进度及剩余时间。</p>
+<p><img src="image-19.png" alt="alt text" /></p>
+<ol start="3">
+<li>下载完成后，点击「烧录」按钮，系统将自动跳转至固件烧录界面。</li>
+</ol>
+<p><img src="image-20.png" alt="alt text" /></p>
+<h2 id="%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95">固件烧录</h2>
+<ol>
+<li>将 T-Lora Pager 设备通过数据线与电脑连接，在烧录界面选择该设备对应的串口；</li>
+</ol>
+<p><img src="image-22.png" alt="alt text" /></p>
+<ol start="2">
+<li><p>建议将设备切换至下载模式，操作方法：按住设备上的 Boot 按键，同时按下 RST 按键，松开后即可进入下载模式（具体操作可参考 LILYGO 官方 YouTube 视频教程）；</p>
+</li>
+<li><p>烧录工具默认选择软件内置的 esptool，无需额外安装；</p>
+</li>
+<li><p>点击「开始下载」，等待烧录完成（烧录时长根据固件大小有所差异，请耐心等待）；</p>
+</li>
+</ol>
+<p><img src="image-21.png" alt="alt text" /></p>
+<ol start="5">
+<li>当界面显示「固件下载完成」提示时，即表示固件烧录成功。</li>
+</ol>
+<h1 id="%E4%BA%94%E3%80%81%E5%9B%BA%E4%BB%B6%E4%B8%8A%E4%BC%A0">五、固件上传</h1>
+<p>若开发者研发了相关固件，可按以下步骤上传至 LILYGO Spark 平台，分享给全球开发者使用：</p>
+<p><img src="image-23.png" alt="alt text" /></p>
+<ol>
+<li>启动 LILYGO Spark 软件，点击「GitHub 登录」，跟随网页弹窗完成身份验证（若需切换 GitHub 账号，需先在网页端切换账号，再进行软件登录操作）；</li>
+</ol>
+<p><img src="image-24.png" alt="alt text" /></p>
+<ol start="2">
+<li><p>登录成功后，找到界面中的「上传（Upload）」按钮，点击进入固件上传界面；</p>
+</li>
+<li><p>选择需要上传的固件文件，按要求填写固件相关说明信息（包括固件名称、功能介绍、适配设备等）；</p>
+</li>
+</ol>
+<p><img src="image-25.png" alt="alt text" /></p>
+<ol start="4">
+<li>填写完成后，点击「上传」按钮，即可完成固件提交。</li>
+</ol>
+<p>固件上传完成后，可通过 LILYGO 官方各平台联系开发团队，加快固件审核及推广流程，让作品更快被大众知晓和使用。</p>
+<h1 id="%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E">补充说明</h1>
+<ul>
+<li><p>跨平台支持：软件兼容 Windows、macOS、Linux 三种操作系统，可正常安装并运行；</p>
+</li>
+<li><p>下载加速：中国大陆用户下载固件时，软件将自动调用阿里云 OSS 镜像加速，提升下载速度，保障下载稳定性；</p>
+</li>
+</ul>
+<p>截图说明：截图展示固件下载时的加速提示弹窗，红框标注“阿里云OSS镜像加速中”的提示信息，以及下载速度的对比展示。</p>
+<ul>
+<li><p>隐藏功能：软件内置彩蛋功能（如 Konami 代码触发、烧录成功庆祝动画等），用户可自行探索体验；</p>
+</li>
+<li><p>问题反馈：使用过程中若遇到 Bug 或有功能建议，可通过软件「反馈」功能提交，开发团队将及时处理并回复。</p>
+</li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/zh/Meshcore/meshcore.html">
+                            <span class="icon"></span>
+                            <span class="label">Meshcore 使用</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>相关链接</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO 官网</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO 淘宝</a></li>
+</ul>
+</li>
+<li><a>关注我们</a><ul><li><a target="_blank" href="https://x.com/lilygo9">X</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">淘宝店铺</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTube</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">Facebook</a></li>
+</ul>
+</li>
+<li><a>源码</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">开源项目</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki源码</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">深圳市芯元电子科技有限公司 © 2026</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
