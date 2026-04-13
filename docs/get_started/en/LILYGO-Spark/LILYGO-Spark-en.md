@@ -1,36 +1,32 @@
 # LILYGO Spark User Guide
 
-# Software Download and Installation
-
 ## Software Download
 
-1. Visit the LILYGO Spark official GitHub repository: [https://github.com/Xinyuan-LilyGO/LILYGO-Spark](https://github.com/Xinyuan-LilyGO/LILYGO-Spark);
-        
-![alt text](image-1.png)
-      
+<div id="spark-widget" data-theme="green"></div>
 
-2. After entering the repository page, click the 「Releases」 option in the top navigation bar to go to the releases page.
-
-![alt text](image.png)
-
-
-3. According to your computer's operating system (Windows, macOS, Linux), select the corresponding version of the installation package to download, and wait for the download to complete.
-        
-![alt text](image-2.png)
+Click **"Download"** above to get the installer for your current platform, or click **"All Platforms"** to expand the full list of downloads for macOS, Windows, and Linux.
 
 ## Software Installation
 
-1. Locate the downloaded installation package and double-click to start the installer;
-        
-![alt text](image-3.png)
-      
+### Windows
 
-2. Windows users: If a system security prompt appears during installation, follow the pop-up instructions and click `Continue` to complete the installation process;
+1. Locate the downloaded `.exe` file and double-click to start the installer;
+
+![alt text](image-3.png)
+
+2. If a SmartScreen security prompt appears, click `More info` → `Run anyway` to continue;
 
 ![alt text](image-4.png)
-      
 
-3. After installation, the software will start automatically without manual operation.
+3. After installation, the software will start automatically.
+
+### macOS
+
+The macOS version has been **Apple Notarized**, so you can install it directly without any additional security settings.
+
+1. Open the downloaded `.dmg` file and drag LILYGO Spark to the Applications folder;
+2. On first launch, macOS will show a confirmation dialog — click `Open` to proceed;
+3. No need to go to System Settings → Privacy & Security to allow the app, as it is already notarized by Apple.
 
 # Software Function Overview
 

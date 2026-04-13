@@ -1,39 +1,34 @@
 # LILYGO Spark 使用指南
 
-# 软件获取与安装
-
 ## 软件下载
 
-1. 访问 LILYGO Spark 官方GitHub仓库：[https://github.com/Xinyuan-LilyGO/LILYGO-Spark](https://github.com/Xinyuan-LilyGO/LILYGO-Spark)；
-        
-![alt text](image-1.png)
-      
+<div id="spark-widget" data-theme="green"></div>
 
-2. 进入仓库页面后，点击顶部导航栏中的「Releases」选项，进入版本发布页面
-
-![alt text](image.png)
-
-
-3. 根据自身电脑操作系统（Windows、macOS、Linux），选择对应版本的安装包进行下载，等待下载完成。
-        
-![alt text](image-2.png)
+点击上方 **「下载」** 按钮获取当前平台的安装包，或点击 **「All Platforms」** 展开查看 macOS、Windows、Linux 全部下载选项。
 
 ## 软件安装
 
-1. 找到下载完成的安装包，双击启动安装程序；
-        
-![alt text](image-3.png)
-      
+### Windows
 
-2. Windows系统用户：安装过程中若出现系统安全提示，按弹窗指引依次点击 `继续`，完成安装流程；
+1. 找到下载完成的 `.exe` 安装包，双击启动安装程序；
+
+![alt text](image-3.png)
+
+2. 若出现 SmartScreen 安全提示，点击 `更多信息` → `仍要运行` 继续安装；
 
 ![alt text](image-4.png)
-      
 
-3. 安装完成后，软件将自动启动，无需手动触发启动操作。
-        
+3. 安装完成后，软件将自动启动。
 
-      
+### macOS
+
+macOS 版本已通过 **Apple 公证（Notarized）**，可直接安装使用，无需额外的安全设置。
+
+1. 打开下载的 `.dmg` 文件，将 LILYGO Spark 拖入「应用程序」文件夹；
+2. 首次启动时，macOS 会弹出确认对话框，点击「打开」即可；
+3. 由于已经过 Apple 公证，无需前往「系统设置 → 隐私与安全性」中手动允许。
+
+
 
 # 软件功能概述
 
