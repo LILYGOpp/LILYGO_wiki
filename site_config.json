@@ -143,10 +143,11 @@
             "from": "pypi",
             "config": {
                 "header_items": [
-                    "/static/css/custom.css"
+                    "/static/css/custom.css",
+                    "/static/css/spark-widget.css"
                 ],
                 "footer_items": [
-                    "/static/js/custom.js"
+                    "/static/js/spark-widget.js"
                 ],
                 "env":{
                     "main_color": "#4caf7d",
