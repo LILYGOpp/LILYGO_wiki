@@ -165,7 +165,6 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 | RTC | PCF85063ATL (I2C) |
 | Sensors | QMI8658 (Six-axis) + BME280 (Temp/Humidity/Pressure) |
 | Power Management | AXP2101 |
-| Microphone | MP34DT05-A (PDM) |
 | Storage | TF Card |
 | Wireless | 2.4GHz Wi-Fi + Bluetooth 5.0 |
 | USB | 1 × USB Port and OTG (TYPE-C Connector) |

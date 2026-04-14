@@ -164,7 +164,6 @@ T-BEAM-SUPREME V3.0 是一款高性能多功能的物联网开发板，基于 ES
 | RTC | PCF85063ATL (I2C) |
 | 传感器 | QMI8658 (六轴) + BME280 (温湿度气压) |
 | 电源管理 | AXP2101 |
-| 麦克风 | MP34DT05-A (PDM) |
 | 存储 | TF 卡 |
 | 无线 | 2.4GHz Wi-Fi + Bluetooth 5.0 |
 | USB | 1 × USB Port and OTG (TYPE-C接口) |
