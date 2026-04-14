@@ -28,13 +28,13 @@ The macOS version has been **Apple Notarized**, so you can install it directly w
 2. On first launch, macOS will show a confirmation dialog — click `Open` to proceed;
 3. No need to go to System Settings → Privacy & Security to allow the app, as it is already notarized by Apple.
 
-# Software Function Overview
+## Software Function Overview
 
 After the software starts, the interface contains several functional modules. Each module has clear functions and is easy to operate. Details are as follows:
       
 ![alt text](image-5.png)
 
-## Basic Settings
+### Basic Settings
 
 Enter the 「Settings」 interface to personalize the software according to different usage needs:
       
@@ -45,26 +45,26 @@ Enter the 「Settings」 interface to personalize the software according to diff
 - Other Configurations: You can enable the corresponding update channel, adjust the software language (supports Simplified Chinese, English, Traditional Chinese, Japanese), and configure cache, custom firmware list, etc.
 
 
-## GitHub Login
+### GitHub Login
 
 The software supports GitHub OAuth authorization login. After logging in, advanced functions such as firmware upload are unlocked. Operation process: Click the 「Login」 button on the interface and follow the web pop-up to complete authentication.
       
 ![alt text](image-7.png)
 
-## Spark Discovery
+### Spark Discovery
 
 This module is used to publish and display official news, announcements, etc. Users can use this module to keep up with the latest LILYGO updates, product information, and development-related content.
 
 ![alt text](image-8.png)
 
-## 2.4 Firmware Center
+### Firmware Center
 
 Aggregates factory firmware for all LILYGO product series, as well as third-party firmware resources shared by quality developers. It also supports developers uploading their own firmware and examples, jointly enriching the firmware ecosystem.
 
 ![alt text](image-9.png)
     
 
-## Firmware Tools (Firmware Lab)
+### Firmware Tools (Firmware Lab)
 
 Built-in professional firmware processing tools. Core functions include:
 Screenshot description: Screenshot showing the main interface of the Firmware Lab module, with red boxes marking the entry buttons for the four core functions: Firmware Flashing, Firmware Extraction, Firmware Analysis, and Partition Table Editing.
@@ -80,13 +80,13 @@ Screenshot description: Screenshot showing the firmware analysis interface, with
         
 ![alt text](image-10.png)
 
-## Serial Tool
+### Serial Tool
 
 Provides all the functions of a standard serial tool. Operation process: Select the target device's serial port and appropriate baud rate, click the 「Connect」 button to enable serial communication between the computer and the device, and view device log output.
 
 ![alt text](image-11.png)
 
-## Embedded Tools
+### Embedded Tools
 
 Integrates common tools for embedded development, covering various development scenarios to improve development efficiency. It mainly includes:
 
@@ -94,19 +94,19 @@ Resistor Color Code Calculator, SMD Resistor Calculator, LED Current Limiting Re
 
 ![alt text](image-12.png)
 
-## LILYGO Community and Product Documentation
+### LILYGO Community and Product Documentation
 
 This module contains detailed technical documentation and user manuals for all LILYGO product series, as well as links to official purchase channels, making it easy for users to quickly query product information and obtain purchasing options.
       
 ![alt text](image-13.png)
 
-## Spark Lab
+### Spark Lab
 
 Displays the function development roadmap and inspiration planning for LILYGO Spark software. The development team will continuously iterate and optimise software functions based on user feedback and industry technology trends, providing developers with a more convenient experience.
       
 ![alt text](image-14.png)
 
-# Software Version Update
+## Software Version Update
 
 To ensure you have the latest software features and bug fixes, follow these steps to enable the update channel and check for updates:
 
@@ -121,9 +121,9 @@ Screenshot description: Screenshot showing the update-related area in the Settin
 ![alt text](image-16.png)
       
 
-# Firmware Download and Flashing (Taking T-Lora Pager as an Example)
+## Firmware Download and Flashing (Taking T-Lora Pager as an Example)
 
-## Firmware Download
+### Firmware Download
 
 1. Launch the software, click to enter the 「Firmware Center」 module, search and find the firmware resource corresponding to the T-Lora Pager in the firmware list;
         
@@ -138,7 +138,7 @@ Screenshot description: Screenshot showing the 「Download Firmware」 button (m
 
 ![alt text](image-20.png)
 
-## Firmware Flashing
+### Firmware Flashing
 
 1. Connect the T-Lora Pager device to the computer via a data cable, and select the corresponding serial port for that device in the flashing interface;
         
@@ -157,7 +157,7 @@ Screenshot description: Screenshot showing the 「Download Firmware」 button (m
 
 5. When the interface displays the 「Firmware download complete」 message, the firmware has been successfully flashed.
 
-# 5. Firmware Upload
+## Firmware Upload
 
 If a developer has created relevant firmware, they can upload it to the LILYGO Spark platform according to the following steps, sharing it with developers around the world:
       
@@ -179,7 +179,7 @@ If a developer has created relevant firmware, they can upload it to the LILYGO S
 
 After the firmware upload is complete, you can contact the development team through LILYGO's official platforms to speed up firmware review and promotion, allowing your work to be known and used by more people.
 
-# Additional Notes
+## Additional Notes
 
 - Cross‑platform Support: The software is compatible with Windows, macOS, and Linux operating systems; it can be installed and run normally.
 

@@ -28,7 +28,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'   # 或指定版本如 '3.11'
+      - run: pip3 install setuptools
 
       # Runs a set of commands using the runners shell
       - name: build doc
