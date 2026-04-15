@@ -84,7 +84,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 * Chip: SX1262
 * Frequency: 433/868/915/923MHz
-* Other: Optional SX1280 (2.4GHz)
+* Other: LLR1121
 
 ### GPS
 
@@ -96,7 +96,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 * Six-Axis Sensor: QMI8658
 * Temperature/Humidity/Pressure Sensor: BME280
-* Magnetometer: QMC6310
+* Magnetometer: QMC6309 or QMC6310U/QMC6310N (selectable)
 
 ### Power Management
 
@@ -110,13 +110,14 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 
 ### I2C Device Addresses
 
-| Devices                                 | 7-Bit Address | Share Bus |
-| --------------------------------------- | ------------- | --------- |
-| OLED Display (**SH1106**)               | 0x3C          | ✅️         |
-| RTC (**PCF8563**)                       | 0x51          | ✅️         |
-| MAG Sensor(**QMC6310**)                 | 0x1C          | ✅️         |
-| Temperature/humidity Sensor(**BME280**) | 0x77          | ✅️         |
-| Power Manager (**AXP2101**)             | 0x34          | ❌         |
+| Devices                                 | 7-Bit Address | Share Bus      |
+| --------------------------------------- | ------------- | -------------- |
+| OLED Display (**SH1106**)               | 0x3C/0x3D     | ✅️  (I2C Bus 0) |
+| MAG Sensor(**QMC6310U OR QMC6310N**)    | 0x1C/0x3C     | ✅️  (I2C Bus 0) |
+| MAG Sensor(**QMC6309**)                 | 0x7C          | ✅️  (I2C Bus 0) |
+| Temperature/humidity Sensor(**BME280**) | 0x77          | ✅️  (I2C Bus 0) |
+| RTC (**PCF8563**)                       | 0x51          | ❌ (I2C Bus 1)  |
+| Power Manager (**AXP2101**)             | 0x34          | ❌ (I2C Bus 1)  |
 
 ### Electrical Parameters
 
@@ -160,7 +161,7 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 | FLASH| 8MB |
 | PSRAM | 8MB|
 | Display | 1.3-inch SH1106 OLED |
-| LoRa | SX1262 (868/915MHz) / SX1280 (2.4GHz) |
+| LoRa | SX1262 (868/915MHz) / LR1121  |
 | GPS | MAX-M10S or L76K |
 | RTC | PCF85063ATL (I2C) |
 | Sensors | QMI8658 (Six-axis) + BME280 (Temp/Humidity/Pressure) |
@@ -296,52 +297,51 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 4. [Micropython](https://micropython.org/)
 
 ## Pin Overview
-
-| Name                                 | GPIO NUM                  | Free |
-| ------------------------------------ | ------------------------- | ---- |
-| Uart1 TX                             | 43(External QWIIC Socket) | ✅️    |
-| Uart1 RX                             | 44(External QWIIC Socket) | ✅️    |
-| SDA                                  | 17                        | ❌    |
-| SCL                                  | 18                        | ❌    |
-| OLED(**SH1106**) SDA                 | Share with I2C bus        | ❌    |
-| OLED(**SH1106**) SCL                 | Share with I2C bus        | ❌    |
-| RTC(**PCF8563**) SDA                 | Share with I2C bus        | ❌    |
-| RTC(**PCF8563**) SCL                 | Share with I2C bus        | ❌    |
-| MAG Sensor(**QMC6310**) SDA          | Share with I2C bus        | ❌    |
-| MAG Sensor(**QMC6310**) SCL          | Share with I2C bus        | ❌    |
-| RTC(**PCF8563**) Interrupt           | 14                        | ❌    |
-| IMU Sensor(**QMI8658**) Interrupt    | 33                        | ❌    |
-| IMU Sensor(**QMI8658**) MISO         | Share with SPI bus        | ❌    |
-| IMU Sensor(**QMI8658**) MOSI         | Share with SPI bus        | ❌    |
-| IMU Sensor(**QMI8658**) SCK          | Share with SPI bus        | ❌    |
-| IMU Sensor(**QMI8658**) CS           | 34                        | ❌    |
-| SPI MOSI                             | 35                        | ❌    |
-| SPI MISO                             | 37                        | ❌    |
-| SPI SCK                              | 36                        | ❌    |
-| SD CS                                | 47                        | ❌    |
-| SD MOSI                              | Share with SPI bus        | ❌    |
-| SD MISO                              | Share with SPI bus        | ❌    |
-| SD SCK                               | Share with SPI bus        | ❌    |
-| GNSS(**L76K or Ublox M10**) TX       | 8                         | ❌    |
-| GNSS(**L76K or Ublox M10**) RX       | 9                         | ❌    |
-| GNSS(**L76K or Ublox M10**) PPS      | 6                         | ❌    |
-| GNSS(**L76K**) Wake-up               | 7                         | ❌    |
-| LoRa(**SX1262 or LR1121**) SCK       | 12                        | ❌    |
-| LoRa(**SX1262 or LR1121**) MISO      | 13                        | ❌    |
-| LoRa(**SX1262 or LR1121**) MOSI      | 11                        | ❌    |
-| LoRa(**SX1262 or LR1121**) RESET     | 5                         | ❌    |
-| LoRa(**SX1262 or LR1121**) DIO1/DIO9 | 1                         | ❌    |
-| LoRa(**SX1262 or LR1121**) BUSY      | 4                         | ❌    |
-| LoRa(**SX1262 or LR1121**) CS        | 10                        | ❌    |
-| Button1 (BOOT)                       | 0                         | ❌    |
-| PMU (**AXP2101**) IRQ                | 40                        | ❌    |
-| PMU (**AXP2101**) SDA                | 42                        | ❌    |
-| PMU (**AXP2101**) SCL                | 41                        | ❌    |
+| Name                                         | GPIO NUM                   | Free |
+| -------------------------------------------- | -------------------------- | ---- |
+| Uart1 TX                                     | 43(External QWIIC Socket)  | ✅️    |
+| Uart1 RX                                     | 44(External QWIIC Socket)  | ✅️    |
+| SDA                                          | 17                         | ❌    |
+| SCL                                          | 18                         | ❌    |
+| OLED(**SH1106**) SDA                         | Share with I2C bus         | ❌    |
+| OLED(**SH1106**) SCL                         | Share with I2C bus         | ❌    |
+| RTC(**PCF8563**) SDA                         | Share with **PMU** I2C bus | ❌    |
+| RTC(**PCF8563**) SCL                         | Share with **PMU** I2C bus | ❌    |
+| MAG Sensor(**QMC6310U/QMC6310N/QC6309**) SDA | Share with I2C bus         | ❌    |
+| MAG Sensor(**QMC6310U/QMC6310N/QC6309**) SCL | Share with I2C bus         | ❌    |
+| RTC(**PCF8563**) Interrupt                   | 14                         | ❌    |
+| IMU Sensor(**QMI8658**) Interrupt            | 33                         | ❌    |
+| IMU Sensor(**QMI8658**) MISO                 | Share with SPI bus         | ❌    |
+| IMU Sensor(**QMI8658**) MOSI                 | Share with SPI bus         | ❌    |
+| IMU Sensor(**QMI8658**) SCK                  | Share with SPI bus         | ❌    |
+| IMU Sensor(**QMI8658**) CS                   | 34                         | ❌    |
+| SPI MOSI                                     | 35                         | ❌    |
+| SPI MISO                                     | 37                         | ❌    |
+| SPI SCK                                      | 36                         | ❌    |
+| SD CS                                        | 47                         | ❌    |
+| SD MOSI                                      | Share with SPI bus         | ❌    |
+| SD MISO                                      | Share with SPI bus         | ❌    |
+| SD SCK                                       | Share with SPI bus         | ❌    |
+| GNSS(**L76K or Ublox M10**) TX               | 8                          | ❌    |
+| GNSS(**L76K or Ublox M10**) RX               | 9                          | ❌    |
+| GNSS(**L76K or Ublox M10**) PPS              | 6                          | ❌    |
+| GNSS(**L76K**) Wake-up                       | 7                          | ❌    |
+| LoRa(**SX1262 or LR1121**) SCK               | 12                         | ❌    |
+| LoRa(**SX1262 or LR1121**) MISO              | 13                         | ❌    |
+| LoRa(**SX1262 or LR1121**) MOSI              | 11                         | ❌    |
+| LoRa(**SX1262 or LR1121**) RESET             | 5                          | ❌    |
+| LoRa(**SX1262 or LR1121**) DIO1/DIO9         | 1                          | ❌    |
+| LoRa(**SX1262 or LR1121**) BUSY              | 4                          | ❌    |
+| LoRa(**SX1262 or LR1121**) CS                | 10                         | ❌    |
+| Button1 (BOOT)                               | 0                          | ❌    |
+| PMU (**AXP2101**) IRQ                        | 40                         | ❌    |
+| PMU (**AXP2101**) SDA                        | 42                         | ❌    |
+| PMU (**AXP2101**) SCL                        | 41                         | ❌    |
 
 > 1. GNSS wake-up function is only available in the L76K version.
 > 
 > 2. The radio has its own SPI bus, while other peripheral SPI devices share that SPI bus
-
+> 3. T-BeamSupreme has three magnetometer versions: QMC6310N, QMC6310U, and QMC6309, each with a different device address.
 
 ## Related Tests
 
