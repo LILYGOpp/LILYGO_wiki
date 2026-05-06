@@ -197,6 +197,7 @@ var _hmt = _hmt || [];
 <li class="not_active no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
 <li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow-P4/T-Halow-P4.html"><span class="label">T-Halow-P4</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
 <li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
@@ -406,7 +407,7 @@ var _hmt = _hmt || [];
 <ul>
 <li>Chip: SX1262</li>
 <li>Frequency: 433/868/915/923MHz</li>
-<li>Other: Optional SX1280 (2.4GHz)</li>
+<li>Other: LLR1121</li>
 </ul>
 <h3 id="GPS">GPS</h3>
 <ul>
@@ -418,7 +419,7 @@ var _hmt = _hmt || [];
 <ul>
 <li>Six-Axis Sensor: QMI8658</li>
 <li>Temperature/Humidity/Pressure Sensor: BME280</li>
-<li>Magnetometer: QMC6310</li>
+<li>Magnetometer: QMC6309 or QMC6310U/QMC6310N (selectable)</li>
 </ul>
 <h3 id="Power-Management">Power Management</h3>
 <ul>
@@ -442,28 +443,33 @@ var _hmt = _hmt || [];
 <tbody>
 <tr>
   <td>OLED Display (<strong>SH1106</strong>)</td>
-  <td>0x3C</td>
-  <td>✅️</td>
+  <td>0x3C/0x3D</td>
+  <td>✅️  (I2C Bus 0)</td>
 </tr>
 <tr>
-  <td>RTC (<strong>PCF8563</strong>)</td>
-  <td>0x51</td>
-  <td>✅️</td>
+  <td>MAG Sensor(<strong>QMC6310U OR QMC6310N</strong>)</td>
+  <td>0x1C/0x3C</td>
+  <td>✅️  (I2C Bus 0)</td>
 </tr>
 <tr>
-  <td>MAG Sensor(<strong>QMC6310</strong>)</td>
-  <td>0x1C</td>
-  <td>✅️</td>
+  <td>MAG Sensor(<strong>QMC6309</strong>)</td>
+  <td>0x7C</td>
+  <td>✅️  (I2C Bus 0)</td>
 </tr>
 <tr>
   <td>Temperature/humidity Sensor(<strong>BME280</strong>)</td>
   <td>0x77</td>
-  <td>✅️</td>
+  <td>✅️  (I2C Bus 0)</td>
+</tr>
+<tr>
+  <td>RTC (<strong>PCF8563</strong>)</td>
+  <td>0x51</td>
+  <td>❌ (I2C Bus 1)</td>
 </tr>
 <tr>
   <td>Power Manager (<strong>AXP2101</strong>)</td>
   <td>0x34</td>
-  <td>❌</td>
+  <td>❌ (I2C Bus 1)</td>
 </tr>
 </tbody>
 </table>
@@ -487,6 +493,41 @@ var _hmt = _hmt || [];
 <tr>
   <td>🔋Battery Voltage</td>
   <td>3.7V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="LR1121-RF-parameters">LR1121 RF parameters</h3>
+<table>
+<thead>
+<tr>
+  <th>Features</th>
+  <th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>RF  Module</td>
+  <td>LR1121</td>
+</tr>
+<tr>
+  <td>Frequency range</td>
+  <td>830-945MHz，2.4-2.5GHz</td>
+</tr>
+<tr>
+  <td>Transfer rate(LoRa)</td>
+  <td>0.6 K~300 Kbps@FSK@ Sub1G</td>
+</tr>
+<tr>
+  <td>Transfer rate(FSK)</td>
+  <td>0.018 K~62.5 Kbps@LoRa@ Sub1G</td>
+</tr>
+<tr>
+  <td>Transfer rate(FSK)</td>
+  <td>0.476 K~101.5 Kbps@LoRa@ 2.4G</td>
+</tr>
+<tr>
+  <td>Modulation</td>
+  <td>LoRa,(G)FSK ，LR-FHSS</td>
 </tr>
 </tbody>
 </table>
@@ -592,7 +633,7 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td style="text-align:center">LoRa</td>
-  <td style="text-align:center">SX1262 (868/915MHz) / SX1280 (2.4GHz)</td>
+  <td style="text-align:center">SX1262 (868/915MHz) / LR1121</td>
 </tr>
 <tr>
   <td style="text-align:center">GPS</td>
@@ -871,21 +912,21 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
   <td>RTC(<strong>PCF8563</strong>) SDA</td>
-  <td>Share with I2C bus</td>
+  <td>Share with <strong>PMU</strong> I2C bus</td>
   <td>❌</td>
 </tr>
 <tr>
   <td>RTC(<strong>PCF8563</strong>) SCL</td>
+  <td>Share with <strong>PMU</strong> I2C bus</td>
+  <td>❌</td>
+</tr>
+<tr>
+  <td>MAG Sensor(<strong>QMC6310U/QMC6310N/QC6309</strong>) SDA</td>
   <td>Share with I2C bus</td>
   <td>❌</td>
 </tr>
 <tr>
-  <td>MAG Sensor(<strong>QMC6310</strong>) SDA</td>
-  <td>Share with I2C bus</td>
-  <td>❌</td>
-</tr>
-<tr>
-  <td>MAG Sensor(<strong>QMC6310</strong>) SCL</td>
+  <td>MAG Sensor(<strong>QMC6310U/QMC6310N/QC6309</strong>) SCL</td>
   <td>Share with I2C bus</td>
   <td>❌</td>
 </tr>
@@ -1036,6 +1077,8 @@ var _hmt = _hmt || [];
 <li><p>GNSS wake-up function is only available in the L76K version.</p>
 </li>
 <li><p>The radio has its own SPI bus, while other peripheral SPI devices share that SPI bus</p>
+</li>
+<li><p>T-BeamSupreme has three magnetometer versions: QMC6310N, QMC6310U, and QMC6309, each with a different device address.</p>
 </li>
 </ol>
 </blockquote>

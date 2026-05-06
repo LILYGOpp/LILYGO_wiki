@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<html lang="en"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": []}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+        
+        <meta name="html-generator" content="teedoc-plugin-jupyter-notebook-parser">
+        
+        <meta name="blog-generator" content="teedoc-plugin-blog">
+        
+        <link rel="stylesheet" href="/static/css/gitalk/gitalk.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/gitalk/custom_gitalk.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d52982572d5512e9762879ebf063c86";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/spark-widget.css" type="text/css"/>
+        
+    
+    
+    <title>LILYGO T-Halow-P4 - LILYGO Wiki</title>
+    
+    <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
+    <script type="text/javascript">metadata = {"tags": ["ESP32-P4", "ESP32-C6", "WiFi-HaLow", "802.11ah", "MIPI", "Camera", "IoT", "LongRange", "PoE"], "date": false, "update": [], "ts": 0, "author": "", "brief": "", "cover": "", "show_source": false}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/en/">
+                
+                    <img class="site_logo" src="/static/image/logo.png" alt="LILYGO logo">
+                
+                
+                    <h2>LILYGO</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/get_started/en/">Products</a></li>
+<li class=""><a  href="/news/">START</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a target="_blank" href="https://xinyuan-lilygo.github.io/Launchpad/"><img src='/static/image/setting.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/High_speed/T-Halow-P4/T-Halow-P4.html">English</a></li>
+<li class=""><a  href="/get_started/zh/High_speed/T-Halow-P4/T-Halow-P4.html">中文 简体</a></li>
+</ul></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="google_translate_element"><img class="icon" src="/static/image/google_translate/translate.svg"/>Translate</a></li></ul><ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">Search</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">Keywords separated by space</span>
+                                <span id="search_loading_hint">Loading, wait please ...</span>
+                                <span id="search_download_err_hint">Download error, please check network and refresh again</span>
+                                <span id="search_other_docs_result_hint">Result from other docs</span>
+                                <span id="search_curr_doc_result_hint">Result from current doc</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">T-Circle</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Display</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-P4/T-Display-P4.html"><span class="label">T-Display P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Long/T-Display-S3-Long.html"><span class="label">T-Display S3 Long</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro/T-Display-S3-Pro.html"><span class="label">T-Display S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-Pro-LR1121/T-Display-S3-Pro-LR1121.html"><span class="label">T-Display S3 Pro LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-Plus/T-Display-S3-AMOLED-Plus.html"><span class="label">T-Display S3 AMOLED Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.43/T-Display-S3-AMOLED-1.43.html"><span class="label">T-Display S3 AMOLED 1.43</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.64/T-Display-S3-AMOLED-1.64.html"><span class="label">T-Display S3 AMOLED 1.64</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-S3-AMOLED-1.75/T-Display-S3-AMOLED-1.75.html"><span class="label">T-Display S3 AMOLED 1.75</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Display-Bar/T-Display-Bar.html"><span class="label">T-Display Bar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Pico-2350/T-Pico-2350.html"><span class="label">T-Pico 2350</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-QT-C6/T-QT-C6.html"><span class="label">T-QT C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Encoder-Pro/T-Encoder-Pro.html"><span class="label">T-Encoder Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Camera-Plus-S3/T-Camera-Plus-S3.html"><span class="label">T-Camera Plus S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Display/T-Keyboard-S3-Pro/T-Keyboard-S3-Pro.html"><span class="label">T-Keyboard-S3 Pro</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Wearable and Handheld Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active no_link"><a><span class="label">T-Watch</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-S3-PLUS/T-Watch-S3-PLUS.html"><span class="label">T-Watch S3 Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Watch-Ultra/T-Watch-Ultra.html"><span class="label">T-Watch Ultra</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T5 E-Paper</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper/T5-E-Paper.html"><span class="label">T5 E-Paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-S3-Pro/T5-E-Paper-S3-Pro.html"><span class="label">T5 E-Paper S3 Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T5-E-Paper-Lite/T5-E-Paper-Lite.html"><span class="label">T5 E-Paper S3 Lite</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Deck</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck/T-Deck.html"><span class="label">T-Deck</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Plus/T-Deck-Plus.html"><span class="label">T-Deck Plus</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Deck-Pro/T-Deck-Pro.html"><span class="label">T-Deck Pro</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-Echo</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo/T-Echo.html"><span class="label">T-Echo</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Echo-Lite/T-Echo-Lite.html"><span class="label">T-Echo Lite</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-CC1101/T-Embed-CC1101.html"><span class="label">T-Embed CC1101</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Embed-SI4732/T-Embed-SI4732.html"><span class="label">T-Embed SI4732</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Glass/T-Glass.html"><span class="label">T-Glass</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Wearable/T-Mini-E-paper-S3/T-Mini-E-paper-S3.html"><span class="label">T-Mini E-paper-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Wireless Kit</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active no_link"><a><span class="label">LoRa/GPS</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3S3/T3S3.html"><span class="label">T3 S3</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/LoRa32/LoRa32.html"><span class="label">T-LoRa32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoRa-C6/T-LoRa-C6.html"><span class="label">T-LoRa-C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Lora-Dual/T-Lora-Dual.html"><span class="label">T-LoRa Dual</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-STM32/T3-STM32.html"><span class="label">T3 STM32</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-TXCO/T3-TXCO.html"><span class="label">T3 TXCO</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-LR1121/T3-S3-LR1121.html"><span class="label">T3-S3 LR1121</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3-E-paper/T3-S3-E-paper.html"><span class="label">T3-S3 E-paper</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T3-S3_MVSRBoard/T3-S3_MVSRBoard.html"><span class="label">T3-S3_MVSRBoard</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-LoraPager/T-LoraPager.html"><span class="label">T-LoraPager</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-1W/T-Beam-1W.html"><span class="label">T-Beam 1W</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LoRa_GPS/T-Beam-SUPREME/T-Beam-SUPREME.html"><span class="label">T-Beam SUPREME</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">HSC Tech</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-TWR/T-TWR.html"><span class="label">T-TWR</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Halow/T-Halow.html"><span class="label">T-Halow</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/get_started/en/High_speed/T-Halow-P4/T-Halow-P4.html"><span class="label">T-Halow-P4</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect/T-Connect.html"><span class="label">T-Connect</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Connect-Pro/T-Connect-Pro.html"><span class="label">T-Connect Pro</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-Sim-Shield/T-Sim-Shield.html"><span class="label">T-Sim Shield</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-ETH</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Elite/T-ETH-Elite.html"><span class="label">T-ETH-Elite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-Gateway/T-ETH-Gateway.html"><span class="label">T-ETH-Gateway</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-LoRa-shield/T-ETH-LoRa-shield.html"><span class="label">T-ETH-LoRa-shield</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH/T-ETH-1302/T-ETH-1302.html"><span class="label">T-ETH-1302</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">T-ETH-Lite</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite/T-ETH-Lite.html"><span class="label">T-ETH-Lite</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-ETH-Lite/T-ETH-Lite-S3/T-ETH-Lite-S3.html"><span class="label">T-ETH-Lite-S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-2Can/T-2Can.html"><span class="label">T-2Can</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM.html"><span class="label">T-PCIE</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/SIM7600E/SIM7600E.html"><span class="label">SIM7600E</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">T-A7670</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670E/T-A7670E.html"><span class="label">T-A7670E</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670G/T-A7670G.html"><span class="label">T-A7670G</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/High_speed/T-PCIE/T-A7670/T-A7670SA/T-A7670SA.html"><span class="label">T-A7670SA</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">AI Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Display-K230/T-Display-K230.html"><span class="label">T-Display K230</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Bao/T-Bao.html"><span class="label">T-Bao</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/AI/T-Circle-S3/T-Circle-S3.html"><span class="label">T-Circle S3</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Basic Module</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T7_C6/T7_C6.html"><span class="label">T7 C6</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Basic_Module/T-Knob/T-Knob.html"><span class="label">T-Knob</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Expansion Kit</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-BHI260AP/T-BHI260AP.html"><span class="label">T-BHI260AP</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Solar/T-Solar.html"><span class="label">T-Solar</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Expand_Module/T-Radar/T-Radar.html"><span class="label">T-Radar</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">FAQ</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/no_translate.html?ref=/get_started/zh/maixIV/m4ndock/FAQ.html&from=/get_started/en/maixIV/m4ndock/FAQ.html"><span class="label">FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshtastic</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_lilygo.html"><span class="label">Meshtastic device</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_use.html"><span class="label">Meshtastic download</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/Meshtastic/Meshtastic_FAQ/Meshtastic_FAQ.html"><span class="label">Meshtastic FAQ</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Meshcore</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active with_link"><a href="/get_started/en/LILYGO-Spark/LILYGO-Spark-en.html"><span class="label">LILYGO-Spark</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>LILYGO T-Halow-P4</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>ESP32-P4</li>
+                            
+                                <li>ESP32-C6</li>
+                            
+                                <li>WiFi-HaLow</li>
+                            
+                                <li>802.11ah</li>
+                            
+                                <li>MIPI</li>
+                            
+                                <li>Camera</li>
+                            
+                                <li>IoT</li>
+                            
+                                <li>LongRange</li>
+                            
+                                <li>PoE</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <div align="center">
+  <img src="./assets/T-Halow-P4-1.jpg" alt="T-Halow-P4 Product Main Image" width="80%">
+</div>
+<div style="padding: 1em 0; display: flex; justify-content: center">
+  <a target="_blank" style="margin: 1em; color: white; font-size: 0.9em; border-radius: 0.3em; padding: 0.5em 2em; background-color: rgb(103, 175, 8)" href="https://lilygo.cc/products/t-halow-p4">Purchase on Official Store</a>
+</div>
+<h2 id="%F0%9F%93%A6-Project-Versions">📦 Project Versions</h2>
+<p>T-Halow-P4 is a high-performance upgrade version of the T-Halow series, based on ESP32-P4 main controller, integrating ESP32-C6 auxiliary processor and T-Halow module. Please select the corresponding documentation based on your needs:</p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Version</th>
+  <th style="text-align:center">Release Date</th>
+  <th style="text-align:center">Main Features</th>
+  <th style="text-align:center">Documentation Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">T-Halow-P4</td>
+  <td style="text-align:center">2025-12-04</td>
+  <td style="text-align:center">ESP32-P4 + ESP32-C6 + T-Halow Module</td>
+  <td style="text-align:center"><a href="https://github.com/Xinyuan-LilyGO/T-Halow-P4"  target="_blank">GitHub Repository</a></td>
+</tr>
+<tr>
+  <td style="text-align:center">T-Halow</td>
+  <td style="text-align:center">2023-08-23</td>
+  <td style="text-align:center">ESP32-S3 + T-Halow Module</td>
+  <td style="text-align:center"><a href="../T-Halow/T-Halow.html"  >T-Halow Documentation</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: T-Halow-P4 and T-Halow use the same <a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/docs/AT_cmd.md"  target="_blank">AT Command Set</a>.</p>
+</blockquote>
+<p>Regarding the SDK for the TX-AH module, Taixin provides non-OS drivers, refer to: <a href="https://www.taixin-semi.com/upload/files/productFile/20251204/taixin-nonos-driver_20251204162053.zip"  target="_blank">taixin-nonos-driver</a></p>
+<h2 id="%F0%9F%9A%80-Product-Overview">🚀 Product Overview</h2>
+<div align="center">
+  <img src="./assets/T-Halow-P4-2.jpg" alt="T-Halow-P4 Product Image" width="80%">
+</div>
+<p><strong>LILYGO T-Halow-P4</strong> is a high-performance IoT development board based on <strong>ESP32-P4</strong> main controller, integrating <strong>ESP32-C6</strong> auxiliary processor and <strong>T-Halow</strong> long-range communication module. Designed for scenarios requiring high-performance processing, long-range communication, and multimedia applications, suitable for intelligent security, industrial monitoring, remote inspection, and other professional applications.</p>
+<h3 id="Core-Features">Core Features</h3>
+<ul>
+<li>✅ <strong>High-Performance Processing</strong>: ESP32-P4 main controller, supports complex graphics and video task processing</li>
+<li>✅ <strong>Dual-Core Collaboration</strong>: ESP32-C6 auxiliary processor, supports Wi-Fi 6 and Bluetooth 5.3</li>
+<li>✅ <strong>Long-Range Communication</strong>: T-Halow module supports Wi-Fi HaLow (802.11ah)</li>
+<li>✅ <strong>Multimedia Interfaces</strong>: Onboard MIPI-DSI display interface and MIPI-CSI camera interface</li>
+<li>✅ <strong>Image Processing</strong>: Supports JPEG image decoding (1080P 30fps), PPA, 2D DMA</li>
+<li>✅ <strong>Video Encoding</strong>: Supports H264 encoding, JPEG encoding, 1080P video</li>
+<li>✅ <strong>Rich Peripherals</strong>: Supports SPI, I2S, I2C, LED PWM, Ethernet, etc.</li>
+</ul>
+<h2 id="%F0%9F%93%8A-Hardware-Specifications">📊 Hardware Specifications</h2>
+<p><img src="assets/T-Halow-P4-info.jpg" alt="alt text" /></p>
+<table>
+<thead>
+<tr>
+  <th>Item</th>
+  <th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Main Controller Chip</td>
+  <td>ESP32-P4 (High-Performance Processor)</td>
+</tr>
+<tr>
+  <td>Auxiliary Processor</td>
+  <td>ESP32-C6-MINI (Wi-Fi 6 + Bluetooth 5.3)</td>
+</tr>
+<tr>
+  <td>Flash Storage</td>
+  <td>16MB Nor Flash (QSPI Interface)</td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td>32MB (Package-Stacked)</td>
+</tr>
+<tr>
+  <td>Wireless Protocol</td>
+  <td>Wi-Fi 6 + Bluetooth 5.3 (ESP32-C6)</td>
+</tr>
+<tr>
+  <td>Wi-Fi HaLow</td>
+  <td>Supports 802.11ah Long-Range Communication</td>
+</tr>
+<tr>
+  <td>Display Interface</td>
+  <td>MIPI-DSI, Supports Touch</td>
+</tr>
+<tr>
+  <td>Camera Interface</td>
+  <td>MIPI-CSI, Supports 1080P Video</td>
+</tr>
+<tr>
+  <td>Image Processing</td>
+  <td>JPEG Decoding (1080P 30fps), PPA, 2D DMA</td>
+</tr>
+<tr>
+  <td>Video Encoding</td>
+  <td>H264 Encoding, JPEG Encoding</td>
+</tr>
+<tr>
+  <td>Peripheral Interfaces</td>
+  <td>SPI, I2S, I2C, LED PWM, Ethernet, etc.</td>
+</tr>
+<tr>
+  <td>Programming Platform</td>
+  <td>ESP-IDF v5.4.1+</td>
+</tr>
+<tr>
+  <td>Development Environment</td>
+  <td>Visual Studio Code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Pin-Definition-%28PINMAP%29">Pin Definition (PINMAP)</h3>
+<p><img src="./assets/T-Halow-P4-pin.jpg" alt="T-Halow-P4 Pinout Diagram" /></p>
+<p><strong>I2C Pins:</strong></p>
+<ul>
+<li>I2C_SCL: IO8</li>
+<li>I2C_SDA: IO7</li>
+</ul>
+<p><strong>Halow Module Pins:</strong></p>
+<ul>
+<li>AH_CMD: IO44</li>
+<li>AH_CLK: IO43</li>
+<li>AH_D3: IO42</li>
+<li>AH_D2: IO41</li>
+<li>AH_D1: IO40</li>
+<li>AH_D0: IO39</li>
+<li>AH_TX: IO12</li>
+<li>AH_RX: IO13</li>
+</ul>
+<p><strong>ESP32-C6 Pins:</strong></p>
+<ul>
+<li>ESP32C6_CMD: IO19</li>
+<li>ESP32C6_CLK: IO18</li>
+<li>ESP32C6_D3: IO17</li>
+<li>ESP32C6_D2: IO16</li>
+<li>ESP32C6_D1: IO15</li>
+<li>ESP32C6_D0: IO14</li>
+<li>ESP32C6_WAKEUP: IO6</li>
+</ul>
+<p><strong>Camera/Display Pins:</strong></p>
+<ul>
+<li>TOUCH_SCL: IO8</li>
+<li>TOUCH_SDA: IO7</li>
+<li>TOUCH_INT: IO11</li>
+<li>TOUCH_RST: IO10</li>
+<li>MIPI_DSI_RST: IO9</li>
+</ul>
+
+<pre class="language-c"><code class="language-c">                                   GND                                                                   GND
+                ┌────────────────────────────────────────────────┐             ┌─────────────────────────────────────────────────────────┐
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                                │             │                                                         │
+                │                                ┌───────────────┴─────────────┴──────────────────┐                                      │
+                │                                │                                                │                           ┌──────────┴───────────┐
+                │                                │                                                │      DSI DATA 1P          │                      │
+                │                                │                                                ├───────────────────────────┤                      │
+    ┌───────────┴─────────┐ CSI DATA 1P          │                                                │                           │                      │
+    │                     ├──────────────────────┤                                                │      DSI DATA 1N          │                      │
+    │                     │                      │                                                ├───────────────────────────┤                      │
+    │                     │ CSI DATA 1N          │                  ESP32-P4                      │                           │                      │
+    │       Camera        ├──────────────────────┤                                                │      DSI CLK N            │      LCD Screen      │
+    │                     │                      │                                                ├───────────────────────────┤                      │
+    │                     │ CSI CLK N            │                                                │                           │                      │
+    │                     ├──────────────────────┤                                                │      DSI CLK P            │                      │
+    │                     │                      │                                                ├───────────────────────────┤                      │
+    │                     │ CSI CLK P            │                                                │                           │                      │
+    │                     ├──────────────────────┤                                                │      DSI DATA 0P          │                      │
+    │                     │                      │                                                ├───────────────────────────┤                      │
+    │                     │ CSI DATA 0P          │                                                │                           │                      │
+    │                     ├──────────────────────┤                                                │      DSI DATA 0N          │                      │
+    │                     │                      │                                                ├───────────────────────────┤                      │
+    │                     │ CSI DATA 0N          │                                                │                           │                      │
+    │                     ├──────────────────────┤                                                │                           └──────────────────────┘
+    │                     │                      │                                                │
+    └───────┬──┬──────────┘                      │                                                │
+            │  │           I2C SCL               │                                                │
+            │  └─────────────────────────────────┤                                                │
+            │              I2C SDA               │                                                │
+            └────────────────────────────────────┤                                                │
+                                                 └────────────────────────────────────────────────┘
+
+</code></pre>
+<h2 id="%F0%9F%93%A1-Technical-Features-Introduction">📡 Technical Features Introduction</h2>
+<h3 id="Wi-Fi-HaLow-%28802.11ah%29">Wi-Fi HaLow (802.11ah)</h3>
+<p>Wi-Fi HaLow is a long-range, low-power Wi-Fi standard optimized for IoT. With the same transmission power, it offers longer transmission distance and stronger wall penetration capability compared to traditional 2.4GHz/5GHz Wi-Fi.</p>
+<p><strong>T-Halow-P4 equipped with Taixin TX-AH module supports:</strong></p>
+<ul>
+<li>Operating frequency band: 730–950MHz</li>
+<li>Channel bandwidth: 1/2/4/8MHz adjustable</li>
+<li>Physical throughput: 150Kbps – 32.5Mbps</li>
+<li>Transmission distance: Up to several kilometers (depending on environment)</li>
+</ul>
+<h3 id="ESP32-P4-High-Performance-Processing">ESP32-P4 High-Performance Processing</h3>
+<p>ESP32-P4 is a high-performance processor designed for complex graphics and video tasks:</p>
+<ul>
+<li>Supports JPEG image decoding (1080P 30fps)</li>
+<li>Pixel Processing Accelerator (PPA)</li>
+<li>2D DMA image accelerator</li>
+<li>Supports H264 and JPEG video encoding</li>
+</ul>
+<h3 id="ESP32-C6-Wireless-Connectivity">ESP32-C6 Wireless Connectivity</h3>
+<p>ESP32-C6 provides advanced wireless connectivity capabilities:</p>
+<ul>
+<li>Supports Wi-Fi 6 (802.11ax)</li>
+<li>Bluetooth 5.3</li>
+<li>Uses esp-hosted-mcu solution</li>
+<li>Communicates with ESP32-P4 via SDIO</li>
+</ul>
+<h2 id="%F0%9F%94%84-Quick-Start">🔄 Quick Start</h2>
+<h3 id="Development-Environment-Setup">Development Environment Setup</h3>
+<p>The project examples are compiled in ESP-IDF v5.4.1 environment. When using T-Halow-P4, ensure ESP-IDF version ≥ 5.4.1.</p>
+<p><strong>Environment Setup Steps:</strong></p>
+<ol>
+<li>Install ESP-IDF v5.4.1+ (refer to <a href="https://docs.espressif.com/projects/esp-idf/en/v5.5.2/esp32/get-started/index.html"  target="_blank">official documentation</a>)</li>
+<li>Clone T-Halow-P4 project repository</li>
+<li>Enter examples directory and select example program</li>
+</ol>
+<h3 id="Project-Compilation-and-Flashing">Project Compilation and Flashing</h3>
+<p><strong>Compilation Steps:</strong></p>
+
+<pre class="language-bash"><code class="language-bash">cd ~/examples/xxx
+idf.py set-target esp32p4
+idf.py build
+</code></pre>
+<p><strong>Download Mode Setup:</strong></p>
+<ol>
+<li>Plug in USB, open serial port tool</li>
+<li>Hold BOOT button without releasing</li>
+<li>Press RST button and release immediately</li>
+<li>Serial output &quot;wait for download&quot; indicates entering download mode</li>
+<li>Release BOOT button, close serial port</li>
+</ol>
+<p><strong>Program Flashing:</strong></p>
+
+<pre class="language-bash"><code class="language-bash">idf.py -p PORT flash
+</code></pre>
+<h3 id="Halow-Module-Usage">Halow Module Usage</h3>
+<p>Halow module connects to ESP32-P4 via SPI + UART:</p>
+<ul>
+<li><strong>SPI</strong>: For data transmission, using Taixin official drivers</li>
+<li><strong>UART</strong>: For sending/receiving AT commands and displaying runtime information</li>
+</ul>
+<p>Data transmission link:</p>
+
+<pre class="language-none"><code class="language-none">ESP32P4 -&gt; SPI/SDIO -&gt; Halow -&gt; RF(AP) -&gt; RF(STA) -&gt; SPI/SDIO -&gt; Halow -&gt; ESP32P4
+</code></pre>
+<h2 id="%F0%9F%93%9A-Official-Documentation-%28English%29">📚 Official Documentation (English)</h2>
+<p>For more information about the TX-AH module, please visit Taixin's official website: <a href="https://en.taixin-semi.com/Product?prouctSubClass=33"  target="_blank">Resources Download</a></p>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">Document Name</th>
+  <th style="text-align:left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">Frequency Setting Instructions</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AF802.11AH%20Frequency%20setting%20description_20231130110312.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">TX-AH-Rx00P Series Module Technical Specification</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AF802.11ahTX-AH-Rx00P%20Series%20module%20technical%20specification_20231116174457.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">TX-AH-Rx00P Bridge Instructions</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH%20Bridge%20instructions_20230908122753.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">AH Module AT Command Development Guide</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH%20Module%20AT%20instruction%20development%20guide_20230524100503.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">AH Module Development Board Instructions</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH%20Module%20development%20board%20instructions_20230621205234.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">AH Module Hardware Design Guide</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH%20Module%20hardware%20Design%20Guide_20230621170639.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">AH Performance Test Method</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH%20Performance%20test%20method_20230908122816.pdf"  target="_blank">Download</a></td>
+</tr>
+<tr>
+  <td style="text-align:left">AH-RF EMC Certification Guide</td>
+  <td style="text-align:left"><a href="https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/%E6%B3%B0%E8%8A%AFAH-RF%20EMC%20Certification%20guide_20230720140052.pdf"  target="_blank">Download</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="%F0%9F%93%8A-TX-AH-Model-Comparison">📊 TX-AH Model Comparison</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:center">Module Name</th>
+  <th style="text-align:center">Front Silkscreen Marking</th>
+  <th style="text-align:center">Certification Status</th>
+  <th style="text-align:center">Supported Frequency Band</th>
+  <th style="text-align:left">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:center">TX-AH-R900P</td>
+  <td style="text-align:center">Bottom-left P9, Bottom-right P9</td>
+  <td style="text-align:center">FCC/CE Certifiable</td>
+  <td style="text-align:center">860MHz ~ 928MHz</td>
+  <td style="text-align:left">Standard Version</td>
+</tr>
+<tr>
+  <td style="text-align:center">TX-AH-R900PNR</td>
+  <td style="text-align:center">Bottom-left P9, Bottom-right NR</td>
+  <td style="text-align:center">FCC Certifiable</td>
+  <td style="text-align:center">902MHz ~ 928MHz</td>
+  <td style="text-align:left">With 915M Saw, improved reception</td>
+</tr>
+<tr>
+  <td style="text-align:center">TX-AH-R900PNR-860M</td>
+  <td style="text-align:center">Bottom-left 86, Bottom-right NR</td>
+  <td style="text-align:center">CE Certifiable</td>
+  <td style="text-align:center">859MHz ~ 894MHz</td>
+  <td style="text-align:left">With 875M Saw, improved reception</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remarks:</strong></p>
+<ol>
+<li>Differences between P series modules and early A series modules:<ul>
+<li>(1) P series bottom-left silkscreen starts with P, A series starts with R</li>
+<li>(2) P series PIN4/5 require power supply, A series do not</li>
+</ul>
+</li>
+<li>Modules default without shielding case, shielded versions add <strong>-S</strong> suffix to module name (S indicates Shield)</li>
+</ol>
+<h2 id="%F0%9F%9A%80-Quick-Start">🚀 Quick Start</h2>
+<p>🟢 <strong>PlatformIO is recommended</strong> as these examples were developed on PlatformIO. 🟢</p>
+<h3 id="PlatformIO-Development-Environment">PlatformIO Development Environment</h3>
+<ol>
+<li>Install <a href="https://code.visualstudio.com/"  target="_blank">Visual Studio Code</a> and <a href="https://www.python.org/"  target="_blank">Python</a>, clone or download this project;</li>
+<li>Search for and install the <code>PlatformIO</code> extension in VSCode extensions;</li>
+<li>Restart VSCode after installation;</li>
+<li>Open this project, PlatformIO will automatically download required third-party libraries and dependencies, first-time process may take longer, please be patient;</li>
+<li>After all dependencies are installed, open the <code>platformio.ini</code> configuration file, uncomment and select example programs in <code>example</code>, then press <code>Ctrl+S</code> to save;</li>
+<li>Click ☑️ at the bottom of VSCode to compile the project, insert USB and select COM port in VSCode;</li>
+<li>Finally click ➡️ button to download the program to Flash;</li>
+</ol>
+<h3 id="Arduino-IDE-Development-Environment">Arduino IDE Development Environment</h3>
+<ol>
+<li><p>Install <a href="https://www.arduino.cc/en/software"  target="_blank">Arduino IDE</a></p>
+</li>
+<li><p>Copy and paste all files from <code>this project/lib/</code> to Arduino library path (usually <code>C:\\Users\\username\\Documents\\Arduino\\libraries</code>);</p>
+</li>
+<li><p>Open Arduino IDE, click <code>File -&gt; Open</code> in the upper left corner, open the example under <code>this project/example/xxx/xxx.ino</code>;</p>
+</li>
+<li><p>Configure Arduino as follows, then click the upper left button in Arduino to compile and download;</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+  <th>Arduino IDE Setting</th>
+  <th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Board</td>
+  <td><strong>ESP32S3 Dev Module</strong></td>
+</tr>
+<tr>
+  <td>Port</td>
+  <td>Your port</td>
+</tr>
+<tr>
+  <td>USB CDC On Boot</td>
+  <td>Enable</td>
+</tr>
+<tr>
+  <td>CPU Frequency</td>
+  <td>240MHZ(WiFi)</td>
+</tr>
+<tr>
+  <td>Core Debug Level</td>
+  <td>None</td>
+</tr>
+<tr>
+  <td>USB DFU On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Erase All Flash Before Sketch Upload</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Events Run On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>Flash Mode</td>
+  <td>QIO 80MHZ</td>
+</tr>
+<tr>
+  <td>Flash Size</td>
+  <td><strong>16MB(128Mb)</strong></td>
+</tr>
+<tr>
+  <td>Arduino Runs On</td>
+  <td>Core1</td>
+</tr>
+<tr>
+  <td>USB Firmware MSC On Boot</td>
+  <td>Disable</td>
+</tr>
+<tr>
+  <td>Partition Scheme</td>
+  <td><strong>16M Flash(3M APP/9.9MB FATFS)</strong></td>
+</tr>
+<tr>
+  <td>PSRAM</td>
+  <td><strong>OPI PSRAM</strong></td>
+</tr>
+<tr>
+  <td>Upload Mode</td>
+  <td><strong>UART0/Hardware CDC</strong></td>
+</tr>
+<tr>
+  <td>Upload Speed</td>
+  <td>921600</td>
+</tr>
+<tr>
+  <td>USB Mode</td>
+  <td><strong>CDC and JTAG</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="%F0%9F%A7%AD-Application-Scenarios">🧭 Application Scenarios</h2>
+<ul>
+<li>🏭 <strong>Industrial Security Monitoring</strong>: High-performance image processing + HaLow long-range communication</li>
+<li>🌾 <strong>Agricultural Environmental Monitoring</strong>: Large-scale farmland sensor data collection and remote monitoring</li>
+<li>🏗️ <strong>Construction Site Inspection</strong>: Long-range video inspection and equipment status monitoring</li>
+<li>🔬 <strong>Scientific Field Data Collection</strong>: Long-range reliable data transmission and multimedia processing</li>
+<li>📡 <strong>IoT Gateway</strong>: Connecting large numbers of low-power sensor nodes</li>
+<li>🎥 <strong>Smart Camera</strong>: Remote monitoring system supporting H264 encoding</li>
+</ul>
+<h2 id="%E2%9A%A0%EF%B8%8F-Important-Notes">⚠️ Important Notes</h2>
+<p>❗ <strong>For more TX-AH module resources, please refer to Taixin's official website</strong>: <a href="https://www.taixin-semi.com/Product?prouctSubClass=33"  target="_blank">Resources Download Address</a></p>
+<h2 id="%F0%9F%93%9A-Resources-Download">📚 Resources Download</h2>
+<h3 id="Official-Documentation">Official Documentation</h3>
+<ul>
+<li><a href="https://github.com/Xinyuan-LilyGO/T-Halow-P4"  target="_blank">T-Halow-P4 GitHub Repository</a></li>
+<li><a href="./hardware/%E6%B3%B0%E8%8A%AFnon-os_WiFi%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.pdf"  >Taixin non-os WiFi Driver Development Guide</a></li>
+<li><a href="./hardware/%E6%B3%B0%E8%8A%AFAH%E6%A8%A1%E7%BB%84AT%E6%8C%87%E4%BB%A4%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.pdf"  >Taixin AH Module AT Command Development Guide</a></li>
+<li><a href="./doc/AT_cmd.html"  >AT Command Set Documentation</a></li>
+</ul>
+<h3 id="Development-Resources">Development Resources</h3>
+<ul>
+<li><a href="https://docs.espressif.com/projects/esp-idf/en/v5.5.2/esp32/get-started/index.html"  target="_blank">ESP-IDF Official Documentation</a></li>
+<li><a href="https://www.taixin-semi.com/upload/files/productFile/20251204/taixin-nonos-driver_20251204162053.zip"  target="_blank">Taixin Driver Download</a></li>
+<li><a href="./AH-V1.6-SDK/readme_cn.html"  >AH-V1.6-SDK Instructions</a></li>
+</ul>
+<h3 id="Dependencies">Dependencies</h3>
+<ul>
+<li><code>espressif/esp_hosted^1.4.1</code></li>
+<li><code>espressif/esp_wifi_remote^0.8.5</code></li>
+<li><code>espressif/esp_lcd_ek79007^1.0.2</code></li>
+<li><code>lvgl/lvgl</code></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/get_started/en/High_speed/T-Halow/T-Halow.html">
+                            <span class="icon"></span>
+                            <span class="label">T-Halow</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/get_started/en/High_speed/T-Connect/T-Connect.html">
+                            <span class="label">T-Connect</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>Links</a><ul><li><a target="_blank" href="https://lilygo.cc">LILYGO official website</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">LILYGO Taobao</a></li>
+</ul>
+</li>
+<li><a>Follow us</a><ul><li><a target="_blank" href="https://x.com/lilygo9">Twitter</a></li>
+<li><a target="_blank" href="https://shop140839766.taobao.com/?spm=a1z10.1-c.0.0.359257605UXZ3y">TaoBao</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Github</a></li>
+<li><a target="_blank" href="https://www.youtube.com/@LILYGO">YouTuBe</a></li>
+<li><a target="_blank" href="https://www.facebook.com/lilygottgo">FaceBook</a></li>
+</ul>
+</li>
+<li><a>Source Code</a><ul><li><a target="_blank" href="https://github.com/Xinyuan-LilyGO">Open Source Projects</a></li>
+<li><a target="_blank" href="https://github.com/Xinyuan-LilyGO/LILYGO_wiki">Wiki source</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://lilygo.cc/">LIIYGO</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script type="text/javascript">
+                var transLoaded = false;
+                var loading = false;
+                var domain = "translate.google.com";
+                var domainDefault = domain;
+                var storeDomain = localStorage.getItem("googleTransDomain");
+                if(storeDomain){
+                    domain = storeDomain;
+                    console.log("load google translate domain from local storage:" + domain);
+                }
+                function getUrl(domain){
+                    if(domain == "/")
+                        return "/static/js/google_translate/element.js?cb=googleTranslateElementInit";
+                    else
+                        return "https://" + domain + "/translate_a/element.js?cb=googleTranslateElementInit";
+                }
+                var url = getUrl(domain);
+                console.log("google translate domain:" + domain + ", url: " + url);
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "auto", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                }
+                function loadJS( url, callback ){
+                    var script = document.createElement('script');
+                    fn = callback || function(){ };
+                    script.type = 'text/javascript';
+                    if(script.readyState){
+                        script.onreadystatechange = function(){
+                            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                                script.onreadystatechange = null;
+                                fn();
+                            }
+                        };
+                    }else{
+                        script.onload = function(){
+                            fn();
+                        };
+                    }
+                    script.src = url;
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                }
+                function removeHint(){
+                    var hint = document.getElementById("loadingTranslate");
+                    if(hint){
+                        hint.remove();
+                    }
+                }
+                var btn = document.getElementById("google_translate_element");
+                btn.onclick = function(){
+                    if(transLoaded) return;
+                    if(loading){
+                        var flag = confirm("loading from " + domain + ", please wait, or change domain?");
+                        if(flag){
+                            newDomain = prompt("domain, default: " + domainDefault + ", now: " + domain);
+                            if(newDomain){
+                                domain = newDomain;
+                                console.log(domain);
+                                url = getUrl(domain);
+                                loadJS(url, function(){
+                                    localStorage.setItem("googleTransDomain", domain);
+                                    removeHint()
+                                    transLoaded = true;
+                                });
+                            }
+                        }
+                        return;
+                    }
+                    btn.innerHTML = '<span id="loadingTranslate"><img class="icon" src="/static/image/google_translate/translate.svg"/>Loading ...</span>';
+                    loading = true;
+                    loadJS(url, function(){
+                        localStorage.setItem("googleTransDomain", domain);
+                        removeHint()
+                        transLoaded = true;
+                    });
+                }
+                </script>
+            
+    
+        <script src="/static/js/plugin_blog/main.js"></script>
+    
+        <script src="/static/js/gitalk/gitalk.min.js"></script>
+    
+        <script src="/static/js/gitalk/main.js"></script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <link rel="stylesheet" href="/static/js/add_hint/style.css" type="text/css"/>
+    
+        <script src="/static/js/add_hint/main.js"></script>
+    
+        <script src="/static/js/spark-widget.js"></script>
+    
+</body>
+
+</html>
