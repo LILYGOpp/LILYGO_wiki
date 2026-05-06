@@ -111,6 +111,8 @@ items:
             file: High_speed/T-TWR/T-TWR.md
         -   label: T-Halow
             file: High_speed/T-Halow/T-Halow.md
+        -   label: T-Halow-P4
+            file: High_speed/T-Halow-P4/T-Halow-P4.md            
         -   label: T-Connect
             file: High_speed/T-Connect/T-Connect.md            
         -   label: T-Connect Pro

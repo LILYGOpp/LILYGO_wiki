@@ -127,6 +127,16 @@ T-BEAM-SUPREME V3.0 是一款高性能多功能的物联网开发板，基于 ES
 | ⚡Charge Current      | 0-1024mA (\(Programmable\)) |
 | 🔋Battery Voltage     | 3.7V                        |
 
+### LR1121 RF Module 参数信息
+
+| Features            | Details                       |
+| ------------------- | ----------------------------- |
+| RF  Module          | LR1121                        |
+| Frequency range     | 830-945MHz，2.4-2.5GHz        |
+| Transfer rate(LoRa) | 0.6 K~300 Kbps@FSK@ Sub1G     |
+| Transfer rate(FSK)  | 0.018 K~62.5 Kbps@LoRa@ Sub1G |
+| Transfer rate(FSK)  | 0.476 K~101.5 Kbps@LoRa@ 2.4G |
+| Modulation          | LoRa,(G)FSK ，LR-FHSS         |
 
 ### 电源管理
 

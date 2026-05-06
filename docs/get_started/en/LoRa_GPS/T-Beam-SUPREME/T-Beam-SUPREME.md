@@ -128,6 +128,18 @@ It features a 1.3-inch SH1106 OLED screen (128x64 resolution, I2C interface), su
 | 🔋Battery Voltage     | 3.7V                        |
 
 
+### LR1121 RF parameters
+
+| Features            | Details                       |
+| ------------------- | ----------------------------- |
+| RF  Module          | LR1121                        |
+| Frequency range     | 830-945MHz，2.4-2.5GHz        |
+| Transfer rate(LoRa) | 0.6 K~300 Kbps@FSK@ Sub1G     |
+| Transfer rate(FSK)  | 0.018 K~62.5 Kbps@LoRa@ Sub1G |
+| Transfer rate(FSK)  | 0.476 K~101.5 Kbps@LoRa@ 2.4G |
+| Modulation          | LoRa,(G)FSK ，LR-FHSS         |
+
+
 ### Power Management
 
 | Channel    | Peripherals                              |
