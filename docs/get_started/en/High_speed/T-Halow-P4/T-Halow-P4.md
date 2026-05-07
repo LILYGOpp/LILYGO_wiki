@@ -226,19 +226,19 @@ For more information about the TX-AH module, please visit Taixin's official webs
 | AH-RF EMC Certification Guide | [Download](https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/泰芯AH-RF%20EMC%20Certification%20guide_20230720140052.pdf) |
 
 
-## 📊 TX-AH Model Comparison
+## 📊 Wi-Fi HaLow Frequency Band Support
 
-| Module Name | Front Silkscreen Marking | Certification Status | Supported Frequency Band | Remarks |
-| :---: | :---: | :---: | :---: | :--- |
-| TX-AH-R900P | Bottom-left P9, Bottom-right P9 | FCC/CE Certifiable | 860MHz ~ 928MHz | Standard Version |
-| TX-AH-R900PNR | Bottom-left P9, Bottom-right NR | FCC Certifiable | 902MHz ~ 928MHz | With 915M Saw, improved reception |
-| TX-AH-R900PNR-860M | Bottom-left 86, Bottom-right NR | CE Certifiable | 859MHz ~ 894MHz | With 875M Saw, improved reception |
+T-Halow-P4 supports the following Wi-Fi HaLow frequency bands:
 
-**Remarks:**
-1. Differences between P series modules and early A series modules:
-   - (1) P series bottom-left silkscreen starts with P, A series starts with R
-   - (2) P series PIN4/5 require power supply, A series do not
-2. Modules default without shielding case, shielded versions add **-S** suffix to module name (S indicates Shield)
+| Band | Frequency Range |
+| :---: | :---: | 
+| 868MHz | 859-894MHz | 
+| 915MHz | 902-928MHz | 
+
+**Note:**
+- Please select the appropriate frequency band according to regulatory requirements in your region
+- Antenna design may vary for different frequency bands
+- Refer to product technical specifications for specific certification information
 
 
 ## 🚀 Quick Start

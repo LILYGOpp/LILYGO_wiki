@@ -226,19 +226,19 @@ ESP32P4 -> SPI/SDIO -> Halow -> RF(AP) -> RF(STA) -> SPI/SDIO -> Halow -> ESP32P
 | AH-RF EMC 认证指南 | [下载](https://github.com/Xinyuan-LilyGO/T-Halow/blob/master/hardware/TX_AH/泰芯AH-RF%20EMC%20Certification%20guide_20230720140052.pdf) |
 
 
-## 📊 TX-AH 型号对比
+## 📊 Wi-Fi HaLow 频段支持
 
-| 模组名称 | 正面丝印区分 | 认证情况 | 支持频段 | 备注 |
-| :---: | :---: | :---: | :---: | :--- |
-| TX-AH-R900P | 左下角 P9，右下角 P9 | 可通过 FCC/CE 认证 | 860MHz ~ 928MHz | 标准版本 |
-| TX-AH-R900PNR | 左下角 P9，右下角 NR | 可通过 FCC 认证 | 902MHz ~ 928MHz | 带 915M Saw，改善接收性能 |
-| TX-AH-R900PNR-860M | 左下角 86，右下角 NR | 可通过 CE 认证 | 859MHz ~ 894MHz | 带 875M Saw，改善接收性能 |
+T-Halow-P4 支持以下 Wi-Fi HaLow 频段：
 
-**备注：**
-1. P 系列模组与早期 A 系列模组的区别：
-   - (1) P 系列左下角丝印以 P 开头，A 系列以 R 开头
-   - (2) P 系列的 PIN4/5 需要供电，A 系列不需要
-2. 模组默认不带屏蔽罩，带屏蔽罩的版本在模组名称后加 **-S** 后缀（S 表示 Shield）
+| 频段 | 频率范围 |  
+| :---: | :---: | 
+| 868MHz | 859-894MHz | 
+| 915MHz | 902-928MHz | 
+
+**注意：**
+- 请根据您所在地区的法规要求选择相应的频段
+- 不同频段的天线设计可能有所不同
+- 具体认证信息请参考产品技术规格书
 
 
 ## 🚀 快速开始
