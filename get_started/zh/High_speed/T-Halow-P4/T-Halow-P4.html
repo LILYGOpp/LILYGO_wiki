@@ -621,50 +621,32 @@ idf.py build
 </tr>
 </tbody>
 </table>
-<h2 id="%F0%9F%93%8A-TX-AH-%E5%9E%8B%E5%8F%B7%E5%AF%B9%E6%AF%94">📊 TX-AH 型号对比</h2>
+<h2 id="%F0%9F%93%8A-Wi-Fi-HaLow-%E9%A2%91%E6%AE%B5%E6%94%AF%E6%8C%81">📊 Wi-Fi HaLow 频段支持</h2>
+<p>T-Halow-P4 支持以下 Wi-Fi HaLow 频段：</p>
 <table>
 <thead>
 <tr>
-  <th style="text-align:center">模组名称</th>
-  <th style="text-align:center">正面丝印区分</th>
-  <th style="text-align:center">认证情况</th>
-  <th style="text-align:center">支持频段</th>
-  <th style="text-align:left">备注</th>
+  <th style="text-align:center">频段</th>
+  <th style="text-align:center">频率范围</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-  <td style="text-align:center">TX-AH-R900P</td>
-  <td style="text-align:center">左下角 P9，右下角 P9</td>
-  <td style="text-align:center">可通过 FCC/CE 认证</td>
-  <td style="text-align:center">860MHz ~ 928MHz</td>
-  <td style="text-align:left">标准版本</td>
+  <td style="text-align:center">868MHz</td>
+  <td style="text-align:center">859-894MHz</td>
 </tr>
 <tr>
-  <td style="text-align:center">TX-AH-R900PNR</td>
-  <td style="text-align:center">左下角 P9，右下角 NR</td>
-  <td style="text-align:center">可通过 FCC 认证</td>
-  <td style="text-align:center">902MHz ~ 928MHz</td>
-  <td style="text-align:left">带 915M Saw，改善接收性能</td>
-</tr>
-<tr>
-  <td style="text-align:center">TX-AH-R900PNR-860M</td>
-  <td style="text-align:center">左下角 86，右下角 NR</td>
-  <td style="text-align:center">可通过 CE 认证</td>
-  <td style="text-align:center">859MHz ~ 894MHz</td>
-  <td style="text-align:left">带 875M Saw，改善接收性能</td>
+  <td style="text-align:center">915MHz</td>
+  <td style="text-align:center">902-928MHz</td>
 </tr>
 </tbody>
 </table>
-<p><strong>备注：</strong></p>
-<ol>
-<li>P 系列模组与早期 A 系列模组的区别：<ul>
-<li>(1) P 系列左下角丝印以 P 开头，A 系列以 R 开头</li>
-<li>(2) P 系列的 PIN4/5 需要供电，A 系列不需要</li>
+<p><strong>注意：</strong></p>
+<ul>
+<li>请根据您所在地区的法规要求选择相应的频段</li>
+<li>不同频段的天线设计可能有所不同</li>
+<li>具体认证信息请参考产品技术规格书</li>
 </ul>
-</li>
-<li>模组默认不带屏蔽罩，带屏蔽罩的版本在模组名称后加 <strong>-S</strong> 后缀（S 表示 Shield）</li>
-</ol>
 <h2 id="%F0%9F%9A%80-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">🚀 快速开始</h2>
 <p>🟢 <strong>推荐使用 PlatformIO</strong>，因为这些示例是在 PlatformIO 上开发的。🟢</p>
 <h3 id="PlatformIO-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">PlatformIO 开发环境</h3>
