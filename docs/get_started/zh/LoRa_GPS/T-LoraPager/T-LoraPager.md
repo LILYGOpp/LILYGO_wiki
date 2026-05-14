@@ -368,6 +368,10 @@ T-LoraPager 是一款 LILYGO 推出的手持式 AIOT 可编程开发设备，集
 
 * [T-LoraPager_V1.0](https://github.com/Xinyuan-LilyGO/LilyGoLib/blob/master/Files/(N314)T-Lora_Pager_LR1121_Module_V1.0_20250805.pdf)
 
+## 软件
+
+* [使用 T-Lora pager 运行 Claude Desktop Buddy](claude-desktop-buddy.md)
+
 ## 资料
 
 * [原理图](https://github.com/Xinyuan-LilyGO/LilyGoLib/blob/master/docs/hardware/schematic.pdf)
