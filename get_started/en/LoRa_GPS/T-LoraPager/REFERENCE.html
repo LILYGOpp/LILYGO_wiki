@@ -64,7 +64,7 @@ var _hmt = _hmt || [];
         
     
     
-    <title>LILYGO Spark User Guide - LILYGO Wiki</title>
+    <title>Hardware Buddy BLE Protocol - LILYGO Wiki</title>
     
     <script type="text/javascript">js_vars = {"teedoc-plugin-ad-hint": {"type": "hint", "label": "☆", "content": "If you are interested in our products, you can follow our official website store and Taobao shop.<br> If you find any projects on Github that interest you, please give them a ☆ star. 🦀🦀", "show_times": 2, "show_after_s": 432000, "date": "2021-11-16 14:40", "color": "#a0421d", "link_color": "#e53935", "link_bg_color": "#e6ae5c", "bg_color": "#ffcf89", "color_hover": "white", "bg_color_hover": "#f57c00", "close_color": "#eab971"}}</script>
     <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
@@ -99,8 +99,8 @@ var _hmt = _hmt || [];
 <li class=""><a target="_blank" href="https://lilygo.cc/"><img src='/static/image/shop.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
 <li class=""><a target="_blank" href="https://www.youtube.com/@LILYGO"><img src='/static/image/youtube.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
 <li class=""><a target="_blank" href="https://github.com/Xinyuan-LilyGO"><img src='/static/image/github.svg' style='height: 1.5em;vertical-align: middle;'></a></li>
-<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/LILYGO-Spark/LILYGO-Spark-en.html">English</a></li>
-<li class=""><a  href="/get_started/zh/LILYGO-Spark/LILYGO-Spark-en.html">中文 简体</a></li>
+<li class="sub_items "><a  ><img src='/static/image/language.svg' style='height: 1.5em;vertical-align: middle;'>&nbsp;English</a><ul><li class="active"><a  href="/get_started/en/LoRa_GPS/T-LoraPager/REFERENCE.html">English</a></li>
+<li class=""><a  href="/get_started/zh/LoRa_GPS/T-LoraPager/REFERENCE.html">中文 简体</a></li>
 </ul></li>
 </ul>
 
@@ -122,7 +122,7 @@ var _hmt = _hmt || [];
                 <div id="sidebar_title">
                     
                 </div>
-                <ul class="show">
+                <ul class="">
 <li class="not_active no_link"><a><span class="label">DISPLAY</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
 <li class="not_active no_link"><a><span class="label">T-Circle</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
 <li class="not_active with_link"><a href="/get_started/en/Display/T-Circle/T-Circle.html"><span class="label">T-Circle</span><span class=""></span></a></li>
@@ -259,7 +259,7 @@ var _hmt = _hmt || [];
 <li class="not_active with_link"><a href="/get_started/en/Meshcore/meshcore.html"><span class="label">Meshcore use</span><span class=""></span></a></li>
 </ul>
 </li>
-<li class="active with_link"><a href="/get_started/en/LILYGO-Spark/LILYGO-Spark-en.html"><span class="label">LILYGO-Spark</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/get_started/en/LILYGO-Spark/LILYGO-Spark-en.html"><span class="label">LILYGO-Spark</span><span class=""></span></a></li>
 </ul>
 
             </div>
@@ -274,7 +274,7 @@ var _hmt = _hmt || [];
                     <div id="article_head">
                         <div id="article_title">
                             
-                            <h1>LILYGO Spark User Guide</h1>
+                            <h1>Hardware Buddy BLE Protocol</h1>
                             
                         </div>
                         <div id="article_tags">
@@ -296,7 +296,7 @@ var _hmt = _hmt || [];
                         <div id="article_info_right">
                             
                             <div id="source_link">
-                                <a href="https://github.com/LILYGOpp/LILYGO_wiki/blob/main/docs/get_started/en/LILYGO-Spark/LILYGO-Spark-en.md" target="_blank">
+                                <a href="https://github.com/LILYGOpp/LILYGO_wiki/blob/main/docs/get_started/en/LoRa_GPS/T-LoraPager/REFERENCE.md" target="_blank">
                                     Edit this page
                                 </a>
                             </div>
@@ -313,165 +313,264 @@ var _hmt = _hmt || [];
                     </div>
                     <div id="article_content">
                         
-                            <h2 id="Software-Download">Software Download</h2>
-<div id="spark-widget" data-theme="green"></div>
-<p>Click <strong>&quot;Download&quot;</strong> above to get the installer for your current platform, or click <strong>&quot;All Platforms&quot;</strong> to expand the full list of downloads for macOS, Windows, and Linux.</p>
-<h2 id="Software-Installation">Software Installation</h2>
-<h3 id="Windows">Windows</h3>
+                            <p>This is the wire protocol the Claude desktop apps speak over Bluetooth LE.<br />
+You don't need anything from this repository to implement it. Any device<br />
+that can advertise the Nordic UART Service and parse newline-delimited JSON<br />
+will work: Arduino, ESP32, nRF52, a Raspberry Pi with a BLE dongle.</p>
+<h2 id="Enabling-the-bridge">Enabling the bridge</h2>
+<p>The BLE bridge is off by default. In Claude for macOS or Windows:</p>
 <ol>
-<li>Locate the downloaded <code>.exe</code> file and double-click to start the installer;</li>
+<li><strong>Help → Troubleshooting → Enable Developer Mode</strong> — adds a <strong>Developer</strong><br />
+menu to the menu bar.</li>
+<li><strong>Developer → Open Hardware Buddy…</strong> — opens the pairing window.</li>
+<li>Click <strong>Connect</strong> and pick your device from the scan list. The OS will<br />
+prompt for Bluetooth permission on first use.</li>
 </ol>
-<p><img src="image-3.png" alt="alt text" /></p>
-<ol start="2">
-<li>If a SmartScreen security prompt appears, click <code>More info</code> → <code>Run anyway</code> to continue;</li>
-</ol>
-<p><img src="image-4.png" alt="alt text" /></p>
-<ol start="3">
-<li>After installation, the software will start automatically.</li>
-</ol>
-<h3 id="macOS">macOS</h3>
-<p>The macOS version has been <strong>Apple Notarized</strong>, so you can install it directly without any additional security settings.</p>
-<ol>
-<li>Open the downloaded <code>.dmg</code> file and drag LILYGO Spark to the Applications folder;</li>
-<li>On first launch, macOS will show a confirmation dialog — click <code>Open</code> to proceed;</li>
-<li>No need to go to System Settings → Privacy &amp; Security to allow the app, as it is already notarized by Apple.</li>
-</ol>
-<h2 id="Software-Function-Overview">Software Function Overview</h2>
-<p>After the software starts, the interface contains several functional modules. Each module has clear functions and is easy to operate. Details are as follows:</p>
-<p><img src="image-5.png" alt="alt text" /></p>
-<h3 id="Basic-Settings">Basic Settings</h3>
-<p>Enter the 「Settings」 interface to personalize the software according to different usage needs:</p>
-<p><img src="image-6.png" alt="alt text" /></p>
+<p>Once paired the bridge auto-reconnects in the background; you only need the<br />
+window open for initial pairing, the stats panel, or the folder drop target.</p>
+<h2 id="Transport">Transport</h2>
+<p><strong>BLE Nordic UART Service</strong> (the de-facto serial-over-BLE standard):</p>
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>UUID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Service</td>
+  <td><code>6e400001-b5a3-f393-e0a9-e50e24dcca9e</code></td>
+</tr>
+<tr>
+  <td>RX (desktop → device, write)</td>
+  <td><code>6e400002-b5a3-f393-e0a9-e50e24dcca9e</code></td>
+</tr>
+<tr>
+  <td>TX (device → desktop, notify)</td>
+  <td><code>6e400003-b5a3-f393-e0a9-e50e24dcca9e</code></td>
+</tr>
+</tbody>
+</table>
+<p>Advertise a name starting with <code>Claude</code> over the Nordic UART Service so the<br />
+device picker can filter to you. Appending a few bytes of your BT MAC keeps<br />
+multiple devices distinguishable in the picker.</p>
+<p>Everything on the wire is UTF-8 JSON—one object per line, terminated with<br />
+<code>\n</code>. The desktop reassembles multi-packet lines on its end (notifications<br />
+fragment at the MTU boundary, just send the bytes). Your device needs to do<br />
+the same: accumulate bytes until you see <code>\n</code>, then parse.</p>
+<h2 id="Heartbeat-snapshot">Heartbeat snapshot</h2>
+<p>The desktop apps send a heartbeat snapshot whenever something changes, plus<br />
+a keepalive every 10 seconds:</p>
+
+<pre class="language-json"><code class="language-json">{
+  &quot;total&quot;: 3,
+  &quot;running&quot;: 1,
+  &quot;waiting&quot;: 1,
+  &quot;msg&quot;: &quot;approve: Bash&quot;,
+  &quot;entries&quot;: [&quot;10:42 git push&quot;, &quot;10:41 yarn test&quot;, &quot;10:39 reading file...&quot;],
+  &quot;tokens&quot;: 184502,
+  &quot;tokens_today&quot;: 31200,
+  &quot;prompt&quot;: {
+    &quot;id&quot;: &quot;req_abc123&quot;,
+    &quot;tool&quot;: &quot;Bash&quot;,
+    &quot;hint&quot;: &quot;rm -rf /tmp/foo&quot;
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>total</code></td>
+  <td>Count of all sessions</td>
+</tr>
+<tr>
+  <td><code>running</code></td>
+  <td>Sessions actively generating</td>
+</tr>
+<tr>
+  <td><code>waiting</code></td>
+  <td>Sessions blocked on a permission prompt</td>
+</tr>
+<tr>
+  <td><code>msg</code></td>
+  <td>One-line summary suitable for a small display</td>
+</tr>
+<tr>
+  <td><code>entries</code></td>
+  <td>Recent transcript lines, newest first (capped to a few)</td>
+</tr>
+<tr>
+  <td><code>tokens</code></td>
+  <td>Cumulative output tokens since the desktop app started</td>
+</tr>
+<tr>
+  <td><code>tokens_today</code></td>
+  <td>Output tokens since local midnight (persisted, survives restart)</td>
+</tr>
+<tr>
+  <td><code>prompt</code></td>
+  <td>Only present when a permission decision is needed. The <code>id</code> is what you echo back</td>
+</tr>
+</tbody>
+</table>
+<p>A few useful derived signals: <code>running &gt; 0</code> means at least one session is<br />
+actively generating, <code>waiting &gt; 0</code> means a permission prompt is blocking,<br />
+and <code>total == 0</code> means nothing is open. <code>tokens_today</code> resets at local<br />
+midnight if you want a daily counter.</p>
+<p>If you don't receive a snapshot for ~30 seconds, treat the connection as<br />
+dead.</p>
+<h2 id="Turn-events">Turn events</h2>
+<p>Each completed turn also fires a one-shot event containing the raw SDK<br />
+content array—text blocks, tool calls, and any other content from the<br />
+message. Events that serialize larger than 4KB are dropped (measured in<br />
+UTF-8 bytes, not character count).</p>
+
+<pre class="language-json"><code class="language-json">{
+  &quot;evt&quot;: &quot;turn&quot;,
+  &quot;role&quot;: &quot;assistant&quot;,
+  &quot;content&quot;: [{ &quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;...&quot; }]
+}
+</code></pre>
+<h2 id="Permission-decisions">Permission decisions</h2>
+<p>When <code>prompt</code> is present, your device can return a response. Send one of:</p>
+
+<pre class="language-json"><code class="language-json">{&quot;cmd&quot;:&quot;permission&quot;,&quot;id&quot;:&quot;req_abc123&quot;,&quot;decision&quot;:&quot;once&quot;}
+{&quot;cmd&quot;:&quot;permission&quot;,&quot;id&quot;:&quot;req_abc123&quot;,&quot;decision&quot;:&quot;deny&quot;}
+</code></pre>
+<p>The <code>id</code> must match <code>prompt.id</code> exactly. The desktop forwards this to the<br />
+session manager: <code>&quot;once&quot;</code> approves the tool call, <code>&quot;deny&quot;</code> rejects it.</p>
+<h2 id="One-shot-on-connect">One-shot on connect</h2>
+<p>Time sync (epoch seconds + timezone offset in seconds):</p>
+
+<pre class="language-json"><code class="language-json">{ &quot;time&quot;: [1775731234, -25200] }
+</code></pre>
+<p>Owner name (the user's first name from their account):</p>
+
+<pre class="language-json"><code class="language-json">{ &quot;cmd&quot;: &quot;owner&quot;, &quot;name&quot;: &quot;Felix&quot; }
+</code></pre>
+<h2 id="Commands-and-acks">Commands and acks</h2>
+<p>Any command the desktop sends with a <code>cmd</code> field expects a matching ack:</p>
+
+<pre class="language-json"><code class="language-json">{ &quot;ack&quot;: &quot;&lt;same as cmd&gt;&quot;, &quot;ok&quot;: true, &quot;n&quot;: 0 }
+</code></pre>
+<p>Set <code>ok:false</code> and optionally <code>error:&quot;...&quot;</code> if you couldn't do it. <code>n</code> is a<br />
+generic counter (e.g. bytes written for chunk acks, otherwise 0).</p>
+<table>
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Payload</th>
+  <th>Ack you send back</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>{&quot;cmd&quot;:&quot;status&quot;}</code></td>
+  <td>—</td>
+  <td>see Status response below</td>
+</tr>
+<tr>
+  <td><code>{&quot;cmd&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Clawd&quot;}</code></td>
+  <td>sets device display name</td>
+  <td><code>{&quot;ack&quot;:&quot;name&quot;,&quot;ok&quot;:true}</code></td>
+</tr>
+<tr>
+  <td><code>{&quot;cmd&quot;:&quot;owner&quot;,&quot;name&quot;:&quot;Felix&quot;}</code></td>
+  <td>sets owner name</td>
+  <td><code>{&quot;ack&quot;:&quot;owner&quot;,&quot;ok&quot;:true}</code></td>
+</tr>
+<tr>
+  <td><code>{&quot;cmd&quot;:&quot;unpair&quot;}</code></td>
+  <td>erase stored BLE bonds</td>
+  <td><code>{&quot;ack&quot;:&quot;unpair&quot;,&quot;ok&quot;:true}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Status response.</strong> The desktop polls this every couple of seconds to<br />
+populate the Hardware Buddy window's stats panel:</p>
+
+<pre class="language-json"><code class="language-json">{
+  &quot;ack&quot;: &quot;status&quot;,
+  &quot;ok&quot;: true,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;Clawd&quot;,
+    &quot;sec&quot;: true,
+    &quot;bat&quot;: { &quot;pct&quot;: 87, &quot;mV&quot;: 4012, &quot;mA&quot;: -120, &quot;usb&quot;: true },
+    &quot;sys&quot;: { &quot;up&quot;: 8412, &quot;heap&quot;: 84200 },
+    &quot;stats&quot;: { &quot;appr&quot;: 42, &quot;deny&quot;: 3, &quot;vel&quot;: 8, &quot;nap&quot;: 12, &quot;lvl&quot;: 5 }
+  }
+}
+</code></pre>
+<p>You can omit fields you don't have. <code>bat.mA</code> negative means charging.</p>
+<h2 id="Folder-push">Folder push</h2>
+<p>The Hardware Buddy window has a drop target. Dropping a folder there streams<br />
+its flat contents to your device. The transport is content-agnostic: GIFs,<br />
+config blobs, firmware images, whatever you want under 1.8MB total.</p>
+
+<pre class="language-none"><code class="language-none">desktop:  {&quot;cmd&quot;:&quot;char_begin&quot;,&quot;name&quot;:&quot;bufo&quot;,&quot;total&quot;:184320}
+device:   {&quot;ack&quot;:&quot;char_begin&quot;,&quot;ok&quot;:true}
+
+desktop:  {&quot;cmd&quot;:&quot;file&quot;,&quot;path&quot;:&quot;manifest.json&quot;,&quot;size&quot;:412}
+device:   {&quot;ack&quot;:&quot;file&quot;,&quot;ok&quot;:true}
+desktop:  {&quot;cmd&quot;:&quot;chunk&quot;,&quot;d&quot;:&quot;&lt;base64&gt;&quot;}
+device:   {&quot;ack&quot;:&quot;chunk&quot;,&quot;ok&quot;:true,&quot;n&quot;:&lt;bytes_written_so_far&gt;}
+          ...repeat chunk until file is done...
+desktop:  {&quot;cmd&quot;:&quot;file_end&quot;}
+device:   {&quot;ack&quot;:&quot;file_end&quot;,&quot;ok&quot;:true,&quot;n&quot;:&lt;final_size&gt;}
+
+          ...repeat file/chunk/file_end for each file...
+
+desktop:  {&quot;cmd&quot;:&quot;char_end&quot;}
+device:   {&quot;ack&quot;:&quot;char_end&quot;,&quot;ok&quot;:true}
+</code></pre>
+<p>The desktop sends every regular file in the folder (no recursion, dotfiles<br />
+skipped), base64-encodes each chunk, and waits for each ack before sending<br />
+the next. You decode and append; the protocol is sequential so you don't<br />
+need to buffer whole files.</p>
+<p><code>char_begin.name</code> is whatever the folder is called, unless the folder<br />
+contains a <code>manifest.json</code> with a <code>&quot;name&quot;</code> field, in which case that wins.</p>
+<p>If your device doesn't want pushed files, don't ack <code>char_begin</code>. The<br />
+desktop times out after a few seconds and tells the user it failed.</p>
+<h2 id="Security-and-pairing">Security and pairing</h2>
+<p>The desktop app connects whether or not your device requests link<br />
+encryption, but transcript snippets and tool-call hints flow over this<br />
+link, so an unencrypted device is sniffable by anyone in radio range<br />
+with a cheap nRF dongle. You should require <strong>LE Secure Connections<br />
+bonding</strong>: mark your NUS characteristics (and the TX CCCD) as<br />
+encrypted-only and advertise DisplayOnly IO capability. The first GATT<br />
+access then triggers OS pairing — the desktop prompts the user for the<br />
+6-digit passkey your device displays — and the link is AES-CCM-encrypted<br />
+from then on. Reconnects reuse the stored LTK without re-prompting.</p>
+<p>The desktop app supports both encrypted and unencrypted devices. Two<br />
+protocol hooks tie into pairing:</p>
 <ul>
-<li><p>Theme Settings: Supports switching to dark theme and other styles to suit different usage scenarios and visual habits;</p>
-</li>
-<li><p>Other Configurations: You can enable the corresponding update channel, adjust the software language (supports Simplified Chinese, English, Traditional Chinese, Japanese), and configure cache, custom firmware list, etc.</p>
-</li>
+<li>Include <code>&quot;sec&quot;: true</code> in your status ack's <code>data</code> once the link is<br />
+encrypted (or <code>false</code>/omit it if you don't bond).</li>
+<li>Handle <code>{&quot;cmd&quot;:&quot;unpair&quot;}</code> by erasing your stored bonds. The desktop<br />
+sends this when the user clicks <strong>Forget</strong>, so the next pairing shows<br />
+a fresh passkey. Ack it like any other command.</li>
 </ul>
-<h3 id="GitHub-Login">GitHub Login</h3>
-<p>The software supports GitHub OAuth authorization login. After logging in, advanced functions such as firmware upload are unlocked. Operation process: Click the 「Login」 button on the interface and follow the web pop-up to complete authentication.</p>
-<p><img src="image-7.png" alt="alt text" /></p>
-<h3 id="Spark-Discovery">Spark Discovery</h3>
-<p>This module is used to publish and display official news, announcements, etc. Users can use this module to keep up with the latest LILYGO updates, product information, and development-related content.</p>
-<p><img src="image-8.png" alt="alt text" /></p>
-<h3 id="Firmware-Center">Firmware Center</h3>
-<p>Aggregates factory firmware for all LILYGO product series, as well as third-party firmware resources shared by quality developers. It also supports developers uploading their own firmware and examples, jointly enriching the firmware ecosystem.</p>
-<p><img src="image-9.png" alt="alt text" /></p>
-<h3 id="Firmware-Tools-%28Firmware-Lab%29">Firmware Tools (Firmware Lab)</h3>
-<p>Built-in professional firmware processing tools. Core functions include:<br />
-Screenshot description: Screenshot showing the main interface of the Firmware Lab module, with red boxes marking the entry buttons for the four core functions: Firmware Flashing, Firmware Extraction, Firmware Analysis, and Partition Table Editing.</p>
-<ul>
-<li><p>Firmware Flashing: Write the downloaded firmware to ESP32 series devices;</p>
-</li>
-<li><p>Firmware Extraction: Read and export firmware files from a connected device;</p>
-</li>
-<li><p>Firmware Analysis: Parse .bin format firmware files, automatically identifying key content such as chip type, partition table, bootloader, application information, and file system image;</p>
-</li>
-</ul>
-<p>Screenshot description: Screenshot showing the firmware analysis interface, with a red box marking the .bin file selection entry and the analysis result display area (e.g., chip type, partition table information), clearly showing the analysed core data.</p>
-<ul>
-<li>Partition Table Editing: Provides visual editing of ESP32 partition tables, supporting import and export of partition tables.</li>
-</ul>
-<p><img src="image-10.png" alt="alt text" /></p>
-<h3 id="Serial-Tool">Serial Tool</h3>
-<p>Provides all the functions of a standard serial tool. Operation process: Select the target device's serial port and appropriate baud rate, click the 「Connect」 button to enable serial communication between the computer and the device, and view device log output.</p>
-<p><img src="image-11.png" alt="alt text" /></p>
-<h3 id="Embedded-Tools">Embedded Tools</h3>
-<p>Integrates common tools for embedded development, covering various development scenarios to improve development efficiency. It mainly includes:</p>
-<p>Resistor Color Code Calculator, SMD Resistor Calculator, LED Current Limiting Resistor Calculator, Ohm's Law Calculator, 555 Timer Calculator, Battery Life Calculator, ESP32 Power Estimator, Series/Parallel Resistor Calculator, Circuit Schematic Viewer, etc.</p>
-<p><img src="image-12.png" alt="alt text" /></p>
-<h3 id="LILYGO-Community-and-Product-Documentation">LILYGO Community and Product Documentation</h3>
-<p>This module contains detailed technical documentation and user manuals for all LILYGO product series, as well as links to official purchase channels, making it easy for users to quickly query product information and obtain purchasing options.</p>
-<p><img src="image-13.png" alt="alt text" /></p>
-<h3 id="Spark-Lab">Spark Lab</h3>
-<p>Displays the function development roadmap and inspiration planning for LILYGO Spark software. The development team will continuously iterate and optimise software functions based on user feedback and industry technology trends, providing developers with a more convenient experience.</p>
-<p><img src="image-14.png" alt="alt text" /></p>
-<h2 id="Software-Version-Update">Software Version Update</h2>
-<p>To ensure you have the latest software features and bug fixes, follow these steps to enable the update channel and check for updates:</p>
-<p>Screenshot description: Screenshot showing the update-related area in the Settings interface, with red boxes marking the 「Check for Updates」 option and the update channel setting entry.</p>
-<ol>
-<li>Launch the software and enter the 「Settings」 interface, scroll down to find the 「Advanced」 option, expand it and check 「Canary Channel」 to enable the beta update channel;</li>
-</ol>
-<p><img src="image-15.png" alt="alt text" /></p>
-<ol start="2">
-<li>Click 「Check for Updates」 to detect and update to the latest LILYGO Spark version (Canary version, including the latest development features and optimisations).</li>
-</ol>
-<p><img src="image-16.png" alt="alt text" /></p>
-<h2 id="Firmware-Download-and-Flashing-%28Taking-T-Lora-Pager-as-an-Example%29">Firmware Download and Flashing (Taking T-Lora Pager as an Example)</h2>
-<h3 id="Firmware-Download">Firmware Download</h3>
-<ol>
-<li>Launch the software, click to enter the 「Firmware Center」 module, search and find the firmware resource corresponding to the T-Lora Pager in the firmware list;</li>
-</ol>
-<p><img src="image-18.png" alt="alt text" /></p>
-<ol start="2">
-<li>According to the device model you are using, select the corresponding firmware version (e.g., SX1262 version) and click the 「Download Firmware」 button. Wait for the firmware download to complete;</li>
-</ol>
-<p>Screenshot description: Screenshot showing the 「Download Firmware」 button (marked with a red box) for the firmware, and the progress bar during download, showing download progress and remaining time.</p>
-<p><img src="image-19.png" alt="alt text" /></p>
-<ol start="3">
-<li>After the download is complete, click the 「Flash」 button. The system will automatically jump to the firmware flashing interface.</li>
-</ol>
-<p><img src="image-20.png" alt="alt text" /></p>
-<h3 id="Firmware-Flashing">Firmware Flashing</h3>
-<ol>
-<li>Connect the T-Lora Pager device to the computer via a data cable, and select the corresponding serial port for that device in the flashing interface;</li>
-</ol>
-<p><img src="image-22.png" alt="alt text" /></p>
-<ol start="2">
-<li><p>It is recommended to switch the device to download mode. Operation method: Press and hold the Boot button on the device, simultaneously press the RST button, then release. The device will enter download mode (refer to LILYGO official YouTube video tutorial for detailed operation);</p>
-</li>
-<li><p>The flashing tool defaults to the built‑in esptool; no additional installation is required;</p>
-</li>
-<li><p>Click 「Start Download」 and wait for the flashing to complete (flashing time varies depending on the firmware size, please be patient);</p>
-</li>
-</ol>
-<p><img src="image-21.png" alt="alt text" /></p>
-<ol start="5">
-<li>When the interface displays the 「Firmware download complete」 message, the firmware has been successfully flashed.</li>
-</ol>
-<h2 id="Firmware-Upload">Firmware Upload</h2>
-<p>If a developer has created relevant firmware, they can upload it to the LILYGO Spark platform according to the following steps, sharing it with developers around the world:</p>
-<p><img src="image-23.png" alt="alt text" /></p>
-<ol>
-<li>Launch the LILYGO Spark software, click 「GitHub Login」 and follow the web pop-up to complete authentication (if you need to switch GitHub accounts, first switch the account on the web side, then perform the software login operation);</li>
-</ol>
-<p><img src="image-24.png" alt="alt text" /></p>
-<ol start="2">
-<li><p>After successful login, find the 「Upload」 button on the interface and click to enter the firmware upload interface;</p>
-</li>
-<li><p>Select the firmware file to upload, and fill in the required firmware description information (including firmware name, function description, compatible devices, etc.);</p>
-</li>
-</ol>
-<p><img src="image-25.png" alt="alt text" /></p>
-<ol start="4">
-<li>After completing the information, click the 「Upload」 button to submit the firmware.</li>
-</ol>
-<p>After the firmware upload is complete, you can contact the development team through LILYGO's official platforms to speed up firmware review and promotion, allowing your work to be known and used by more people.</p>
-<h2 id="Additional-Notes">Additional Notes</h2>
-<ul>
-<li><p>Cross‑platform Support: The software is compatible with Windows, macOS, and Linux operating systems; it can be installed and run normally.</p>
-</li>
-<li><p>Download Acceleration: When users in mainland China download firmware, the software will automatically use the Alibaba Cloud OSS mirror acceleration to increase download speed and ensure download stability.</p>
-</li>
-</ul>
-<p>Screenshot description: Screenshot showing the acceleration prompt pop‑up during firmware download, with a red box marking the prompt message “Alibaba Cloud OSS mirror accelerating” and a comparison of download speeds.</p>
-<ul>
-<li><p>Hidden Features: The software has Easter egg functions (such as Konami code trigger, celebration animation after successful flashing, etc.) for users to discover.</p>
-</li>
-<li><p>Feedback: If you encounter bugs or have feature suggestions during use, you can submit them through the software's 「Feedback」 function. The development team will handle and respond promptly.</p>
-</li>
-</ul>
+<p>If you accept the folder-push protocol, validate <code>file.path</code> before<br />
+writing — the desktop sends whatever filenames are in the dropped<br />
+folder, so reject <code>..</code> and absolute paths unless your filesystem holds<br />
+nothing you'd mind overwritten.</p>
+<h2 id="Availability">Availability</h2>
+<p>The BLE API is only available when the desktop apps are in developer mode<br />
+(<strong>Help → Troubleshooting → Enable Developer Mode</strong>). It's intended for<br />
+makers and developers and isn't an officially supported product feature.</p>
 
                         
                     </div>
                 </div>
                 <div id="previous_next">
                     <div id="previous">
-                        
-                        <a href="/get_started/en/Meshcore/meshcore.html">
-                            <span class="icon"></span>
-                            <span class="label">Meshcore use</span>
-                        </a>
                         
                     </div>
                     <div id="next">
