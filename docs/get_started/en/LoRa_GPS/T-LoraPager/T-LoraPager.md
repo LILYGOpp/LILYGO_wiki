@@ -367,6 +367,10 @@ The development board is feature-rich, integrating QWERT keyboard, AI-enabled IM
 
 * [T-LoraPager_V1.0](https://github.com/Xinyuan-LilyGO/LilyGoLib/blob/master/Files/(N314)T-Lora_Pager_LR1121_Module_V1.0_20250805.pdf)
 
+## Software
+
+* [Claude Desktop Buddy with T-Lora pager](claude-desktop-buddy.md)
+
 ## Resources
 
 * [Schematic](https://github.com/Xinyuan-LilyGO/LilyGoLib/blob/master/docs/hardware/schematic.pdf)
